@@ -4,7 +4,8 @@ Setting up IntegrationDemo & cocos2d-x for Windows build environment on Windows
   - Mac OS X (10.11.1)
   - Xcode (7.2)
   - Wwise SDK for iOS/Mac
-  * Refer http://www.cocos2d-x.org/wiki/Win32_Installation_and_Setup
+   (https://www.audiokinetic.com/download/#macosx)
+  * Tested with Macbook Pro, iPhone 6 and 6 Plus
   
 2. Make sure that you have installed WWise SDK for iOS/Mac
 3. Launch Xcode
