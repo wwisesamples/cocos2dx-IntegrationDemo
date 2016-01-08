@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v140_xp:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit
+Release|Win32|D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\proj.win32\|

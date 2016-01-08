@@ -1,0 +1,100 @@
+﻿Build started 2015/12/08 17:00:03.
+     1>Project "D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\editor-support\spine\proj.win32\libSpine.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\\" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\cocos\audio\include" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\cocos\editor-support" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\extensions" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\cocos\editor-support" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\cocos" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\cocos\platform" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\cocos\platform\desktop" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\external\glfw3\include\win32" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\external\freetype2\include\win32\freetype2" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\external\freetype2\include\win32\\" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\external" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _LIB /D COCOS2DXWIN32_EXPORTS /D GL_GLEXT_PROTOTYPES /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug.win32\\" /Fd"Debug.win32\libSpine.pdb" /Gd /TC /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Animation.c ..\AnimationState.c ..\AnimationStateData.c ..\Atlas.c ..\AtlasAttachmentLoader.c ..\Attachment.c ..\AttachmentLoader.c ..\Bone.c ..\BoneData.c ..\BoundingBoxAttachment.c ..\Event.c ..\EventData.c ..\extension.c ..\IkConstraint.c ..\IkConstraintData.c ..\Json.c ..\MeshAttachment.c ..\RegionAttachment.c ..\Skeleton.c ..\SkeletonBounds.c ..\SkeletonData.c ..\SkeletonJson.c ..\Skin.c ..\SkinnedMeshAttachment.c ..\Slot.c ..\SlotData.c
+         Animation.c
+         AnimationState.c
+         AnimationStateData.c
+         Atlas.c
+         AtlasAttachmentLoader.c
+         Attachment.c
+         AttachmentLoader.c
+         Bone.c
+         BoneData.c
+         BoundingBoxAttachment.c
+         Event.c
+         EventData.c
+         extension.c
+         IkConstraint.c
+         IkConstraintData.c
+         Json.c
+         MeshAttachment.c
+         RegionAttachment.c
+         Skeleton.c
+         SkeletonBounds.c
+         SkeletonData.c
+         SkeletonJson.c
+         Skin.c
+         SkinnedMeshAttachment.c
+         Slot.c
+         SlotData.c
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\\" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\cocos\audio\include" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\cocos\editor-support" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\extensions" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\cocos\editor-support" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\cocos" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\cocos\platform" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\cocos\platform\desktop" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\external\glfw3\include\win32" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\external\freetype2\include\win32\freetype2" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\external\freetype2\include\win32\\" /I"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\2d\..\..\external" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _LIB /D COCOS2DXWIN32_EXPORTS /D GL_GLEXT_PROTOTYPES /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug.win32\\" /Fd"Debug.win32\libSpine.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\PolygonBatch.cpp ..\SkeletonAnimation.cpp ..\SkeletonRenderer.cpp "..\spine-cocos2dx.cpp"
+         PolygonBatch.cpp
+         SkeletonAnimation.cpp
+         SkeletonRenderer.cpp
+         spine-cocos2dx.cpp
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\base\ccutf8.h : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss (compiling source file ..\SkeletonAnimation.cpp)
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\base\ccutf8.h : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss (compiling source file ..\spine-cocos2dx.cpp)
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\base\ccutf8.h : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss (compiling source file ..\PolygonBatch.cpp)
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\base\ccutf8.h : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss (compiling source file ..\SkeletonRenderer.cpp)
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\platform\ccsaxparser.h : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss (compiling source file ..\SkeletonAnimation.cpp)
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\platform\ccsaxparser.h : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss (compiling source file ..\spine-cocos2dx.cpp)
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\platform\ccsaxparser.h : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss (compiling source file ..\PolygonBatch.cpp)
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\platform\ccsaxparser.h : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss (compiling source file ..\SkeletonRenderer.cpp)
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\2d\cctmxlayer.h : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss (compiling source file ..\spine-cocos2dx.cpp)
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\2d\cctmxlayer.h : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss (compiling source file ..\SkeletonAnimation.cpp)
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\2d\cctmxlayer.h : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss (compiling source file ..\PolygonBatch.cpp)
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\2d\cctmxlayer.h : warning C4819: The file contains a character that cannot be represented in the current code page (932). Save the file in Unicode format to prevent data loss (compiling source file ..\SkeletonRenderer.cpp)
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\editor-support\spine\skeletonrenderer.cpp(252): warning C4996: 'cocos2d::DrawPrimitives::setDrawColor4B': was declared deprecated
+         d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\2d\ccdrawingprimitives.h(245): note: see declaration of 'cocos2d::DrawPrimitives::setDrawColor4B'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\editor-support\spine\skeletonrenderer.cpp(265): warning C4996: 'cocos2d::DrawPrimitives::drawPoly': was declared deprecated
+         d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\2d\ccdrawingprimitives.h(142): note: see declaration of 'cocos2d::DrawPrimitives::drawPoly'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\editor-support\spine\skeletonrenderer.cpp(271): warning C4996: 'cocos2d::DrawPrimitives::setDrawColor4B': was declared deprecated
+         d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\2d\ccdrawingprimitives.h(245): note: see declaration of 'cocos2d::DrawPrimitives::setDrawColor4B'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\editor-support\spine\skeletonrenderer.cpp(276): warning C4996: 'cocos2d::DrawPrimitives::drawLine': was declared deprecated
+         d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\2d\ccdrawingprimitives.h(115): note: see declaration of 'cocos2d::DrawPrimitives::drawLine'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\editor-support\spine\skeletonrenderer.cpp(279): warning C4996: 'cocos2d::DrawPrimitives::setPointSize': was declared deprecated
+         d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\2d\ccdrawingprimitives.h(263): note: see declaration of 'cocos2d::DrawPrimitives::setPointSize'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\editor-support\spine\skeletonrenderer.cpp(280): warning C4996: 'cocos2d::DrawPrimitives::setDrawColor4B': was declared deprecated
+         d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\2d\ccdrawingprimitives.h(245): note: see declaration of 'cocos2d::DrawPrimitives::setDrawColor4B'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\editor-support\spine\skeletonrenderer.cpp(283): warning C4996: 'cocos2d::DrawPrimitives::drawPoint': was declared deprecated
+         d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\2d\ccdrawingprimitives.h(100): note: see declaration of 'cocos2d::DrawPrimitives::drawPoint'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\editor-support\spine\skeletonrenderer.cpp(284): warning C4996: 'cocos2d::DrawPrimitives::setDrawColor4B': was declared deprecated
+         d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\cocos\2d\ccdrawingprimitives.h(245): note: see declaration of 'cocos2d::DrawPrimitives::setDrawColor4B'
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\proj.win32\Debug.win32\libSpine.lib" /NOLOGO Debug.win32\Animation.obj
+         Debug.win32\AnimationState.obj
+         Debug.win32\AnimationStateData.obj
+         Debug.win32\Atlas.obj
+         Debug.win32\AtlasAttachmentLoader.obj
+         Debug.win32\Attachment.obj
+         Debug.win32\AttachmentLoader.obj
+         Debug.win32\Bone.obj
+         Debug.win32\BoneData.obj
+         Debug.win32\BoundingBoxAttachment.obj
+         Debug.win32\Event.obj
+         Debug.win32\EventData.obj
+         Debug.win32\extension.obj
+         Debug.win32\IkConstraint.obj
+         Debug.win32\IkConstraintData.obj
+         Debug.win32\Json.obj
+         Debug.win32\MeshAttachment.obj
+         Debug.win32\PolygonBatch.obj
+         Debug.win32\RegionAttachment.obj
+         Debug.win32\Skeleton.obj
+         Debug.win32\SkeletonAnimation.obj
+         Debug.win32\SkeletonBounds.obj
+         Debug.win32\SkeletonData.obj
+         Debug.win32\SkeletonJson.obj
+         Debug.win32\SkeletonRenderer.obj
+         Debug.win32\Skin.obj
+         Debug.win32\SkinnedMeshAttachment.obj
+         Debug.win32\Slot.obj
+         Debug.win32\SlotData.obj
+         "Debug.win32\spine-cocos2dx.obj"
+         libSpine.vcxproj -> D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\proj.win32\Debug.win32\libSpine.lib
+     1>Done Building Project "D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\cocos\editor-support\spine\proj.win32\libSpine.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:16.05

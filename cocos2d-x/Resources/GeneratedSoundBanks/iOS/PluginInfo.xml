@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PluginInfo Project="IntegrationDemo" Platform="iOS" Motion="true">
+	<Plugins>
+		<Plugin Name="Wwise Tone Generator" ID="6684674"/>
+		<Plugin Name="Wwise Parametric EQ" ID="6881283"/>
+		<Plugin Name="Wwise Delay" ID="6946819"/>
+		<Plugin Name="Wwise Peak Limiter" ID="7208963"/>
+		<Plugin Name="Wwise Matrix Reverb" ID="7536643"/>
+		<Plugin Name="Wwise RoomVerb" ID="7733251"/>
+		<Plugin Name="Wwise Synth One" ID="9699330"/>
+		<Plugin Name="Wwise Audio Input" ID="13107202"/>
+	</Plugins>
+</PluginInfo>

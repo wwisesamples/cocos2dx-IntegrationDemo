@@ -1,0 +1,27 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1834394558	Surface			\Footsteps With Multiple Variables\Surface	
+
+Switch	ID	Name	Switch Group			Notes
+	2058049674	Wood	Surface			
+	2185786256	Gravel	Surface			
+	2195636714	Dirt	Surface			
+	2473969246	Metal	Surface			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	246300162	Footstep_Weight			\Footsteps With Multiple Variables\Footstep_Weight	0 is a light footstep and 100 is a heavy footstep.  This RTPC drives the Footstep_Weight switch
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	121114457	metalsheet_walk_heel_04_res	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\Footsteps\MetalSheet\Footstep_Walking_Hardmetal_04_3898B905.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Metal_Any\Heel\metalsheet_walk_heel_04_res		1612
+	209481135	metalsheet_walk_heel_02_res	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\Footsteps\MetalSheet\Footstep_Walking_Hardmetal_02_73B48BFF.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Metal_Any\Heel\metalsheet_walk_heel_02_res		2296
+	241699658	metalsheet_walk_toe_02_res	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\Footsteps\MetalSheet\Footstep_Walking_Hardmetal_02_03FF4684.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Metal_Any\Toe\metalsheet_walk_toe_02_res		2152
+	269683302	metalsheet_walk_toe_01_res	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\Footsteps\MetalSheet\Footstep_Walking_Hardmetal_01_FAC70CD6.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Metal_Any\Toe\metalsheet_walk_toe_01_res		3664
+	535268333	metalsheet_walk_toe_03_res	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\Footsteps\MetalSheet\Footstep_Walking_Hardmetal_03_FCDDF636.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Metal_Any\Toe\metalsheet_walk_toe_03_res		4780
+	664900215	metalsheet_walk_heel_01_res	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\Footsteps\MetalSheet\Footstep_Walking_Hardmetal_01_2F0D52AB.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Metal_Any\Heel\metalsheet_walk_heel_01_res		2116
+	667657885	metalsheet_walk_toe_04_res	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\Footsteps\MetalSheet\Footstep_Walking_Hardmetal_04_74F9399C.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Metal_Any\Toe\metalsheet_walk_toe_04_res		3952
+	715100575	metalsheet_walk_heel_03_res	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\Footsteps\MetalSheet\Footstep_Walking_Hardmetal_03_261B6038.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Metal_Any\Heel\metalsheet_walk_heel_03_res		2404
+	753066208	metalsheet_walk_toe_05_res	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\Footsteps\MetalSheet\Footstep_Walking_Hardmetal_05_52ADB2AB.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Metal_Any\Toe\metalsheet_walk_toe_05_res		4096
+	906530360	metalsheet_walk_heel_05_res	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\Footsteps\MetalSheet\Footstep_Walking_Hardmetal_05_D0F63C7C.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Metal_Any\Heel\metalsheet_walk_heel_05_res		2188
+

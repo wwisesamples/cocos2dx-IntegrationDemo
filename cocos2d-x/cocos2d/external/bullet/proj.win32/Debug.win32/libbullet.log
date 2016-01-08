@@ -1,0 +1,357 @@
+﻿Build started 2015/12/08 17:00:03.
+     1>Project "D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\external\bullet\proj.win32\libbullet.vcxproj" on node 4 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I../../ /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug.win32\\" /Fd"Debug.win32\libbullet.pdb" /Gd /TP /analyze- /errorReport:prompt ..\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp ..\BulletCollision\BroadphaseCollision\btBroadphaseProxy.cpp ..\BulletCollision\BroadphaseCollision\btCollisionAlgorithm.cpp ..\BulletCollision\BroadphaseCollision\btDbvt.cpp ..\BulletCollision\BroadphaseCollision\btDbvtBroadphase.cpp ..\BulletCollision\BroadphaseCollision\btDispatcher.cpp ..\BulletCollision\BroadphaseCollision\btMultiSapBroadphase.cpp ..\BulletCollision\BroadphaseCollision\btOverlappingPairCache.cpp ..\BulletCollision\BroadphaseCollision\btQuantizedBvh.cpp ..\BulletCollision\BroadphaseCollision\btSimpleBroadphase.cpp ..\BulletCollision\CollisionDispatch\btActivatingCollisionAlgorithm.cpp ..\BulletCollision\CollisionDispatch\btBox2dBox2dCollisionAlgorithm.cpp ..\BulletCollision\CollisionDispatch\btBoxBoxCollisionAlgorithm.cpp ..\BulletCollision\CollisionDispatch\btBoxBoxDetector.cpp ..\BulletCollision\CollisionDispatch\btCollisionDispatcher.cpp ..\BulletCollision\CollisionDispatch\btCollisionObject.cpp ..\BulletCollision\CollisionDispatch\btCollisionWorld.cpp ..\BulletCollision\CollisionDispatch\btCompoundCollisionAlgorithm.cpp ..\BulletCollision\CollisionDispatch\btCompoundCompoundCollisionAlgorithm.cpp ..\BulletCollision\CollisionDispatch\btConvex2dConvex2dAlgorithm.cpp ..\BulletCollision\CollisionDispatch\btConvexConcaveCollisionAlgorithm.cpp ..\BulletCollision\CollisionDispatch\btConvexConvexAlgorithm.cpp ..\BulletCollision\CollisionDispatch\btConvexPlaneCollisionAlgorithm.cpp ..\BulletCollision\CollisionDispatch\btDefaultCollisionConfiguration.cpp ..\BulletCollision\CollisionDispatch\btEmptyCollisionAlgorithm.cpp ..\BulletCollision\CollisionDispatch\btGhostObject.cpp ..\BulletCollision\CollisionDispatch\btHashedSimplePairCache.cpp ..\BulletCollision\CollisionDispatch\btInternalEdgeUtility.cpp ..\BulletCollision\CollisionDispatch\btManifoldResult.cpp ..\BulletCollision\CollisionDispatch\btSimulationIslandManager.cpp ..\BulletCollision\CollisionDispatch\btSphereBoxCollisionAlgorithm.cpp ..\BulletCollision\CollisionDispatch\btSphereSphereCollisionAlgorithm.cpp ..\BulletCollision\CollisionDispatch\btSphereTriangleCollisionAlgorithm.cpp ..\BulletCollision\CollisionDispatch\btUnionFind.cpp ..\BulletCollision\CollisionDispatch\SphereTriangleDetector.cpp ..\BulletCollision\CollisionShapes\btBox2dShape.cpp ..\BulletCollision\CollisionShapes\btBoxShape.cpp ..\BulletCollision\CollisionShapes\btBvhTriangleMeshShape.cpp ..\BulletCollision\CollisionShapes\btCapsuleShape.cpp ..\BulletCollision\CollisionShapes\btCollisionShape.cpp ..\BulletCollision\CollisionShapes\btCompoundShape.cpp ..\BulletCollision\CollisionShapes\btConcaveShape.cpp ..\BulletCollision\CollisionShapes\btConeShape.cpp ..\BulletCollision\CollisionShapes\btConvex2dShape.cpp ..\BulletCollision\CollisionShapes\btConvexHullShape.cpp ..\BulletCollision\CollisionShapes\btConvexInternalShape.cpp ..\BulletCollision\CollisionShapes\btConvexPointCloudShape.cpp ..\BulletCollision\CollisionShapes\btConvexPolyhedron.cpp ..\BulletCollision\CollisionShapes\btConvexShape.cpp ..\BulletCollision\CollisionShapes\btConvexTriangleMeshShape.cpp ..\BulletCollision\CollisionShapes\btCylinderShape.cpp ..\BulletCollision\CollisionShapes\btEmptyShape.cpp ..\BulletCollision\CollisionShapes\btHeightfieldTerrainShape.cpp ..\BulletCollision\CollisionShapes\btMinkowskiSumShape.cpp ..\BulletCollision\CollisionShapes\btMultimaterialTriangleMeshShape.cpp ..\BulletCollision\CollisionShapes\btMultiSphereShape.cpp ..\BulletCollision\CollisionShapes\btOptimizedBvh.cpp ..\BulletCollision\CollisionShapes\btPolyhedralConvexShape.cpp ..\BulletCollision\CollisionShapes\btScaledBvhTriangleMeshShape.cpp ..\BulletCollision\CollisionShapes\btShapeHull.cpp ..\BulletCollision\CollisionShapes\btSphereShape.cpp ..\BulletCollision\CollisionShapes\btStaticPlaneShape.cpp ..\BulletCollision\CollisionShapes\btStridingMeshInterface.cpp ..\BulletCollision\CollisionShapes\btTetrahedronShape.cpp ..\BulletCollision\CollisionShapes\btTriangleBuffer.cpp ..\BulletCollision\CollisionShapes\btTriangleCallback.cpp ..\BulletCollision\CollisionShapes\btTriangleIndexVertexArray.cpp ..\BulletCollision\CollisionShapes\btTriangleIndexVertexMaterialArray.cpp ..\BulletCollision\CollisionShapes\btTriangleMesh.cpp ..\BulletCollision\CollisionShapes\btTriangleMeshShape.cpp ..\BulletCollision\CollisionShapes\btUniformScalingShape.cpp ..\BulletCollision\Gimpact\btContactProcessing.cpp ..\BulletCollision\Gimpact\btGenericPoolAllocator.cpp ..\BulletCollision\Gimpact\btGImpactBvh.cpp ..\BulletCollision\Gimpact\btGImpactCollisionAlgorithm.cpp ..\BulletCollision\Gimpact\btGImpactQuantizedBvh.cpp ..\BulletCollision\Gimpact\btGImpactShape.cpp ..\BulletCollision\Gimpact\btTriangleShapeEx.cpp ..\BulletCollision\Gimpact\gim_box_set.cpp ..\BulletCollision\Gimpact\gim_contact.cpp ..\BulletCollision\Gimpact\gim_memory.cpp ..\BulletCollision\Gimpact\gim_tri_collision.cpp ..\BulletCollision\NarrowPhaseCollision\btContinuousConvexCollision.cpp ..\BulletCollision\NarrowPhaseCollision\btConvexCast.cpp ..\BulletCollision\NarrowPhaseCollision\btGjkConvexCast.cpp ..\BulletCollision\NarrowPhaseCollision\btGjkEpa2.cpp ..\BulletCollision\NarrowPhaseCollision\btGjkEpaPenetrationDepthSolver.cpp ..\BulletCollision\NarrowPhaseCollision\btGjkPairDetector.cpp ..\BulletCollision\NarrowPhaseCollision\btMinkowskiPenetrationDepthSolver.cpp ..\BulletCollision\NarrowPhaseCollision\btPersistentManifold.cpp ..\BulletCollision\NarrowPhaseCollision\btPolyhedralContactClipping.cpp ..\BulletCollision\NarrowPhaseCollision\btRaycastCallback.cpp ..\BulletCollision\NarrowPhaseCollision\btSubSimplexConvexCast.cpp ..\BulletCollision\NarrowPhaseCollision\btVoronoiSimplexSolver.cpp ..\BulletDynamics\Character\btKinematicCharacterController.cpp ..\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp ..\BulletDynamics\ConstraintSolver\btContactConstraint.cpp ..\BulletDynamics\ConstraintSolver\btFixedConstraint.cpp ..\BulletDynamics\ConstraintSolver\btGearConstraint.cpp ..\BulletDynamics\ConstraintSolver\btGeneric6DofConstraint.cpp ..\BulletDynamics\ConstraintSolver\btGeneric6DofSpringConstraint.cpp ..\BulletDynamics\ConstraintSolver\btHinge2Constraint.cpp ..\BulletDynamics\ConstraintSolver\btHingeConstraint.cpp ..\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.cpp ..\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.cpp ..\BulletDynamics\ConstraintSolver\btSliderConstraint.cpp ..\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.cpp ..\BulletDynamics\ConstraintSolver\btTypedConstraint.cpp ..\BulletDynamics\ConstraintSolver\btUniversalConstraint.cpp ..\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.cpp ..\BulletDynamics\Dynamics\btRigidBody.cpp ..\BulletDynamics\Dynamics\btSimpleDynamicsWorld.cpp "..\BulletDynamics\Dynamics\Bullet-C-API.cpp" ..\BulletDynamics\Featherstone\btMultiBody.cpp ..\BulletDynamics\Featherstone\btMultiBodyConstraint.cpp ..\BulletDynamics\Featherstone\btMultiBodyConstraintSolver.cpp ..\BulletDynamics\Featherstone\btMultiBodyDynamicsWorld.cpp ..\BulletDynamics\Featherstone\btMultiBodyJointLimitConstraint.cpp ..\BulletDynamics\Featherstone\btMultiBodyJointMotor.cpp ..\BulletDynamics\Featherstone\btMultiBodyPoint2Point.cpp ..\BulletDynamics\MLCPSolvers\btDantzigLCP.cpp ..\BulletDynamics\MLCPSolvers\btMLCPSolver.cpp ..\BulletDynamics\Vehicle\btRaycastVehicle.cpp ..\BulletDynamics\Vehicle\btWheelInfo.cpp ..\BulletMultiThreaded\btGpu3DGridBroadphase.cpp ..\BulletMultiThreaded\btParallelConstraintSolver.cpp ..\BulletMultiThreaded\btThreadSupportInterface.cpp ..\BulletMultiThreaded\PosixThreadSupport.cpp ..\BulletMultiThreaded\SequentialThreadSupport.cpp ..\BulletMultiThreaded\SpuCollisionObjectWrapper.cpp ..\BulletMultiThreaded\SpuCollisionTaskProcess.cpp ..\BulletMultiThreaded\SpuContactManifoldCollisionAlgorithm.cpp ..\BulletMultiThreaded\SpuFakeDma.cpp ..\BulletMultiThreaded\SpuGatheringCollisionDispatcher.cpp ..\BulletMultiThreaded\SpuLibspe2Support.cpp ..\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\boxBoxDistance.cpp ..\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuCollisionShapes.cpp ..\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuContactResult.cpp ..\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuGatheringCollisionTask.cpp ..\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuMinkowskiPenetrationDepthSolver.cpp ..\BulletMultiThreaded\SpuSampleTaskProcess.cpp ..\BulletMultiThreaded\SpuSampleTask\SpuSampleTask.cpp ..\BulletMultiThreaded\Win32ThreadSupport.cpp ..\LinearMath\btAlignedAllocator.cpp ..\LinearMath\btConvexHull.cpp ..\LinearMath\btConvexHullComputer.cpp ..\LinearMath\btGeometryUtil.cpp ..\LinearMath\btPolarDecomposition.cpp ..\LinearMath\btQuickprof.cpp ..\LinearMath\btSerializer.cpp ..\LinearMath\btVector3.cpp ..\MiniCL\MiniCL.cpp ..\MiniCL\MiniCLTaskScheduler.cpp ..\MiniCL\MiniCLTask\MiniCLTask.cpp
+         btAxisSweep3.cpp
+         btBroadphaseProxy.cpp
+         btCollisionAlgorithm.cpp
+         btDbvt.cpp
+         btDbvtBroadphase.cpp
+         btDispatcher.cpp
+         btMultiSapBroadphase.cpp
+         btOverlappingPairCache.cpp
+         btQuantizedBvh.cpp
+         btSimpleBroadphase.cpp
+         btActivatingCollisionAlgorithm.cpp
+         btBox2dBox2dCollisionAlgorithm.cpp
+         btBoxBoxCollisionAlgorithm.cpp
+         btBoxBoxDetector.cpp
+         btCollisionDispatcher.cpp
+         btCollisionObject.cpp
+         btCollisionWorld.cpp
+         btCompoundCollisionAlgorithm.cpp
+         btCompoundCompoundCollisionAlgorithm.cpp
+         btConvex2dConvex2dAlgorithm.cpp
+         btConvexConcaveCollisionAlgorithm.cpp
+         btConvexConvexAlgorithm.cpp
+         btConvexPlaneCollisionAlgorithm.cpp
+         btDefaultCollisionConfiguration.cpp
+         btEmptyCollisionAlgorithm.cpp
+         btGhostObject.cpp
+         btHashedSimplePairCache.cpp
+         btInternalEdgeUtility.cpp
+         btManifoldResult.cpp
+         btSimulationIslandManager.cpp
+         btSphereBoxCollisionAlgorithm.cpp
+         btSphereSphereCollisionAlgorithm.cpp
+         btSphereTriangleCollisionAlgorithm.cpp
+         btUnionFind.cpp
+         SphereTriangleDetector.cpp
+         btBox2dShape.cpp
+         btBoxShape.cpp
+         btBvhTriangleMeshShape.cpp
+         btCapsuleShape.cpp
+         btCollisionShape.cpp
+         btCompoundShape.cpp
+         btConcaveShape.cpp
+         btConeShape.cpp
+         btConvex2dShape.cpp
+         btConvexHullShape.cpp
+         btConvexInternalShape.cpp
+         btConvexPointCloudShape.cpp
+         btConvexPolyhedron.cpp
+         btConvexShape.cpp
+         btConvexTriangleMeshShape.cpp
+         btCylinderShape.cpp
+         btEmptyShape.cpp
+         btHeightfieldTerrainShape.cpp
+         btMinkowskiSumShape.cpp
+         btMultimaterialTriangleMeshShape.cpp
+         btMultiSphereShape.cpp
+         btOptimizedBvh.cpp
+         btPolyhedralConvexShape.cpp
+         btScaledBvhTriangleMeshShape.cpp
+         btShapeHull.cpp
+         btSphereShape.cpp
+         btStaticPlaneShape.cpp
+         btStridingMeshInterface.cpp
+         btTetrahedronShape.cpp
+         btTriangleBuffer.cpp
+         btTriangleCallback.cpp
+         btTriangleIndexVertexArray.cpp
+         btTriangleIndexVertexMaterialArray.cpp
+         btTriangleMesh.cpp
+         btTriangleMeshShape.cpp
+         btUniformScalingShape.cpp
+         btContactProcessing.cpp
+         btGenericPoolAllocator.cpp
+         btGImpactBvh.cpp
+         btGImpactCollisionAlgorithm.cpp
+         btGImpactQuantizedBvh.cpp
+         btGImpactShape.cpp
+         btTriangleShapeEx.cpp
+         gim_box_set.cpp
+         gim_contact.cpp
+         gim_memory.cpp
+         gim_tri_collision.cpp
+         btContinuousConvexCollision.cpp
+         btConvexCast.cpp
+         btGjkConvexCast.cpp
+         btGjkEpa2.cpp
+         btGjkEpaPenetrationDepthSolver.cpp
+         btGjkPairDetector.cpp
+         btMinkowskiPenetrationDepthSolver.cpp
+         btPersistentManifold.cpp
+         btPolyhedralContactClipping.cpp
+         btRaycastCallback.cpp
+         btSubSimplexConvexCast.cpp
+         btVoronoiSimplexSolver.cpp
+         btKinematicCharacterController.cpp
+         btConeTwistConstraint.cpp
+         btContactConstraint.cpp
+         btFixedConstraint.cpp
+         btGearConstraint.cpp
+         btGeneric6DofConstraint.cpp
+         btGeneric6DofSpringConstraint.cpp
+         btHinge2Constraint.cpp
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletdynamics\constraintsolver\btconetwistconstraint.cpp(866): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletdynamics\constraintsolver\btconetwistconstraint.cpp(911): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletdynamics\constraintsolver\btconetwistconstraint.cpp(971): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletdynamics\constraintsolver\btconetwistconstraint.cpp(973): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletdynamics\constraintsolver\btcontactconstraint.h(25): warning C4359: 'btContactConstraint': Alignment specifier is less than actual alignment (128), and will be ignored. (compiling source file ..\BulletDynamics\ConstraintSolver\btContactConstraint.cpp)
+         btHingeConstraint.cpp
+         btPoint2PointConstraint.cpp
+         btSequentialImpulseConstraintSolver.cpp
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletdynamics\character\btkinematiccharactercontroller.cpp(137): warning C4305: '=': truncation from 'double' to 'btScalar'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletdynamics\character\btkinematiccharactercontroller.cpp(148): warning C4305: '=': truncation from 'double' to 'btScalar'
+         btSliderConstraint.cpp
+         btSolve2LinearConstraint.cpp
+         btTypedConstraint.cpp
+         btUniversalConstraint.cpp
+         btDiscreteDynamicsWorld.cpp
+         btRigidBody.cpp
+         btSimpleDynamicsWorld.cpp
+         Bullet-C-API.cpp
+         btMultiBody.cpp
+         btMultiBodyConstraint.cpp
+         btMultiBodyConstraintSolver.cpp
+         btMultiBodyDynamicsWorld.cpp
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletdynamics\constraintsolver\btcontactconstraint.h(25): warning C4359: 'btContactConstraint': Alignment specifier is less than actual alignment (128), and will be ignored. (compiling source file ..\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.cpp)
+         btMultiBodyJointLimitConstraint.cpp
+         btMultiBodyJointMotor.cpp
+         btMultiBodyPoint2Point.cpp
+         btDantzigLCP.cpp
+         btMLCPSolver.cpp
+         btRaycastVehicle.cpp
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletdynamics\mlcpsolvers\btdantziglcp.cpp(1567): warning C4473: 'printf' : not enough arguments passed for format string
+         d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletdynamics\mlcpsolvers\btdantziglcp.cpp(1567): note: placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+         d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletdynamics\mlcpsolvers\btdantziglcp.cpp(1567): note: the missing variadic argument 2 is required by format string '% s'
+         btWheelInfo.cpp
+         btGpu3DGridBroadphase.cpp
+         btParallelConstraintSolver.cpp
+         btThreadSupportInterface.cpp
+         PosixThreadSupport.cpp
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletdynamics\constraintsolver\btcontactconstraint.h(25): warning C4359: 'btContactConstraint': Alignment specifier is less than actual alignment (128), and will be ignored. (compiling source file ..\BulletDynamics\Vehicle\btRaycastVehicle.cpp)
+         SequentialThreadSupport.cpp
+         SpuCollisionObjectWrapper.cpp
+         SpuCollisionTaskProcess.cpp
+         SpuContactManifoldCollisionAlgorithm.cpp
+         SpuFakeDma.cpp
+         SpuGatheringCollisionDispatcher.cpp
+         SpuLibspe2Support.cpp
+         boxBoxDistance.cpp
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletmultithreaded\btparallelconstraintsolver.cpp(1141): warning C4316: 'btConstraintSolverIO': object allocated on the heap may not be aligned 16
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletmultithreaded\btparallelconstraintsolver.cpp(1484): warning C4305: 'initializing': truncation from 'double' to 'float'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletmultithreaded\sequentialthreadsupport.cpp(180): warning C4316: 'btDummyCriticalSection': object allocated on the heap may not be aligned 16
+         SpuCollisionShapes.cpp
+         SpuContactResult.cpp
+         SpuGatheringCollisionTask.cpp
+         SpuMinkowskiPenetrationDepthSolver.cpp
+         SpuSampleTaskProcess.cpp
+         SpuSampleTask.cpp
+         Win32ThreadSupport.cpp
+         btAlignedAllocator.cpp
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletmultithreaded\spusampletask\spusampletask.cpp(226): warning C4316: 'SampleTask_LocalStoreMemory': object allocated on the heap may not be aligned 16
+         btConvexHull.cpp
+         btConvexHullComputer.cpp
+         btGeometryUtil.cpp
+         btPolarDecomposition.cpp
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletmultithreaded\spunarrowphasecollisiontask\spugatheringcollisiontask.cpp(130): warning C4359: 'CollisionTask_LocalStoreMemory': Alignment specifier is less than actual alignment (128), and will be ignored.
+         btQuickprof.cpp
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletmultithreaded\win32threadsupport.cpp(253): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\bulletmultithreaded\win32threadsupport.cpp(262): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+         btSerializer.cpp
+         btVector3.cpp
+         MiniCL.cpp
+         MiniCLTaskScheduler.cpp
+         MiniCLTask.cpp
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\minicl\minicl.cpp(83): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\minicl\minicl.cpp(96): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\minicl\minicl.cpp(129): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\minicl\minicl.cpp(194): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\minicl\minicl.cpp(207): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\minicl\minicl.cpp(166): warning C4101: 'workitem_size': unreferenced local variable
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\minicl\minicl.cpp(547): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+     1>d:\audiokinetic\wwise_v2015.1.4_build_5497\sdk\samples\integrationdemo\cocos2d-x\cocos2d\external\bullet\minicl\minicl.cpp(640): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\proj.win32\Debug.win32\libbullet.lib" /NOLOGO Debug.win32\btAxisSweep3.obj
+         Debug.win32\btBroadphaseProxy.obj
+         Debug.win32\btCollisionAlgorithm.obj
+         Debug.win32\btDbvt.obj
+         Debug.win32\btDbvtBroadphase.obj
+         Debug.win32\btDispatcher.obj
+         Debug.win32\btMultiSapBroadphase.obj
+         Debug.win32\btOverlappingPairCache.obj
+         Debug.win32\btQuantizedBvh.obj
+         Debug.win32\btSimpleBroadphase.obj
+         Debug.win32\btActivatingCollisionAlgorithm.obj
+         Debug.win32\btBox2dBox2dCollisionAlgorithm.obj
+         Debug.win32\btBoxBoxCollisionAlgorithm.obj
+         Debug.win32\btBoxBoxDetector.obj
+         Debug.win32\btCollisionDispatcher.obj
+         Debug.win32\btCollisionObject.obj
+         Debug.win32\btCollisionWorld.obj
+         Debug.win32\btCompoundCollisionAlgorithm.obj
+         Debug.win32\btCompoundCompoundCollisionAlgorithm.obj
+         Debug.win32\btConvex2dConvex2dAlgorithm.obj
+         Debug.win32\btConvexConcaveCollisionAlgorithm.obj
+         Debug.win32\btConvexConvexAlgorithm.obj
+         Debug.win32\btConvexPlaneCollisionAlgorithm.obj
+         Debug.win32\btDefaultCollisionConfiguration.obj
+         Debug.win32\btEmptyCollisionAlgorithm.obj
+         Debug.win32\btGhostObject.obj
+         Debug.win32\btHashedSimplePairCache.obj
+         Debug.win32\btInternalEdgeUtility.obj
+         Debug.win32\btManifoldResult.obj
+         Debug.win32\btSimulationIslandManager.obj
+         Debug.win32\btSphereBoxCollisionAlgorithm.obj
+         Debug.win32\btSphereSphereCollisionAlgorithm.obj
+         Debug.win32\btSphereTriangleCollisionAlgorithm.obj
+         Debug.win32\btUnionFind.obj
+         Debug.win32\SphereTriangleDetector.obj
+         Debug.win32\btBox2dShape.obj
+         Debug.win32\btBoxShape.obj
+         Debug.win32\btBvhTriangleMeshShape.obj
+         Debug.win32\btCapsuleShape.obj
+         Debug.win32\btCollisionShape.obj
+         Debug.win32\btCompoundShape.obj
+         Debug.win32\btConcaveShape.obj
+         Debug.win32\btConeShape.obj
+         Debug.win32\btConvex2dShape.obj
+         Debug.win32\btConvexHullShape.obj
+         Debug.win32\btConvexInternalShape.obj
+         Debug.win32\btConvexPointCloudShape.obj
+         Debug.win32\btConvexPolyhedron.obj
+         Debug.win32\btConvexShape.obj
+         Debug.win32\btConvexTriangleMeshShape.obj
+         Debug.win32\btCylinderShape.obj
+         Debug.win32\btEmptyShape.obj
+         Debug.win32\btHeightfieldTerrainShape.obj
+         Debug.win32\btMinkowskiSumShape.obj
+         Debug.win32\btMultimaterialTriangleMeshShape.obj
+         Debug.win32\btMultiSphereShape.obj
+         Debug.win32\btOptimizedBvh.obj
+         Debug.win32\btPolyhedralConvexShape.obj
+         Debug.win32\btScaledBvhTriangleMeshShape.obj
+         Debug.win32\btShapeHull.obj
+         Debug.win32\btSphereShape.obj
+         Debug.win32\btStaticPlaneShape.obj
+         Debug.win32\btStridingMeshInterface.obj
+         Debug.win32\btTetrahedronShape.obj
+         Debug.win32\btTriangleBuffer.obj
+         Debug.win32\btTriangleCallback.obj
+         Debug.win32\btTriangleIndexVertexArray.obj
+         Debug.win32\btTriangleIndexVertexMaterialArray.obj
+         Debug.win32\btTriangleMesh.obj
+         Debug.win32\btTriangleMeshShape.obj
+         Debug.win32\btUniformScalingShape.obj
+         Debug.win32\btContactProcessing.obj
+         Debug.win32\btGenericPoolAllocator.obj
+         Debug.win32\btGImpactBvh.obj
+         Debug.win32\btGImpactCollisionAlgorithm.obj
+         Debug.win32\btGImpactQuantizedBvh.obj
+         Debug.win32\btGImpactShape.obj
+         Debug.win32\btTriangleShapeEx.obj
+         Debug.win32\gim_box_set.obj
+         Debug.win32\gim_contact.obj
+         Debug.win32\gim_memory.obj
+         Debug.win32\gim_tri_collision.obj
+         Debug.win32\btContinuousConvexCollision.obj
+         Debug.win32\btConvexCast.obj
+         Debug.win32\btGjkConvexCast.obj
+         Debug.win32\btGjkEpa2.obj
+         Debug.win32\btGjkEpaPenetrationDepthSolver.obj
+         Debug.win32\btGjkPairDetector.obj
+         Debug.win32\btMinkowskiPenetrationDepthSolver.obj
+         Debug.win32\btPersistentManifold.obj
+         Debug.win32\btPolyhedralContactClipping.obj
+         Debug.win32\btRaycastCallback.obj
+         Debug.win32\btSubSimplexConvexCast.obj
+         Debug.win32\btVoronoiSimplexSolver.obj
+         Debug.win32\btKinematicCharacterController.obj
+         Debug.win32\btConeTwistConstraint.obj
+         Debug.win32\btContactConstraint.obj
+         Debug.win32\btFixedConstraint.obj
+         Debug.win32\btGearConstraint.obj
+         Debug.win32\btGeneric6DofConstraint.obj
+         Debug.win32\btGeneric6DofSpringConstraint.obj
+         Debug.win32\btHinge2Constraint.obj
+         Debug.win32\btHingeConstraint.obj
+         Debug.win32\btPoint2PointConstraint.obj
+         Debug.win32\btSequentialImpulseConstraintSolver.obj
+         Debug.win32\btSliderConstraint.obj
+         Debug.win32\btSolve2LinearConstraint.obj
+         Debug.win32\btTypedConstraint.obj
+         Debug.win32\btUniversalConstraint.obj
+         Debug.win32\btDiscreteDynamicsWorld.obj
+         Debug.win32\btRigidBody.obj
+         Debug.win32\btSimpleDynamicsWorld.obj
+         "Debug.win32\Bullet-C-API.obj"
+         Debug.win32\btMultiBody.obj
+         Debug.win32\btMultiBodyConstraint.obj
+         Debug.win32\btMultiBodyConstraintSolver.obj
+         Debug.win32\btMultiBodyDynamicsWorld.obj
+         Debug.win32\btMultiBodyJointLimitConstraint.obj
+         Debug.win32\btMultiBodyJointMotor.obj
+         Debug.win32\btMultiBodyPoint2Point.obj
+         Debug.win32\btDantzigLCP.obj
+         Debug.win32\btMLCPSolver.obj
+         Debug.win32\btRaycastVehicle.obj
+         Debug.win32\btWheelInfo.obj
+         Debug.win32\btGpu3DGridBroadphase.obj
+         Debug.win32\btParallelConstraintSolver.obj
+         Debug.win32\btThreadSupportInterface.obj
+         Debug.win32\PosixThreadSupport.obj
+         Debug.win32\SequentialThreadSupport.obj
+         Debug.win32\SpuCollisionObjectWrapper.obj
+         Debug.win32\SpuCollisionTaskProcess.obj
+         Debug.win32\SpuContactManifoldCollisionAlgorithm.obj
+         Debug.win32\SpuFakeDma.obj
+         Debug.win32\SpuGatheringCollisionDispatcher.obj
+         Debug.win32\SpuLibspe2Support.obj
+         Debug.win32\boxBoxDistance.obj
+         Debug.win32\SpuCollisionShapes.obj
+         Debug.win32\SpuContactResult.obj
+         Debug.win32\SpuGatheringCollisionTask.obj
+         Debug.win32\SpuMinkowskiPenetrationDepthSolver.obj
+         Debug.win32\SpuSampleTaskProcess.obj
+         Debug.win32\SpuSampleTask.obj
+         Debug.win32\Win32ThreadSupport.obj
+         Debug.win32\btAlignedAllocator.obj
+         Debug.win32\btConvexHull.obj
+         Debug.win32\btConvexHullComputer.obj
+         Debug.win32\btGeometryUtil.obj
+         Debug.win32\btPolarDecomposition.obj
+         Debug.win32\btQuickprof.obj
+         Debug.win32\btSerializer.obj
+         Debug.win32\btVector3.obj
+         Debug.win32\MiniCL.obj
+         Debug.win32\MiniCLTaskScheduler.obj
+         Debug.win32\MiniCLTask.obj
+     1>PosixThreadSupport.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+     1>btBroadphaseProxy.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+         libbullet.vcxproj -> D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\proj.win32\Debug.win32\libbullet.lib
+     1>Done Building Project "D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\external\bullet\proj.win32\libbullet.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:14.70

@@ -1,0 +1,24 @@
+Event	ID	Name			Wwise Object Path	Notes
+	519773712	PlayMusicDemo3			\MusicCallbacks\PlayMusicDemo3	
+	519773713	PlayMusicDemo2			\MusicCallbacks\PlayMusicDemo2	
+	519773714	PlayMusicDemo1			\MusicCallbacks\PlayMusicDemo1	
+	1327221850	Resume_All_Global			\Default Work Unit\Resume_All_Global	
+	3493516265	Pause_All_Global			\Default Work Unit\Pause_All_Global	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2	CC #1: Modulation			\CC 0-31\CC #1: Modulation	
+
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	150695989	Modulator Envelope (Custom)				
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	702118206	Wwise Synth One	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\SynthOne\Wwise Synth One	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	329559453	CallbackTrack1	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\C3 (128Hz)_82EFC8A5.wem		\Interactive Music Hierarchy\Music Callbacks\CallbackPlaylist\CallbackSegment1\CallbackTrack1		4564
+	608003259	callback	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\callback_00000000.wem		\Interactive Music Hierarchy\Music Callbacks\MIDICallbacks\callback		282
+	708003509	CallbackTrack4	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\C6 (1024Hz)_82EFC8A5.wem		\Interactive Music Hierarchy\Music Callbacks\CallbackPlaylist\CallbackSegment4\CallbackTrack4		4564
+	752036114	MarchingBand	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\MarchingBand_82EFC8A5.wem		\Interactive Music Hierarchy\Music Callbacks\MarchingBand\MarchingBand		288064
+	942304755	CallbackTrack2	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\C4 (256Hz)_82EFC8A5.wem		\Interactive Music Hierarchy\Music Callbacks\CallbackPlaylist\CallbackSegment2\CallbackTrack2		4564
+	1005470372	CallbackTrack3	D:\Audiokinetic\Wwise_v2015.1.2_build5457\SDK\samples\IntegrationDemo\WwiseProject\.cache\iOS\SFX\C5 (512Hz)_82EFC8A5.wem		\Interactive Music Hierarchy\Music Callbacks\CallbackPlaylist\CallbackSegment3\CallbackTrack3		4564
+

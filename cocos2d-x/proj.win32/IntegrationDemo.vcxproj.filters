@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AK">
+      <UniqueIdentifier>{fa144a55-f9bd-4188-9f2e-62b7ef18ea7e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneBase.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneDialogueMenu.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneDynamicDialogue.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneFootsteps.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneInteractiveMusic.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneLocalization.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneMain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneMarkers.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneMusicCallbacks.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneRTPCCarEngine.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\WwiseWrapper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SoundEngine\Win32\AkDefaultIOHookBlocking.cpp">
+      <Filter>AK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SoundEngine\Common\AkFileLocationBase.cpp">
+      <Filter>AK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SoundEngine\Common\AkFilePackage.cpp">
+      <Filter>AK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SoundEngine\Common\AkFilePackageLUT.cpp">
+      <Filter>AK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Helpers.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneMicrophone.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Windows\SoundInput.cpp">
+      <Filter>AK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Windows\SoundInputMgr.cpp">
+      <Filter>AK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\SoundInputBase.cpp">
+      <Filter>AK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\SoundInputMgrBase.cpp">
+      <Filter>AK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ScenePositioning.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneExternalSources.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SceneBGM.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneBase.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneDialogueMenu.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneDynamicDialogue.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneFootsteps.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneInteractiveMusic.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneLocalization.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneMain.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneMarkers.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneMusicCallbacks.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneRTPCCarEngine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\WwiseWrapper.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SoundEngine\Win32\AkDefaultIOHookBlocking.h">
+      <Filter>AK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SoundEngine\Common\AkFileLocationBase.h">
+      <Filter>AK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SoundEngine\Common\AkFilePackage.h">
+      <Filter>AK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SoundEngine\Common\AkFilePackageLowLevelIO.h">
+      <Filter>AK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SoundEngine\Common\AkFilePackageLUT.h">
+      <Filter>AK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SoundEngine\Common\AkMultipleFileLocation.h">
+      <Filter>AK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Helpers.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneMicrophone.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Windows\SoundInput.h">
+      <Filter>AK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Windows\SoundInputMgr.h">
+      <Filter>AK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\SoundInputBase.h">
+      <Filter>AK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\SoundInputMgrBase.h">
+      <Filter>AK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ScenePositioning.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneExternalSources.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SceneBGM.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\SoundEngine\Common\AkFilePackageLowLevelIO.inl">
+      <Filter>AK</Filter>
+    </None>
+    <None Include="..\..\..\SoundEngine\Common\AkMultipleFileLocation.inl">
+      <Filter>AK</Filter>
+    </None>
+  </ItemGroup>
+</Project>

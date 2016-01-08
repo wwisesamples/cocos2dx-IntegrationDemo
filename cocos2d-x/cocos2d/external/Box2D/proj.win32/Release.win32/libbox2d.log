@@ -1,0 +1,103 @@
+﻿Build started 2015/12/08 17:41:04.
+     1>Project "D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\external\Box2D\proj.win32\libbox2d.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include" /I../../ /nologo /W3 /WX- /MP /O1 /Oy- /D WIN32 /D NDEBUG /D _LIB /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release.win32\\" /Fd"Release.win32\libbox2d.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Collision\b2BroadPhase.cpp ..\Collision\b2CollideCircle.cpp ..\Collision\b2CollideEdge.cpp ..\Collision\b2CollidePolygon.cpp ..\Collision\b2Collision.cpp ..\Collision\b2Distance.cpp ..\Collision\b2DynamicTree.cpp ..\Collision\b2TimeOfImpact.cpp ..\Collision\Shapes\b2ChainShape.cpp ..\Collision\Shapes\b2CircleShape.cpp ..\Collision\Shapes\b2EdgeShape.cpp ..\Collision\Shapes\b2PolygonShape.cpp ..\Common\b2BlockAllocator.cpp ..\Common\b2Draw.cpp ..\Common\b2Math.cpp ..\Common\b2Settings.cpp ..\Common\b2StackAllocator.cpp ..\Common\b2Timer.cpp ..\Dynamics\b2Body.cpp ..\Dynamics\b2ContactManager.cpp ..\Dynamics\b2Fixture.cpp ..\Dynamics\b2Island.cpp ..\Dynamics\b2World.cpp ..\Dynamics\b2WorldCallbacks.cpp ..\Dynamics\Contacts\b2ChainAndCircleContact.cpp ..\Dynamics\Contacts\b2ChainAndPolygonContact.cpp ..\Dynamics\Contacts\b2CircleContact.cpp ..\Dynamics\Contacts\b2Contact.cpp ..\Dynamics\Contacts\b2ContactSolver.cpp ..\Dynamics\Contacts\b2EdgeAndCircleContact.cpp ..\Dynamics\Contacts\b2EdgeAndPolygonContact.cpp ..\Dynamics\Contacts\b2PolygonAndCircleContact.cpp ..\Dynamics\Contacts\b2PolygonContact.cpp ..\Dynamics\Joints\b2DistanceJoint.cpp ..\Dynamics\Joints\b2FrictionJoint.cpp ..\Dynamics\Joints\b2GearJoint.cpp ..\Dynamics\Joints\b2Joint.cpp ..\Dynamics\Joints\b2MotorJoint.cpp ..\Dynamics\Joints\b2MouseJoint.cpp ..\Dynamics\Joints\b2PrismaticJoint.cpp ..\Dynamics\Joints\b2PulleyJoint.cpp ..\Dynamics\Joints\b2RevoluteJoint.cpp ..\Dynamics\Joints\b2RopeJoint.cpp ..\Dynamics\Joints\b2WeldJoint.cpp ..\Dynamics\Joints\b2WheelJoint.cpp ..\Rope\b2Rope.cpp
+         b2BroadPhase.cpp
+         b2CollideCircle.cpp
+         b2CollideEdge.cpp
+         b2CollidePolygon.cpp
+         b2Collision.cpp
+         b2Distance.cpp
+         b2DynamicTree.cpp
+         b2TimeOfImpact.cpp
+         b2ChainShape.cpp
+         b2CircleShape.cpp
+         b2EdgeShape.cpp
+         b2PolygonShape.cpp
+         b2BlockAllocator.cpp
+         b2Draw.cpp
+         b2Math.cpp
+         b2Settings.cpp
+         b2StackAllocator.cpp
+         b2Timer.cpp
+         b2Body.cpp
+         b2ContactManager.cpp
+         b2Fixture.cpp
+         b2Island.cpp
+         b2World.cpp
+         b2WorldCallbacks.cpp
+         b2ChainAndCircleContact.cpp
+         b2ChainAndPolygonContact.cpp
+         b2CircleContact.cpp
+         b2Contact.cpp
+         b2ContactSolver.cpp
+         b2EdgeAndCircleContact.cpp
+         b2EdgeAndPolygonContact.cpp
+         b2PolygonAndCircleContact.cpp
+         b2PolygonContact.cpp
+         b2DistanceJoint.cpp
+         b2FrictionJoint.cpp
+         b2GearJoint.cpp
+         b2Joint.cpp
+         b2MotorJoint.cpp
+         b2MouseJoint.cpp
+         b2PrismaticJoint.cpp
+         b2PulleyJoint.cpp
+         b2RevoluteJoint.cpp
+         b2RopeJoint.cpp
+         b2WeldJoint.cpp
+         b2WheelJoint.cpp
+         b2Rope.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\proj.win32\Release.win32\libbox2d.lib" /NOLOGO Release.win32\b2BroadPhase.obj
+         Release.win32\b2CollideCircle.obj
+         Release.win32\b2CollideEdge.obj
+         Release.win32\b2CollidePolygon.obj
+         Release.win32\b2Collision.obj
+         Release.win32\b2Distance.obj
+         Release.win32\b2DynamicTree.obj
+         Release.win32\b2TimeOfImpact.obj
+         Release.win32\b2ChainShape.obj
+         Release.win32\b2CircleShape.obj
+         Release.win32\b2EdgeShape.obj
+         Release.win32\b2PolygonShape.obj
+         Release.win32\b2BlockAllocator.obj
+         Release.win32\b2Draw.obj
+         Release.win32\b2Math.obj
+         Release.win32\b2Settings.obj
+         Release.win32\b2StackAllocator.obj
+         Release.win32\b2Timer.obj
+         Release.win32\b2Body.obj
+         Release.win32\b2ContactManager.obj
+         Release.win32\b2Fixture.obj
+         Release.win32\b2Island.obj
+         Release.win32\b2World.obj
+         Release.win32\b2WorldCallbacks.obj
+         Release.win32\b2ChainAndCircleContact.obj
+         Release.win32\b2ChainAndPolygonContact.obj
+         Release.win32\b2CircleContact.obj
+         Release.win32\b2Contact.obj
+         Release.win32\b2ContactSolver.obj
+         Release.win32\b2EdgeAndCircleContact.obj
+         Release.win32\b2EdgeAndPolygonContact.obj
+         Release.win32\b2PolygonAndCircleContact.obj
+         Release.win32\b2PolygonContact.obj
+         Release.win32\b2DistanceJoint.obj
+         Release.win32\b2FrictionJoint.obj
+         Release.win32\b2GearJoint.obj
+         Release.win32\b2Joint.obj
+         Release.win32\b2MotorJoint.obj
+         Release.win32\b2MouseJoint.obj
+         Release.win32\b2PrismaticJoint.obj
+         Release.win32\b2PulleyJoint.obj
+         Release.win32\b2RevoluteJoint.obj
+         Release.win32\b2RopeJoint.obj
+         Release.win32\b2WeldJoint.obj
+         Release.win32\b2WheelJoint.obj
+         Release.win32\b2Rope.obj
+         libbox2d.vcxproj -> D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\proj.win32\Release.win32\libbox2d.lib
+     1>Done Building Project "D:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo\cocos2d-x\cocos2d\external\Box2D\proj.win32\libbox2d.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.68

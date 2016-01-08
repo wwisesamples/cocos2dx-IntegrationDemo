@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	330151568	Play_Hello_RSX			\Default Work Unit\Play_Hello_RSX	
+
