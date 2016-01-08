@@ -91,11 +91,11 @@ This demo shows various ways to implement footsteps in a game. It also show surf
 In this example, the footstep sounds are modified by 3 variables: surface, walking speed and walker weight.
 
 - Surface issues (Surface switch) The surface will change the actual properties of the sounds so it can't be simulated. However, footsteps being impact sounds, we chose to use SoundSeed Impact for most of the surface types. Each surface has very specific resonance characteristics that SS Impact can modulate. SS Impact will give a large variety of sounds out of a small subset of real sounds, thus saving space. 
-- 
+ 
 - Walking Speed issues (Footstep_Speed RTPC) This project supports a smooth transition from walking to running in almost all cases. For this variable, we assume the following: the faster you walk, the shorter is the footstep and the harder you hit the ground. This translates in Pitch and Volume changes respectively. Look for RTPC on these parameters in the project. The Speed RTPC is driven directly by the joystick displacement in this demo. 
-- 
+ 
 - Walker Weight issues (Footstep_Weight RTPC) The footstep structure supports various walker weights. We assume that in real life, a heavier walker will have a longer footstep and that it will be more muffled. This translates in Pitch and LPF changes respectively. Look for RTPC on these parameters in the project. 
-- 
+ 
 With each surface, we show a different way of dealing with the sound samples and variables. These are only suggestions and ideas that you can use in your own structure.
 
 - Gravel Our gravel samples are very noisy so they don't go well with SoundSeed Impact. Also, they are very similar, so it won't give us anything more to have a lot of samples of this surface. More variation is obtained with a bit of Volume, LPF and Pitch randomizations. The Weight influance is done through the EQ effect with its gain parameters driven by the Weight RTPC. For light footsteps, the higher frequencies are boosted and the reverse for heavy footsteps. Note the RTPCs effect on pitch and volume. 
