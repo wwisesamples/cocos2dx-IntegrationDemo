@@ -3,9 +3,10 @@ Setting up IntegrationDemo & cocos2d-x for Android build environment on Windows
 1. Environment Requirements
   - Windows 7 or higher 
   - Android development tools
+  - Wwise (2015.1.4 Build 5497 or higher) 
   - Cocos2d-x (v3.8.1 or higher)
-  - Wwise SDK
-  * Refer http://www.cocos2d-x.org/wiki/Win32_Installation_and_Setup
+   (For more info, go to http://www.cocos2d-x.org/wiki/Win32_Installation_and_Setup)
+  - Android device (Tested witn Nexus 5x(Android 6.0.0))
   
 2. Android development tools
  2.1 JDK 
@@ -56,5 +57,5 @@ Setting up IntegrationDemo & cocos2d-x for Android build environment on Windows
  4.3 Build & run 
      Debug   -> cocos run -p android -m debug NDK_DEBUG=1 V=1 NDK_LOG=1
      Release -> cocos run -p android　
- 
+
    
