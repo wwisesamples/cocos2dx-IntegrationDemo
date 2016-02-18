@@ -1,13 +1,18 @@
-#include "cocos2d.h"
+#ifdef 	COCOS_INTEGRATION
+  #include "cocos2d.h"
+#else
+  #include <stdio.h>  // vsprintf...
+#endif // COCOS_INTEGRATION
+
 #include "WwiseWrapper.h"
 #include <AK/SoundEngine/Common/AkTypes.h>
-#include "Platform.h"
 #include <wchar.h>
+
 #ifdef AK_IOS
   #include "SoundInput.h"
-#endif
+#endif // AK_IOS
 #ifndef AK_OPTIMIZED
-  #include <AK/Comm/AkCommunication.h>
+  #include <AK/Comm/AkCommunication.h> // Communication between Wwise and the game (excluded in release build)
 #endif // AK_OPTIMIZED
 #ifdef AK_MOTION
   #include <AK/MotionEngine/Common/AkMotionEngine.h>	// Motion Engine (required only for playback of Motion objects)
@@ -112,7 +117,7 @@
 #pragma comment( lib, "AkHarmonizerFX.lib")
 #pragma comment( lib, "AkTimeStretchFX.lib")
 #pragma comment( lib, "AkExpanderFX.lib")
-#pragma comment( lib, "Msacm32.lib")
+#pragma comment( lib, "Msacm32.lib") // Microsoft ACM Library
 #endif
 
 static const AkUInt32 kMaxNumPools = 20;
@@ -363,7 +368,9 @@ bool Wwise::Init(   AkMemSettings&          in_memSettings,
     {
 	//SetLoadFileErrorMessage("Init.bnk");
 	LOGAK("<Wwise::Init> Cannot load Init.bnk! error");
+#ifdef 	COCOS_INTEGRATION
 	cocos2d::MessageBox("Cannot load Init.bnk!", "Error");
+#endif
 	return false;
     }
 
