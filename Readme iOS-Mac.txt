@@ -1,4 +1,4 @@
-Setting up IntegrationDemo & cocos2d-x for Windows build environment on Windows 
+Setting up IntegrationDemo & cocos2d-x for iOS/Mac build environment
 
 1. Environment Requirements
   - Mac OS X (10.11.1)
