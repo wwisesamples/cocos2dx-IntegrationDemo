@@ -212,6 +212,10 @@ LOCAL_MODULE            := AkGainFX
 LOCAL_SRC_FILES 		:= $(SDK_LIB_DIR)/libAkGainFX.a
 include $(PREBUILT_STATIC_LIBRARY)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE            := zip
+LOCAL_SRC_FILES         := $(SDK_LIB_DIR)/libzip.a 
+include $(PREBUILT_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
  
@@ -225,6 +229,7 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Android
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Common
+LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Android/libzip/lib
 LOCAL_C_INCLUDES += ${WWISESDK}/include 
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../../Common
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../../MenuSystem
@@ -234,6 +239,7 @@ LOCAL_C_INCLUDES += ${WWISESDK}/samples/IntegrationDemo/cocos2d-x/cocos2d/cocos/
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/IntegrationDemo/cocos2d-x/cocos2d/external
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/IntegrationDemo/cocos2d-x/cocos2d/extensions
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/IntegrationDemo/cocos2d-x/cocos2d/external/chipmunk/include/chipmunk
+LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Android/libzip/lib
 
 LOCAL_SRC_FILES := hellocpp/main.cpp  \
                    ../../Classes/AppDelegate.cpp \
@@ -320,7 +326,8 @@ AkTremoloFX \
 AkVorbisDecoder \
 McDSPFutzBoxFX \
 AkGainFX \
-McDSPLimiterFX
+McDSPLimiterFX \
+zip
 
 include $(BUILD_SHARED_LIBRARY)
 #include $(PREBUILT_STATIC_LIBRARY)

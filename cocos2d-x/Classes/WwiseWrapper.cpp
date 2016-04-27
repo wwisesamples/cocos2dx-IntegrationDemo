@@ -267,9 +267,7 @@ namespace WWISE {
     bool initialize(void* mgr)
     {
 	Wwise::Instance().GetDefaultSettings(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit);
-#ifdef AK_ANDROID
-	Wwise::Instance().GetLowLevelIOHandler()->SetAssetManager((AAssetManager*)mgr);
-#endif
+
 	if (!Wwise::Instance().Init(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit,
 	    (AkOSChar*)MY_SOUND_BANK_PATH, m_strError, sizeof(m_strError))) {
 	    LOGAKW(m_strError);
