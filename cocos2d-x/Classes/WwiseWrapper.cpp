@@ -267,7 +267,38 @@ namespace WWISE {
     bool initialize(void* mgr)
     {
 	Wwise::Instance().GetDefaultSettings(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit);
-
+#ifdef AK_ANDROID
+	// Wwise::Instance().GetLowLevelIOHandler()->SetAssetManager((AAssetManager*)mgr);
+    JavaVM* jvm = cocos2d::JniHelper::getJavaVM();
+    if (!jvm)
+    {
+        LOGAK("<Wwise::Init> Failed to get JVM. Aborted.");
+        return false;
+    }
+    m_platformInitSettings.pJavaVM = jvm;
+    // Get activity.
+    JNIEnv* env = cocos2d::JniHelper::getEnv();
+    if (!env)
+    {
+        LOGAK("<Wwise::Init> Failed to get JNIEnv to retrieve Activity. Aborted.");
+        return false;
+    }
+    jclass classID = env->FindClass("org/cocos2dx/cpp/AppActivity");
+    if (!classID)
+    {
+        LOGAK("<Wwise::Init> Failed to find class AppActivity to retrieve Activity. Aborted.");
+        return false;
+    }
+    jmethodID methodID = env->GetStaticMethodID(classID, "getInstance", "()Ljava/lang/Object;");
+    if (!methodID)
+    {
+        LOGAK("<Wwise::Init> Failed to find method getInstance to retrieve Activity. Aborted.");
+        return false;
+    }
+    m_platformInitSettings.jNativeActivity = env->CallStaticObjectMethod(classID, methodID);
+    // m_platformInitSettings.jNativeActivity = NULL;
+    Wwise::Instance().GetLowLevelIOHandler()->InitAndroidIO(m_platformInitSettings.pJavaVM, m_platformInitSettings.jNativeActivity);
+#endif
 	if (!Wwise::Instance().Init(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit,
 	    (AkOSChar*)MY_SOUND_BANK_PATH, m_strError, sizeof(m_strError))) {
 	    LOGAKW(m_strError);
@@ -354,6 +385,7 @@ bool Wwise::Init(   AkMemSettings&          in_memSettings,
 
     // Set the path to the SoundBank Files.
     hr = m_pLowLevelIO->SetBasePath(in_soundBankPath);
+    //hr = m_pLowLevelIO->SetBasePath("/sdcard/IntegrationDemo/GeneratedSoundBanks");
 
     // Set global language. Low-level I/O devices can use this string to find language-specific assets.
     if (AK::StreamMgr::SetCurrentLanguage(AKTEXT("English(US)")) != AK_Success)
@@ -366,6 +398,9 @@ bool Wwise::Init(   AkMemSettings&          in_memSettings,
     {
 	//SetLoadFileErrorMessage("Init.bnk");
 	LOGAK("<Wwise::Init> Cannot load Init.bnk! error");
+    __AK_OSCHAR_SNPRINTF(in_szErrorBuffer, in_unErrorBufferCharCount, AKTEXT("AK: in_soundBankPath: %s"), in_soundBankPath);
+    // __AK_OSCHAR_SNPRINTF(in_szErrorBuffer, in_unErrorBufferCharCount, AKTEXT("AK: in_soundBankPath: %s"), "/sdcard/IntegrationDemo/");
+
 #ifdef 	COCOS_INTEGRATION
 	cocos2d::MessageBox("Cannot load Init.bnk!", "Error");
 #endif
