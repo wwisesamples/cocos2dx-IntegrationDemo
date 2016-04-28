@@ -267,8 +267,8 @@ namespace WWISE {
     bool initialize(void* mgr)
     {
 	Wwise::Instance().GetDefaultSettings(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit);
+
 #ifdef AK_ANDROID
-	// Wwise::Instance().GetLowLevelIOHandler()->SetAssetManager((AAssetManager*)mgr);
     JavaVM* jvm = cocos2d::JniHelper::getJavaVM();
     if (!jvm)
     {
