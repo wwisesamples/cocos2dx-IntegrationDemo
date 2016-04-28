@@ -296,7 +296,6 @@ namespace WWISE {
         return false;
     }
     m_platformInitSettings.jNativeActivity = env->CallStaticObjectMethod(classID, methodID);
-    // m_platformInitSettings.jNativeActivity = NULL;
     Wwise::Instance().GetLowLevelIOHandler()->InitAndroidIO(m_platformInitSettings.pJavaVM, m_platformInitSettings.jNativeActivity);
 #endif
 	if (!Wwise::Instance().Init(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit,
@@ -385,7 +384,6 @@ bool Wwise::Init(   AkMemSettings&          in_memSettings,
 
     // Set the path to the SoundBank Files.
     hr = m_pLowLevelIO->SetBasePath(in_soundBankPath);
-    //hr = m_pLowLevelIO->SetBasePath("/sdcard/IntegrationDemo/GeneratedSoundBanks");
 
     // Set global language. Low-level I/O devices can use this string to find language-specific assets.
     if (AK::StreamMgr::SetCurrentLanguage(AKTEXT("English(US)")) != AK_Success)
@@ -396,10 +394,7 @@ bool Wwise::Init(   AkMemSettings&          in_memSettings,
     AkBankID bankID;
     if (AK::SoundEngine::LoadBank("Init.bnk", AK_DEFAULT_POOL_ID, bankID) != AK_Success)
     {
-	//SetLoadFileErrorMessage("Init.bnk");
 	LOGAK("<Wwise::Init> Cannot load Init.bnk! error");
-    __AK_OSCHAR_SNPRINTF(in_szErrorBuffer, in_unErrorBufferCharCount, AKTEXT("AK: in_soundBankPath: %s"), in_soundBankPath);
-    // __AK_OSCHAR_SNPRINTF(in_szErrorBuffer, in_unErrorBufferCharCount, AKTEXT("AK: in_soundBankPath: %s"), "/sdcard/IntegrationDemo/");
 
 #ifdef 	COCOS_INTEGRATION
 	cocos2d::MessageBox("Cannot load Init.bnk!", "Error");
