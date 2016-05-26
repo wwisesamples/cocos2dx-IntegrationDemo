@@ -267,8 +267,36 @@ namespace WWISE {
     bool initialize(void* mgr)
     {
 	Wwise::Instance().GetDefaultSettings(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit);
+
 #ifdef AK_ANDROID
-	Wwise::Instance().GetLowLevelIOHandler()->SetAssetManager((AAssetManager*)mgr);
+    JavaVM* jvm = cocos2d::JniHelper::getJavaVM();
+    if (!jvm)
+    {
+        LOGAK("<Wwise::Init> Failed to get JVM. Aborted.");
+        return false;
+    }
+    m_platformInitSettings.pJavaVM = jvm;
+    // Get activity.
+    JNIEnv* env = cocos2d::JniHelper::getEnv();
+    if (!env)
+    {
+        LOGAK("<Wwise::Init> Failed to get JNIEnv to retrieve Activity. Aborted.");
+        return false;
+    }
+    jclass classID = env->FindClass("org/cocos2dx/cpp/AppActivity");
+    if (!classID)
+    {
+        LOGAK("<Wwise::Init> Failed to find class AppActivity to retrieve Activity. Aborted.");
+        return false;
+    }
+    jmethodID methodID = env->GetStaticMethodID(classID, "getInstance", "()Ljava/lang/Object;");
+    if (!methodID)
+    {
+        LOGAK("<Wwise::Init> Failed to find method getInstance to retrieve Activity. Aborted.");
+        return false;
+    }
+    m_platformInitSettings.jNativeActivity = env->CallStaticObjectMethod(classID, methodID);
+    Wwise::Instance().GetLowLevelIOHandler()->InitAndroidIO(m_platformInitSettings.pJavaVM, m_platformInitSettings.jNativeActivity);
 #endif
 	if (!Wwise::Instance().Init(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit,
 	    (AkOSChar*)MY_SOUND_BANK_PATH, m_strError, sizeof(m_strError))) {
@@ -366,8 +394,8 @@ bool Wwise::Init(   AkMemSettings&          in_memSettings,
     AkBankID bankID;
     if (AK::SoundEngine::LoadBank("Init.bnk", AK_DEFAULT_POOL_ID, bankID) != AK_Success)
     {
-	//SetLoadFileErrorMessage("Init.bnk");
 	LOGAK("<Wwise::Init> Cannot load Init.bnk! error");
+
 #ifdef 	COCOS_INTEGRATION
 	cocos2d::MessageBox("Cannot load Init.bnk!", "Error");
 #endif
