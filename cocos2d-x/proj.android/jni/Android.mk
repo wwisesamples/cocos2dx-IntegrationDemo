@@ -280,7 +280,7 @@ LOCAL_CFLAGS += -DAK_DEBUG -DCOCOS_INTEGRATION
 #LOCAL_WHOLE_STATIC_LIBRARIES += gnustl_static
 #LOCAL_WHOLE_STATIC_LIBRARIES += cocosdenshion_static
 #LOCAL_WHOLE_STATIC_LIBRARIES += box2d_static
-# ’Ç‰Á
+# ???
 #LOCAL_WHOLE_STATIC_LIBRARIES += cocos_extension_static
 #LOCAL_WHOLE_STATIC_LIBRARIES += android_native_app_glue
 
@@ -338,6 +338,5 @@ $(call import-module,.)
 #$(call import-module,3d)
 #$(call import-module,audio/android)
 #$(call import-module,Box2D)
-# ’Ç‰Á
+# ???
 #$(call import-module,extensions)
-
