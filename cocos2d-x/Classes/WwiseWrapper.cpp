@@ -10,6 +10,7 @@
 
 #ifdef AK_IOS
   #include "SoundInput.h"
+  #include "Platform.h"
 #endif // AK_IOS
 #ifndef AK_OPTIMIZED
   #include <AK/Comm/AkCommunication.h> // Communication between Wwise and the game (excluded in release build)
@@ -31,13 +32,14 @@
     }
 #elif WIN32
     #define __AK_OSCHAR_SNPRINTF    	_snwprintf
+    #pragma warning(disable:4996)   // to avoid C4996	'_snwprintf': This function or variable may be unsafe. Consider using _snwprintf_s instead.
     void LOGAK(char *format, ...)
     {
         char buffer[1000];
         
         va_list argptr;
         va_start(argptr, format);
-        vsprintf(buffer, format, argptr);
+        vsprintf_s(buffer, format, argptr);
         va_end(argptr);
         OutputDebugStringA(buffer);
     }
@@ -52,7 +54,7 @@
         OutputDebugString(buffer);
     }
 #elif defined(AK_APPLE) //__APPLE__
-    //#define __AK_OSCHAR_SNPRINTF
+    #define __AK_OSCHAR_SNPRINTF
     //#define  LOGAK                      CCLOG
     //#define  LOGAKW                     CCLOG
 #else
@@ -70,7 +72,6 @@
 #pragma comment( lib, "CommunicationCentral")
 #endif
 #endif
-
 // plugins
 #define AK_PLUGINS
 #include <AK/Plugin/AllPluginsRegistrationHelpers.h>	// Plug-ins
@@ -126,8 +127,8 @@ static const AkUInt32 kLEngineDefaultPoolSize = 1 * 1024 * 1024;
 
 #ifdef AK_WIN
   #ifdef _DEBUG
-    #define MY_SOUND_BANK_PATH L"../../WwiseProject/GeneratedSoundBanks/Windows/"
-  #else
+    #define MY_SOUND_BANK_PATH L"../../WwiseProject/GeneratedSoundBanks/Windows/"  // Please change this path to yours
+#else
     #define MY_SOUND_BANK_PATH L"Wwise/"
   #endif
 #elif defined AK_ANDROID
@@ -264,14 +265,43 @@ namespace {
 }
 
 namespace WWISE {
-    bool initialize(void* mgr)
+    bool initialize(void* mgr, AkOSChar* strBankpath)
     {
 	Wwise::Instance().GetDefaultSettings(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit);
 #ifdef AK_ANDROID
-	Wwise::Instance().GetLowLevelIOHandler()->SetAssetManager((AAssetManager*)mgr);
+	//Wwise::Instance().GetLowLevelIOHandler()->SetAssetManager((AAssetManager*)mgr);
+    JavaVM* jvm = cocos2d::JniHelper::getJavaVM();
+    if (!jvm)
+    {
+        LOGAK("<Wwise::Init> Failed to get JVM. Aborted.");
+        return false;
+    }
+    m_platformInitSettings.pJavaVM = jvm;
+    // Get activity.
+    JNIEnv* env = cocos2d::JniHelper::getEnv();
+    if (!env)
+    {
+        LOGAK("<Wwise::Init> Failed to get JNIEnv to retrieve Activity. Aborted.");
+        return false;
+    }
+    jclass classID = env->FindClass("org/cocos2dx/cpp/AppActivity");
+    if (!classID)
+    {
+        LOGAK("<Wwise::Init> Failed to find class AppActivity to retrieve Activity. Aborted.");
+        return false;
+    }
+    jmethodID methodID = env->GetStaticMethodID(classID, "getInstance", "()Ljava/lang/Object;");
+    if (!methodID)
+    {
+        LOGAK("<Wwise::Init> Failed to find method getInstance to retrieve Activity. Aborted.");
+        return false;
+    }
+    m_platformInitSettings.jNativeActivity = env->CallStaticObjectMethod(classID, methodID);
+    Wwise::Instance().GetLowLevelIOHandler()->InitAndroidIO(m_platformInitSettings.pJavaVM, m_platformInitSettings.jNativeActivity);
 #endif
+	AkOSChar* pstrBankpath = strBankpath ? strBankpath : MY_SOUND_BANK_PATH;
 	if (!Wwise::Instance().Init(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit,
-	    (AkOSChar*)MY_SOUND_BANK_PATH, m_strError, sizeof(m_strError))) {
+	    (AkOSChar*)pstrBankpath, m_strError, sizeof(m_strError))) {
 	    LOGAKW(m_strError);
 	    abort();
 	}
@@ -558,4 +588,5 @@ void Wwise::TermWwise()
     {
 	AK::MemoryMgr::Term();
     }
+
 }
