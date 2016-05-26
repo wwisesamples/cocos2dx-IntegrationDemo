@@ -27,6 +27,19 @@ THE SOFTWARE.
 package org.cocos2dx.cpp;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
+import android.app.Activity;
+import android.os.Bundle;
 
 public class AppActivity extends Cocos2dxActivity {
+
+	private static Object instance;
+
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		instance = this;
+	}
+
+	public static Object getInstance() {
+    	return instance;
+  	}
 }
