@@ -12,8 +12,19 @@ Setting up IntegrationDemo & cocos2d-x for Windows build environment on Windows
    - SDK (Windows, Visual Studio 2015)
 3. Download IntegrationDemo-cocos folder from GitHub
 4. Copy 3. over to <Wwise SDK>\SDK\samples
-   e.g.)  3.  -> c:\Wwise_v2015.1.4_build_5497\SDK\samples\
-                 -> c:\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo-cocos
+   e.g.) c:\Wwise_v2015.1.4_build_5497\SDK\samples\
+   * Folder structure
+     <Wwise SDK>\SDK\samples\IntegrationDemo
+		Android			-- New
+		Common			-- Original
+		DemoPages		-- Original
+		cocos2d-x		-- New
+		iOS				-- New
+		Mac				-- New
+		MenuSystem		-- Original
+		Windows			-- Original (Replace 1 file)
+		WwiseProject	-- Original
+    
 5. Build 
    1) Launch Visual Studio 2015
    2) Open solution file (<Wwise SDK>\SDK\samples\IntegrationDemo\cocos2d-x\proj.win32\IntegrationDemo-cocos2d-x.sln)
