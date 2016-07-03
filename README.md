@@ -1,11 +1,12 @@
 # Wwise and cocos2d-x IntegrationDemo
 This is a simple demo project that integrated Wwise in cocos2d-x platform. The Integration Demo application contains a series of demonstrations that show how to integrate various features of the sound engine in your game.
 
-## Beta version released on Jan 8, 2016
+
+## Updated on July 2nd, 2016
 Project has created & tested with
-- Wwise 2015.1.4 Build 5497 
+- Wwise 2016.1.0.5775 
   https://www.audiokinetic.com/download/
-- cocos2d-x 3.8.1
+- cocos2d-x 3.11.1
   http://www.cocos2d-x.org/download
   
 ## Building and Running the Demo
@@ -17,23 +18,29 @@ Generate the Integration Demo SoundBanks for Windows in their default paths.
 Open the solution found in "samples\IntegrationDemo\Windows" and build using the desired configuration. 
 To run the Integration Demo, simply launch the executable found in the directory mentioned above.
 
+Follow the instructions in "Readme Windows.txt" to build and run the sample for Windows.
+
 ### Mac
 Confirm that the version of XCode installed on your machine matches the one mentioned in Platform Requirements . 
 Open the Xcode project found in "samples\IntegrationDemo\Mac" and build using the desired configuration. 
 To run the Integration Demo, simply launch the executable found in the directory "Mac\[Debug|Profile|Release]\bin". Note.gif  Note: The banks are not included in the installer and have to be generated using the authoring tool.  
 
+Follow the instructions in "Readme iOS-Mac.txt" to build and run the sample for Mac.
+
 ### iOS
 Confirm that the version of the iOS/tvOS SDK installed on your machine matches the one mentioned in Platform Requirements . 
-Open the Xcode project found in "samples\IntegrationDemo\iOS" or "samples\IntegrationDemo\tvOS" and build using the desired configuration. Note.gif  Note: The banks are not included in the installer and have to be generated using the authoring tool.  
+Open the Xcode project found in "samples\IntegrationDemo\iOS" or "samples\IntegrationDemo\tvOS" and build using the desired configuration. Note.gif  Note: The banks are not included in the installer and have to be generated using the authoring tool.
+
+Follow the instructions in "Readme iOS-Mac.txt" to build and run the sample for iOS. 
 
 ### Android
 Confirm the versions of SDK and tools for Android on your machine matches the one mentioned in Platform Requirements. 
 Open the Wwise project in "samples\IntegrationDemo\WwiseProject" and generate the SoundBanks for Android in their default paths. 
-Normally, banks should be packaged inside of your apk executable file. However, for simplicity sake, the banks are not packaged inside the IntegrationDemo apk. You will need to copy the android banks to the folder /sdcard/IntegrationDemo on your android device. If you don't have a SD card you can modify the path found in the file SDK/samples/IntegrationDemo/Android/platform.h to suit your needs. 
-Load the eclipse project into your Eclipse workspace ( File > Import > Existing Project) 
-Select "SDK/samples/IntegrationDemo/Android" as the root to the project 
-Right-click on the integration demo project and select "Run as Android Application". 
-Note.gif  Note: You will need to use the software keyboard or hardware keyboard to interact with the integration demo. The software keyboard can be opened by holding the menu button for 2 seconds.  
+Normally, banks should be packaged inside of your apk executable file.  
+
+Follow the instructions in "Readme Android.txt" to build and run the sample for Android. 
+
+Note: You will need to use the software keyboard or hardware keyboard to interact with the integration demo. The software keyboard can be opened by holding the menu button for 2 seconds.  
 
 ## Usage Instructions
 You can navigate through the Integration Demo on Windows using either the keyboard, a connected controller or any DirectInput compatible device.
