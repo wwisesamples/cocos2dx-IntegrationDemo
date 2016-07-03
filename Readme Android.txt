@@ -45,8 +45,9 @@ Setting up IntegrationDemo & cocos2d-x for Android build environment on Windows
 	* Make sure no space contain in the installation path
 	e.g.) c:\Audiokinetic\Wwise_v2015.1.4_build_5497
 	
-  3.2 Copy IntegrationDemo-cocos project over to Wwise SDK
-     -> c:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples
+  3.2 Merge this project with official Wwise SDK IntegrationDemo.
+     -> c:\Audiokinetic\Wwise_v2015.1.4_build_5497\SDK\samples\IntegrationDemo
+     Copy the cocos2d-x subfolder into the above folder. When files are in conflict, merge this folder's content into the files of the official build.
 
 4. Build and run IntegrationDemo with cocos2d-x
  4.1 Go to command prompt in where IntegrationDemo-cocos android poject
