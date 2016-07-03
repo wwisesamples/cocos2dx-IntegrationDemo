@@ -304,12 +304,20 @@ void ScenePositioning::UpdateGameObjPos(float x, float y)
     if (m_sprite) m_sprite->setPosition(ccp(x, y));
 
     // Set 3D position
+    AkVector position;
+    m_fGameObjectX = position.X = ((x / m_fWidth) - 0.5f) * 200.0f;
+    m_fGameObjectZ = position.Z = -((y / m_fHeight) - 0.5f) * 200.0f;
+    position.Y = 0;
+                         
+    AkVector orientationFront;
+    orientationFront.Z = 1;
+    orientationFront.Y = orientationFront.X = 0;
+    AkVector orientationTop;
+    orientationTop.X = orientationTop.Z = 0;
+    orientationTop.Y = 1; 
+
     AkSoundPosition soundPos;
-    m_fGameObjectX = soundPos.Position.X = ((x / m_fWidth) - 0.5f) * 200.0f;
-    soundPos.Position.Y = 0;
-    m_fGameObjectZ = soundPos.Position.Z = -((y / m_fHeight) - 0.5f) * 200.0f;;
-    soundPos.Orientation.Z = 1;
-    soundPos.Orientation.Y = soundPos.Orientation.X = 0;
+    soundPos.Set(position, orientationFront, orientationTop);
     AK::SoundEngine::SetPosition(GAME_OBJECT_POSTEST, soundPos);
 
     m_LastX = x;

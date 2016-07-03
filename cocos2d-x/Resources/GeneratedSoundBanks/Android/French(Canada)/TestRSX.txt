@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	330151568	Play_Hello_RSX			\Default Work Unit\Play_Hello_RSX	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	306982885	Hello_RSX	D:\Audiokinetic\Wwise_SDK_ForAndroid\samples\IntegrationDemo\WwiseProject\.cache\Android\Voices\French(Canada)\Hello_E1E65BF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hello_RSX		54712
+	306982885	Hello_RSX	C:\Audiokinetic\Wwise_2016.1.0.5775\SDK\samples\IntegrationDemo\WwiseProject\.cache\Android\Voices\French(Canada)\Hello_E1E65BF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Hello_RSX		54712
 

@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="10" SoundbankVersion="113">
+<SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="11" SoundbankVersion="118">
 	<RootPaths>
-		<ProjectRoot>D:\Audiokinetic\Wwise_SDK_ForAndroid\samples\IntegrationDemo\WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Audiokinetic\Wwise_SDK_ForAndroid\samples\IntegrationDemo\WwiseProject\.cache\Android\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Audiokinetic\Wwise_SDK_ForAndroid\samples\IntegrationDemo\Android\assets\GeneratedSoundBanks\Android\</SoundBanksRoot>
-		<ExternalSourcesInputFile>D:\Audiokinetic\Wwise_SDK_ForAndroid\samples\IntegrationDemo\WwiseProject\myExternalSources\ExtSourceList.wsources</ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Audiokinetic\Wwise_SDK_ForAndroid\samples\IntegrationDemo\WwiseProject\.cache\ExternalSources\Android</ExternalSourcesOutputRoot>
+		<ProjectRoot>C:\Audiokinetic\Wwise_2016.1.0.5775\SDK\samples\IntegrationDemo\WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Audiokinetic\Wwise_2016.1.0.5775\SDK\samples\IntegrationDemo\WwiseProject\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Audiokinetic\Wwise_2016.1.0.5775\SDK\samples\IntegrationDemo\Android\assets\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ExternalSourcesInputFile>C:\Audiokinetic\Wwise_2016.1.0.5775\SDK\samples\IntegrationDemo\WwiseProject\myExternalSources\ExtSourceList.wsources</ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Audiokinetic\Wwise_2016.1.0.5775\SDK\samples\IntegrationDemo\WwiseProject\.cache\ExternalSources\Android</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents>
-		<DialogueEvent Id="3970659059" Name="Objective_Status">
-			<Argument Id="1304109583" Name="Unit"/>
-			<Argument Id="6899006" Name="Objective"/>
-			<Argument Id="3299963692" Name="ObjectiveStatus"/>
+		<DialogueEvent Id="3970659059" Name="Objective_Status" ObjectPath="\Dynamic Dialogue\Dialogue\Objective_Status">
+			<Argument Id="1304109583" Name="Unit" ObjectPath="\States\Dialogue\Unit"/>
+			<Argument Id="6899006" Name="Objective" ObjectPath="\States\Dialogue\Objective"/>
+			<Argument Id="3299963692" Name="ObjectiveStatus" ObjectPath="\States\Dialogue\ObjectiveStatus"/>
 		</DialogueEvent>
-		<DialogueEvent Id="3585983975" Name="Unit_Under_Attack">
-			<Argument Id="1304109583" Name="Unit"/>
-			<Argument Id="3712907969" Name="Hostile"/>
-			<Argument Id="1176052424" Name="Location"/>
+		<DialogueEvent Id="3585983975" Name="Unit_Under_Attack" ObjectPath="\Dynamic Dialogue\Dialogue\Unit_Under_Attack">
+			<Argument Id="1304109583" Name="Unit" ObjectPath="\States\Dialogue\Unit"/>
+			<Argument Id="3712907969" Name="Hostile" ObjectPath="\States\Dialogue\Hostile"/>
+			<Argument Id="1176052424" Name="Location" ObjectPath="\States\Dialogue\Location"/>
 		</DialogueEvent>
-		<DialogueEvent Id="4110439188" Name="WalkieTalkie">
-			<Argument Id="4110439188" Name="WalkieTalkie"/>
+		<DialogueEvent Id="4110439188" Name="WalkieTalkie" ObjectPath="\Dynamic Dialogue\Dialogue\WalkieTalkie">
+			<Argument Id="4110439188" Name="WalkieTalkie" ObjectPath="\States\Dialogue\WalkieTalkie"/>
 		</DialogueEvent>
 	</DialogueEvents>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
 		<SoundBank Id="412724365" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\BGM</ObjectPath>
 			<ShortName>BGM</ShortName>
 			<Path>BGM.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3873244457" Name="Play_NonRecordableMusic"/>
-				<Event Id="2567011622" Name="Play_RecordableMusic"/>
+				<Event Id="3873244457" Name="Play_NonRecordableMusic" ObjectPath="\Events\Default Work Unit\Play_NonRecordableMusic"/>
+				<Event Id="2567011622" Name="Play_RecordableMusic" ObjectPath="\Events\Default Work Unit\Play_RecordableMusic"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="663670250" Language="SFX">
@@ -44,36 +45,39 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="418215934" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Positioning_Demo</ObjectPath>
 			<ShortName>Positioning_Demo</ShortName>
 			<Path>Positioning_Demo.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3493516265" Name="Pause_All_Global"/>
-				<Event Id="1237313597" Name="Play_Positioning_Demo"/>
-				<Event Id="1327221850" Name="Resume_All_Global"/>
+				<Event Id="3493516265" Name="Pause_All_Global" ObjectPath="\Events\Default Work Unit\Pause_All_Global"/>
+				<Event Id="1237313597" Name="Play_Positioning_Demo" ObjectPath="\Events\Default Work Unit\Play_Positioning_Demo"/>
+				<Event Id="1327221850" Name="Resume_All_Global" ObjectPath="\Events\Default Work Unit\Resume_All_Global"/>
 			</IncludedEvents>
 		</SoundBank>
 		<SoundBank Id="480966290" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\ExternalSources</ObjectPath>
 			<ShortName>ExternalSources</ShortName>
 			<Path>ExternalSources.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3493516265" Name="Pause_All_Global"/>
-				<Event Id="4142087708" Name="Play_Three_Numbers_in_a_Row"/>
-				<Event Id="1327221850" Name="Resume_All_Global"/>
+				<Event Id="3493516265" Name="Pause_All_Global" ObjectPath="\Events\Default Work Unit\Pause_All_Global"/>
+				<Event Id="4142087708" Name="Play_Three_Numbers_in_a_Row" ObjectPath="\Events\External Sources\Play_Three_Numbers_in_a_Row"/>
+				<Event Id="1327221850" Name="Resume_All_Global" ObjectPath="\Events\Default Work Unit\Resume_All_Global"/>
 			</IncludedEvents>
 			<ExternalSources>
-				<Source Id="4004957102" Name="Extern_1st_number"/>
-				<Source Id="293435250" Name="Extern_2nd_number"/>
-				<Source Id="978954801" Name="Extern_3rd_number"/>
+				<Source Id="4004957102" Name="Extern_1st_number" ObjectPath="\Actor-Mixer Hierarchy\External Sources\Three Numbers in a Row\1st Number\Extern_1st_number"/>
+				<Source Id="293435250" Name="Extern_2nd_number" ObjectPath="\Actor-Mixer Hierarchy\External Sources\Three Numbers in a Row\2nd Number\Extern_2nd_number"/>
+				<Source Id="978954801" Name="Extern_3rd_number" ObjectPath="\Actor-Mixer Hierarchy\External Sources\Three Numbers in a Row\3rd Number\Extern_3rd_number"/>
 			</ExternalSources>
 		</SoundBank>
 		<SoundBank Id="983016381" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Car</ObjectPath>
 			<ShortName>Car</ShortName>
 			<Path>Car.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3493516265" Name="Pause_All_Global"/>
-				<Event Id="639345804" Name="Play_Engine"/>
-				<Event Id="1327221850" Name="Resume_All_Global"/>
-				<Event Id="37214798" Name="Stop_Engine"/>
+				<Event Id="3493516265" Name="Pause_All_Global" ObjectPath="\Events\Default Work Unit\Pause_All_Global"/>
+				<Event Id="639345804" Name="Play_Engine" ObjectPath="\Events\Default Work Unit\Play_Engine"/>
+				<Event Id="1327221850" Name="Resume_All_Global" ObjectPath="\Events\Default Work Unit\Resume_All_Global"/>
+				<Event Id="37214798" Name="Stop_Engine" ObjectPath="\Events\Default Work Unit\Stop_Engine"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="77544352" Language="SFX">
@@ -91,19 +95,20 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="1028808198" Language="English(US)">
+			<ObjectPath>\SoundBanks\Default Work Unit\DynamicDialogue</ObjectPath>
 			<ShortName>DynamicDialogue</ShortName>
 			<Path>English(US)\DynamicDialogue.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3864097025" Name="Pause_All"/>
-				<Event Id="3493516265" Name="Pause_All_Global"/>
-				<Event Id="3679762312" Name="Resume_All"/>
-				<Event Id="1327221850" Name="Resume_All_Global"/>
-				<Event Id="452547817" Name="Stop_All"/>
+				<Event Id="3864097025" Name="Pause_All" ObjectPath="\Events\Default Work Unit\Pause_All"/>
+				<Event Id="3493516265" Name="Pause_All_Global" ObjectPath="\Events\Default Work Unit\Pause_All_Global"/>
+				<Event Id="3679762312" Name="Resume_All" ObjectPath="\Events\Default Work Unit\Resume_All"/>
+				<Event Id="1327221850" Name="Resume_All_Global" ObjectPath="\Events\Default Work Unit\Resume_All_Global"/>
+				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\Default Work Unit\Stop_All"/>
 			</IncludedEvents>
 			<IncludedDialogueEvents>
-				<DialogueEvent Id="3970659059" Name="Objective_Status"/>
-				<DialogueEvent Id="3585983975" Name="Unit_Under_Attack"/>
-				<DialogueEvent Id="4110439188" Name="WalkieTalkie"/>
+				<DialogueEvent Id="3970659059" Name="Objective_Status" ObjectPath="\Dynamic Dialogue\Dialogue\Objective_Status"/>
+				<DialogueEvent Id="3585983975" Name="Unit_Under_Attack" ObjectPath="\Dynamic Dialogue\Dialogue\Unit_Under_Attack"/>
+				<DialogueEvent Id="4110439188" Name="WalkieTalkie" ObjectPath="\Dynamic Dialogue\Dialogue\WalkieTalkie"/>
 			</IncludedDialogueEvents>
 			<IncludedMemoryFiles>
 				<File Id="28779853" Language="English(US)">
@@ -385,19 +390,20 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="1028808198" Language="French(Canada)">
+			<ObjectPath>\SoundBanks\Default Work Unit\DynamicDialogue</ObjectPath>
 			<ShortName>DynamicDialogue</ShortName>
 			<Path>French(Canada)\DynamicDialogue.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3864097025" Name="Pause_All"/>
-				<Event Id="3493516265" Name="Pause_All_Global"/>
-				<Event Id="3679762312" Name="Resume_All"/>
-				<Event Id="1327221850" Name="Resume_All_Global"/>
-				<Event Id="452547817" Name="Stop_All"/>
+				<Event Id="3864097025" Name="Pause_All" ObjectPath="\Events\Default Work Unit\Pause_All"/>
+				<Event Id="3493516265" Name="Pause_All_Global" ObjectPath="\Events\Default Work Unit\Pause_All_Global"/>
+				<Event Id="3679762312" Name="Resume_All" ObjectPath="\Events\Default Work Unit\Resume_All"/>
+				<Event Id="1327221850" Name="Resume_All_Global" ObjectPath="\Events\Default Work Unit\Resume_All_Global"/>
+				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\Default Work Unit\Stop_All"/>
 			</IncludedEvents>
 			<IncludedDialogueEvents>
-				<DialogueEvent Id="3970659059" Name="Objective_Status"/>
-				<DialogueEvent Id="3585983975" Name="Unit_Under_Attack"/>
-				<DialogueEvent Id="4110439188" Name="WalkieTalkie"/>
+				<DialogueEvent Id="3970659059" Name="Objective_Status" ObjectPath="\Dynamic Dialogue\Dialogue\Objective_Status"/>
+				<DialogueEvent Id="3585983975" Name="Unit_Under_Attack" ObjectPath="\Dynamic Dialogue\Dialogue\Unit_Under_Attack"/>
+				<DialogueEvent Id="4110439188" Name="WalkieTalkie" ObjectPath="\Dynamic Dialogue\Dialogue\WalkieTalkie"/>
 			</IncludedDialogueEvents>
 			<IncludedMemoryFiles>
 				<File Id="28779853" Language="French(Canada)" UsingReferenceLanguageAsStandIn="true">
@@ -679,14 +685,16 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="1868882208" Language="English(US)">
+			<ObjectPath>\SoundBanks\Default Work Unit\TestRSX</ObjectPath>
 			<ShortName>TestRSX</ShortName>
 			<Path>English(US)\TestRSX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="330151568" Name="Play_Hello_RSX"/>
+				<Event Id="330151568" Name="Play_Hello_RSX" ObjectPath="\Events\Default Work Unit\Play_Hello_RSX"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="399670944" Language="English(US)">
@@ -696,10 +704,11 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="1868882208" Language="French(Canada)">
+			<ObjectPath>\SoundBanks\Default Work Unit\TestRSX</ObjectPath>
 			<ShortName>TestRSX</ShortName>
 			<Path>French(Canada)\TestRSX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="330151568" Name="Play_Hello_RSX"/>
+				<Event Id="330151568" Name="Play_Hello_RSX" ObjectPath="\Events\Default Work Unit\Play_Hello_RSX"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="306982885" Language="French(Canada)">
@@ -709,12 +718,13 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="2012559111" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Motion</ObjectPath>
 			<ShortName>Motion</ShortName>
 			<Path>Motion.bnk</Path>
 			<IncludedEvents>
-				<Event Id="679837841" Name="DoorSliding"/>
-				<Event Id="2975448509" Name="GunFire"/>
-				<Event Id="452547817" Name="Stop_All"/>
+				<Event Id="679837841" Name="DoorSliding" ObjectPath="\Events\Motion\DoorSliding"/>
+				<Event Id="2975448509" Name="GunFire" ObjectPath="\Events\Motion\GunFire"/>
+				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\Default Work Unit\Stop_All"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="102876030" Language="SFX">
@@ -728,10 +738,11 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="2058049674" Language="SFX">
+			<ObjectPath>\SoundBanks\Surface Related Banks\Wood</ObjectPath>
 			<ShortName>Wood</ShortName>
 			<Path>Wood.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3854155799" Name="Play_Footsteps"/>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="409943" Language="SFX">
@@ -757,10 +768,11 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="2185786256" Language="SFX">
+			<ObjectPath>\SoundBanks\Surface Related Banks\Gravel</ObjectPath>
 			<ShortName>Gravel</ShortName>
 			<Path>Gravel.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3854155799" Name="Play_Footsteps"/>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="407913791" Language="SFX">
@@ -778,10 +790,11 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="2195636714" Language="SFX">
+			<ObjectPath>\SoundBanks\Surface Related Banks\Dirt</ObjectPath>
 			<ShortName>Dirt</ShortName>
 			<Path>Dirt.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3854155799" Name="Play_Footsteps"/>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="180276440" Language="SFX">
@@ -803,21 +816,22 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="2279279248" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\InteractiveMusic</ObjectPath>
 			<ShortName>InteractiveMusic</ShortName>
 			<Path>InteractiveMusic.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2221704914" Name="IM_1_One_enemy_wants_to_fight"/>
-				<Event Id="3753105098" Name="IM_2_Two_enemies_want_to_fight"/>
-				<Event Id="1350929071" Name="IM_3_Surronded_by_enemies"/>
-				<Event Id="3175089270" Name="IM_4_Death_is_coming"/>
-				<Event Id="2160840676" Name="IM_Communication_Begin"/>
-				<Event Id="3280047539" Name="IM_Explore"/>
-				<Event Id="3455955770" Name="IM_GameOver"/>
-				<Event Id="3952084898" Name="IM_Start"/>
-				<Event Id="2841817544" Name="IM_TheyAreHostile"/>
-				<Event Id="1133905385" Name="IM_WinTheFight"/>
-				<Event Id="3493516265" Name="Pause_All_Global"/>
-				<Event Id="1327221850" Name="Resume_All_Global"/>
+				<Event Id="2221704914" Name="IM_1_One_enemy_wants_to_fight" ObjectPath="\Events\InteractiveMusic\Battle\IM_1_One_enemy_wants_to_fight"/>
+				<Event Id="3753105098" Name="IM_2_Two_enemies_want_to_fight" ObjectPath="\Events\InteractiveMusic\Battle\IM_2_Two_enemies_want_to_fight"/>
+				<Event Id="1350929071" Name="IM_3_Surronded_by_enemies" ObjectPath="\Events\InteractiveMusic\Battle\IM_3_Surronded_by_enemies"/>
+				<Event Id="3175089270" Name="IM_4_Death_is_coming" ObjectPath="\Events\InteractiveMusic\Battle\IM_4_Death_is_coming"/>
+				<Event Id="2160840676" Name="IM_Communication_Begin" ObjectPath="\Events\InteractiveMusic\LookingForOtherSpecies\IM_Communication_Begin"/>
+				<Event Id="3280047539" Name="IM_Explore" ObjectPath="\Events\InteractiveMusic\LookingForOtherSpecies\IM_Explore"/>
+				<Event Id="3455955770" Name="IM_GameOver" ObjectPath="\Events\InteractiveMusic\IM_GameOver"/>
+				<Event Id="3952084898" Name="IM_Start" ObjectPath="\Events\InteractiveMusic\IM_Start"/>
+				<Event Id="2841817544" Name="IM_TheyAreHostile" ObjectPath="\Events\InteractiveMusic\Battle\IM_TheyAreHostile"/>
+				<Event Id="1133905385" Name="IM_WinTheFight" ObjectPath="\Events\InteractiveMusic\IM_WinTheFight"/>
+				<Event Id="3493516265" Name="Pause_All_Global" ObjectPath="\Events\Default Work Unit\Pause_All_Global"/>
+				<Event Id="1327221850" Name="Resume_All_Global" ObjectPath="\Events\Default Work Unit\Resume_All_Global"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="1099684" Language="SFX">
@@ -895,12 +909,13 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="2309453583" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\MarkerTest</ObjectPath>
 			<ShortName>MarkerTest</ShortName>
 			<Path>MarkerTest.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3493516265" Name="Pause_All_Global"/>
-				<Event Id="3368417626" Name="Play_Markers_Test"/>
-				<Event Id="1327221850" Name="Resume_All_Global"/>
+				<Event Id="3493516265" Name="Pause_All_Global" ObjectPath="\Events\Default Work Unit\Pause_All_Global"/>
+				<Event Id="3368417626" Name="Play_Markers_Test" ObjectPath="\Events\Default Work Unit\Play_Markers_Test"/>
+				<Event Id="1327221850" Name="Resume_All_Global" ObjectPath="\Events\Default Work Unit\Resume_All_Global"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="544694784" Language="SFX">
@@ -910,10 +925,11 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="2473969246" Language="SFX">
+			<ObjectPath>\SoundBanks\Surface Related Banks\Metal</ObjectPath>
 			<ShortName>Metal</ShortName>
 			<Path>Metal.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3854155799" Name="Play_Footsteps"/>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="121114457" Language="SFX">
@@ -959,22 +975,32 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="2872041301" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Microphone</ObjectPath>
 			<ShortName>Microphone</ShortName>
 			<Path>Microphone.bnk</Path>
 			<IncludedEvents>
-				<Event Id="6251382" Name="Disable_Microphone_Delay"/>
-				<Event Id="3533161767" Name="Enable_Microphone_Delay"/>
-				<Event Id="1324678662" Name="Play_Microphone"/>
-				<Event Id="3629954576" Name="Stop_Microphone"/>
+				<Event Id="6251382" Name="Disable_Microphone_Delay" ObjectPath="\Events\Default Work Unit\Disable_Microphone_Delay"/>
+				<Event Id="3533161767" Name="Enable_Microphone_Delay" ObjectPath="\Events\Default Work Unit\Enable_Microphone_Delay"/>
+				<Event Id="1324678662" Name="Play_Microphone" ObjectPath="\Events\Default Work Unit\Play_Microphone"/>
+				<Event Id="3629954576" Name="Stop_Microphone" ObjectPath="\Events\Default Work Unit\Stop_Microphone"/>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="3537469747" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Metronome</ObjectPath>
+			<ShortName>Metronome</ShortName>
+			<Path>Metronome.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2710399919" Name="Metronome_PostMIDI" ObjectPath="\Events\MIDI\Metronome_PostMIDI"/>
 			</IncludedEvents>
 		</SoundBank>
 		<SoundBank Id="3887404748" Language="English(US)">
+			<ObjectPath>\SoundBanks\Default Work Unit\Human</ObjectPath>
 			<ShortName>Human</ShortName>
 			<Path>English(US)\Human.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3493516265" Name="Pause_All_Global"/>
-				<Event Id="2952797154" Name="Play_Hello"/>
-				<Event Id="1327221850" Name="Resume_All_Global"/>
+				<Event Id="3493516265" Name="Pause_All_Global" ObjectPath="\Events\Default Work Unit\Pause_All_Global"/>
+				<Event Id="2952797154" Name="Play_Hello" ObjectPath="\Events\Default Work Unit\Play_Hello"/>
+				<Event Id="1327221850" Name="Resume_All_Global" ObjectPath="\Events\Default Work Unit\Resume_All_Global"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="399670944" Language="English(US)">
@@ -984,12 +1010,13 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="3887404748" Language="French(Canada)">
+			<ObjectPath>\SoundBanks\Default Work Unit\Human</ObjectPath>
 			<ShortName>Human</ShortName>
 			<Path>French(Canada)\Human.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3493516265" Name="Pause_All_Global"/>
-				<Event Id="2952797154" Name="Play_Hello"/>
-				<Event Id="1327221850" Name="Resume_All_Global"/>
+				<Event Id="3493516265" Name="Pause_All_Global" ObjectPath="\Events\Default Work Unit\Pause_All_Global"/>
+				<Event Id="2952797154" Name="Play_Hello" ObjectPath="\Events\Default Work Unit\Play_Hello"/>
+				<Event Id="1327221850" Name="Resume_All_Global" ObjectPath="\Events\Default Work Unit\Resume_All_Global"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="306982885" Language="French(Canada)">
@@ -999,14 +1026,15 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="4146461094" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\MusicCallbacks</ObjectPath>
 			<ShortName>MusicCallbacks</ShortName>
 			<Path>MusicCallbacks.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3493516265" Name="Pause_All_Global"/>
-				<Event Id="519773714" Name="PlayMusicDemo1"/>
-				<Event Id="519773713" Name="PlayMusicDemo2"/>
-				<Event Id="519773712" Name="PlayMusicDemo3"/>
-				<Event Id="1327221850" Name="Resume_All_Global"/>
+				<Event Id="3493516265" Name="Pause_All_Global" ObjectPath="\Events\Default Work Unit\Pause_All_Global"/>
+				<Event Id="519773714" Name="PlayMusicDemo1" ObjectPath="\Events\MusicCallbacks\PlayMusicDemo1"/>
+				<Event Id="519773713" Name="PlayMusicDemo2" ObjectPath="\Events\MusicCallbacks\PlayMusicDemo2"/>
+				<Event Id="519773712" Name="PlayMusicDemo3" ObjectPath="\Events\MusicCallbacks\PlayMusicDemo3"/>
+				<Event Id="1327221850" Name="Resume_All_Global" ObjectPath="\Events\Default Work Unit\Resume_All_Global"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="329559453" Language="SFX">

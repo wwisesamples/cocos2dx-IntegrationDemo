@@ -1,0 +1,9 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2710399919	Metronome_PostMIDI			\MIDI\Metronome_PostMIDI	
+
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	520778666	Modulator Envelope (Custom)				
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	301562456	Wwise Synth One	Wwise Synth One		\Actor-Mixer Hierarchy\MIDI\Metronome\Wwise Synth One	
+

@@ -68,6 +68,11 @@ LOCAL_SRC_FILES 		:= $(SDK_LIB_DIR)/libAkMeterFX.a
 include $(PREBUILT_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE            := AkRecorderFX
+LOCAL_SRC_FILES 		:= $(SDK_LIB_DIR)/libAkRecorderFX.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE            := AkPeakLimiterFX
 LOCAL_SRC_FILES 		:= $(SDK_LIB_DIR)/libAkPeakLimiterFX.a
 include $(PREBUILT_STATIC_LIBRARY)
@@ -241,6 +246,7 @@ LOCAL_C_INCLUDES += ${WWISESDK}/samples/IntegrationDemo/cocos2d-x/cocos2d/extens
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/IntegrationDemo/cocos2d-x/cocos2d/external/chipmunk/include/chipmunk
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Android/libzip/lib
 
+
 LOCAL_SRC_FILES := hellocpp/main.cpp  \
                    ../../Classes/AppDelegate.cpp \
                    ../../Classes/WwiseWrapper.cpp \
@@ -308,6 +314,7 @@ AkHarmonizerFX \
 AkMatrixReverbFX \
 AkMemoryMgr \
 AkMeterFX \
+AkRecorderFX \
 AkParametricEQFX \
 AkPeakLimiterFX \
 AkPitchShifterFX \

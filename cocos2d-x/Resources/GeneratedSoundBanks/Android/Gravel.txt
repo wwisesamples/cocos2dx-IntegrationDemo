@@ -18,7 +18,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	1659519038	GravelEQ	Wwise Parametric EQ			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	407913791	AK_FS_Run_Gravel_03	D:\Audiokinetic\Wwise_SDK_ForAndroid\samples\IntegrationDemo\WwiseProject\.cache\Android\SFX\footsteps\Gravel\AK_FS_Run_Gravel_03_990DD2F7.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Gravel_Any\AK_FS_Run_Gravel_03		5068
-	461944601	AK_FS_Run_Gravel_02	D:\Audiokinetic\Wwise_SDK_ForAndroid\samples\IntegrationDemo\WwiseProject\.cache\Android\SFX\footsteps\Gravel\AK_FS_Run_Gravel_02_990DD2F7.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Gravel_Any\AK_FS_Run_Gravel_02		5284
-	996471891	AK_FS_Run_Gravel_01	D:\Audiokinetic\Wwise_SDK_ForAndroid\samples\IntegrationDemo\WwiseProject\.cache\Android\SFX\footsteps\Gravel\AK_FS_Run_Gravel_01_990DD2F7.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Gravel_Any\AK_FS_Run_Gravel_01		5104
+	407913791	AK_FS_Run_Gravel_03	C:\Audiokinetic\Wwise_2016.1.0.5775\SDK\samples\IntegrationDemo\WwiseProject\.cache\Android\SFX\footsteps\Gravel\AK_FS_Run_Gravel_03_990DD2F7.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Gravel_Any\AK_FS_Run_Gravel_03		5068
+	461944601	AK_FS_Run_Gravel_02	C:\Audiokinetic\Wwise_2016.1.0.5775\SDK\samples\IntegrationDemo\WwiseProject\.cache\Android\SFX\footsteps\Gravel\AK_FS_Run_Gravel_02_990DD2F7.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Gravel_Any\AK_FS_Run_Gravel_02		5284
+	996471891	AK_FS_Run_Gravel_01	C:\Audiokinetic\Wwise_2016.1.0.5775\SDK\samples\IntegrationDemo\WwiseProject\.cache\Android\SFX\footsteps\Gravel\AK_FS_Run_Gravel_01_990DD2F7.wem		\Actor-Mixer Hierarchy\Footsteps With Multiple Variables\Footsteps\Gravel_Any\AK_FS_Run_Gravel_01		5104
 
