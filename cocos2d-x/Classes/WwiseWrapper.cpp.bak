@@ -1,13 +1,18 @@
-#include "cocos2d.h"
+#ifdef 	COCOS_INTEGRATION
+  #include "cocos2d.h"
+#else
+  #include <stdio.h>  // vsprintf...
+#endif // COCOS_INTEGRATION
+
 #include "WwiseWrapper.h"
 #include <AK/SoundEngine/Common/AkTypes.h>
-#include "Platform.h"
 #include <wchar.h>
+
 #ifdef AK_IOS
   #include "SoundInput.h"
-#endif
+#endif // AK_IOS
 #ifndef AK_OPTIMIZED
-  #include <AK/Comm/AkCommunication.h>
+  #include <AK/Comm/AkCommunication.h> // Communication between Wwise and the game (excluded in release build)
 #endif // AK_OPTIMIZED
 #ifdef AK_MOTION
   #include <AK/MotionEngine/Common/AkMotionEngine.h>	// Motion Engine (required only for playback of Motion objects)
@@ -112,7 +117,7 @@
 #pragma comment( lib, "AkHarmonizerFX.lib")
 #pragma comment( lib, "AkTimeStretchFX.lib")
 #pragma comment( lib, "AkExpanderFX.lib")
-#pragma comment( lib, "Msacm32.lib")
+#pragma comment( lib, "Msacm32.lib") // Microsoft ACM Library
 #endif
 
 static const AkUInt32 kMaxNumPools = 20;
@@ -262,8 +267,36 @@ namespace WWISE {
     bool initialize(void* mgr)
     {
 	Wwise::Instance().GetDefaultSettings(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit);
+
 #ifdef AK_ANDROID
-	Wwise::Instance().GetLowLevelIOHandler()->SetAssetManager((AAssetManager*)mgr);
+    JavaVM* jvm = cocos2d::JniHelper::getJavaVM();
+    if (!jvm)
+    {
+        LOGAK("<Wwise::Init> Failed to get JVM. Aborted.");
+        return false;
+    }
+    m_platformInitSettings.pJavaVM = jvm;
+    // Get activity.
+    JNIEnv* env = cocos2d::JniHelper::getEnv();
+    if (!env)
+    {
+        LOGAK("<Wwise::Init> Failed to get JNIEnv to retrieve Activity. Aborted.");
+        return false;
+    }
+    jclass classID = env->FindClass("org/cocos2dx/cpp/AppActivity");
+    if (!classID)
+    {
+        LOGAK("<Wwise::Init> Failed to find class AppActivity to retrieve Activity. Aborted.");
+        return false;
+    }
+    jmethodID methodID = env->GetStaticMethodID(classID, "getInstance", "()Ljava/lang/Object;");
+    if (!methodID)
+    {
+        LOGAK("<Wwise::Init> Failed to find method getInstance to retrieve Activity. Aborted.");
+        return false;
+    }
+    m_platformInitSettings.jNativeActivity = env->CallStaticObjectMethod(classID, methodID);
+    Wwise::Instance().GetLowLevelIOHandler()->InitAndroidIO(m_platformInitSettings.pJavaVM, m_platformInitSettings.jNativeActivity);
 #endif
 	if (!Wwise::Instance().Init(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit,
 	    (AkOSChar*)MY_SOUND_BANK_PATH, m_strError, sizeof(m_strError))) {
@@ -361,9 +394,11 @@ bool Wwise::Init(   AkMemSettings&          in_memSettings,
     AkBankID bankID;
     if (AK::SoundEngine::LoadBank("Init.bnk", AK_DEFAULT_POOL_ID, bankID) != AK_Success)
     {
-	//SetLoadFileErrorMessage("Init.bnk");
 	LOGAK("<Wwise::Init> Cannot load Init.bnk! error");
+
+#ifdef 	COCOS_INTEGRATION
 	cocos2d::MessageBox("Cannot load Init.bnk!", "Error");
+#endif
 	return false;
     }
 
@@ -488,7 +523,7 @@ bool Wwise::InitWwise(	AkMemSettings&          in_memSettings,
 	return false;
     }
 
-#if defined(NDK_DEBUG) || defined(AK_DEBUG)
+#if defined(NDK_DEBUG) || defined(AK_DEBUG) || defined(_DEBUG)
     //
     // Initialize communications (not in release build!)
     //
@@ -522,7 +557,7 @@ bool Wwise::InitWwise(	AkMemSettings&          in_memSettings,
 void Wwise::TermWwise()
 {
 //#ifndef AK_OPTIMIZED
-#if defined(NDK_DEBUG) || defined(AK_DEBUG)
+#if defined(NDK_DEBUG) || defined(AK_DEBUG) || defined(_DEBUG)
     // Terminate communications between Wwise and the game
     if (GetCommunicationEnabled()) {
 	AK::Comm::Term();

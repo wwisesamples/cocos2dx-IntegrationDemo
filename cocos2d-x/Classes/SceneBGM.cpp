@@ -13,10 +13,11 @@ USING_NS_CC;
 #define GAME_OBJECT_NON_RECORDABLE 20
 
 #if defined AK_PS4 || defined AK_XBOXONE
-#define BGM_OUTPUT_TYPE AkOutput_BGM
-#else
-#define BGM_OUTPUT_TYPE AkOutput_MergeToMain
+#define BGM_OUTPUT_TYPE ((AkAudioOutputType)( AkOutput_BGM ))
+#define BGM_OUTPUT_FLAGS AkAudioOutputFlags_OptionNotRecordable
 #endif
+
+static const AkGameObjectID SECONDARY_LISTENER_ID = 10001;
 
 SceneBGM::SceneBGM()
 : SceneBase("Background Music Demo",
@@ -94,17 +95,22 @@ bool SceneBGM::init()
 	return false;
     }
 
+	AK::SoundEngine::RegisterGameObj(SECONDARY_LISTENER_ID, "Secondary Listener");
+
+
     //Add a secondary output tied to the BGM endpoint of the console.
     //This output will be tied to listener #8 (any can be used, as long as no other output uses it)
+#ifdef BGM_OUTPUT_TYPE
     AK::SoundEngine::AddSecondaryOutput(0 /*Ignored for BGM*/, BGM_OUTPUT_TYPE, 0x80 /*Use the listener #8 (bit mask)*/);
+#endif
 
     // In order to show the difference between a recordable sound and a non-recordable sound, let's set up 2 game objects.
     // Register the "Recordable music object" game object.  
     AK::SoundEngine::RegisterGameObj(GAME_OBJECT_RECORDABLE, "Recordable music");
     // Register the "Non-recordable music object" game object
     AK::SoundEngine::RegisterGameObj(GAME_OBJECT_NON_RECORDABLE, "Non-recordable music");
-    //Make the non-recordable object emit sound only to listener #8.  Nothing to do on the other object as by default everything is output to the main output, and is recordable.
-    AK::SoundEngine::SetActiveListeners(GAME_OBJECT_NON_RECORDABLE, 0x80);
+	//Make the non-recordable object emit sound only to listener SECONDARY_LISTENER_ID.  Nothing to do on the other object as by default everything is output to the main output, and is recordable.
+	AK::SoundEngine::SetListeners(GAME_OBJECT_NON_RECORDABLE, &SECONDARY_LISTENER_ID, 1);
 
     m_bPlayLicensed = false;
     m_bPlayCopyright = false;
@@ -122,7 +128,9 @@ void SceneBGM::onRelease()
     AK::SoundEngine::UnregisterGameObj(GAME_OBJECT_NON_RECORDABLE);
     AK::SoundEngine::UnloadBank("BGM.bnk", NULL);
 
-    AK::SoundEngine::RemoveSecondaryOutput(0 /*Ignored for BGM*/, BGM_OUTPUT_TYPE);
+#ifdef BGM_OUTPUT_TYPE
+	AK::SoundEngine::RemoveSecondaryOutput(0 /*Ignored for BGM*/, BGM_OUTPUT_TYPE);
+#endif
     m_lastMenuIx = 9;
 }
 

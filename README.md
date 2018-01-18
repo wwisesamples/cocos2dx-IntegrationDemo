@@ -2,9 +2,9 @@
 This is a simple demo project that integrated Wwise in cocos2d-x platform. The Integration Demo application contains a series of demonstrations that show how to integrate various features of the sound engine in your game.
 
 
-## Updated on July 2nd, 2016
+## Updated on Janurary 18, 2018
 Project has created & tested with
-- Wwise 2016.1.0.5775 
+- Wwise 2017.1.4.6407 
   https://www.audiokinetic.com/download/
 - cocos2d-x 3.11.1
   http://www.cocos2d-x.org/download
@@ -13,12 +13,38 @@ Project has created & tested with
 The Integration Demo binaries are available in the "$(Platform)\[Debug|Profile|Release]\bin" directory. If you would like to rebuild the application yourself, follow these steps:
 
 ### Windows
-Confirm that the version of the DirectX SDK installed on your machine matches the one mentioned in Platform Requirements . 
-Generate the Integration Demo SoundBanks for Windows in their default paths. 
-Open the solution found in "samples\IntegrationDemo\Windows" and build using the desired configuration. 
+
+Environment Requirements:
+  - Windows 7 or higher 
+  - Visual Studio 2017
+  - [DirectX SDK](https://www.microsoft.com/en-ca/download/details.aspx?id=6812)
+  - Wwise with Wwise SDK
+  - Refer to [Cocos Wiki](http://www.cocos2d-x.org/wiki/Win32_Installation_and_Setup)
+
+Notes on DirectX:
+
+- Install the version of DirectX SDK mentioned in [Platform Requirements](https://www.audiokinetic.com/library/edge/?source=SDK&id=reference__platform.html) of Wwise documentaiton.
+- Restart your Windows Explorer or reboot your machine to ensure the environment variable *DXSDK_DIR* is in effect. The Visual Studio project depends on this variable.
+
+Failure to do the above would generate **errors regarding missing DX-related header**.
+
+Setting up IntegrationDemo & cocos2d-x for Windows build environment on Windows:
+
+- Make sure that you have Wwise SDK installed with the following components
+  - SDK (Windows, Visual Studio 2017)
+- Copy or merge the following folders into `<Wwise Root>\SDK\samples`:
+  - cocos2d-x
+  - Windows
+- Manually modify `<Wwise Root>\SDK\samples\IntegrationDemo\Common\IntegrationDemo.h` with the following change(s):
+  - Commenting out the line `static const AkGameObjectID LISTENER_ID = 10000;`
+- Build the solution under `<Wwise Root>\SDK\samples\IntegrationDemo\cocos2d-x\proj.win32\IntegrationDemo-cocos2d-x.sln` with your Visual Studio.
+- Generate the Integration Demo SoundBanks for Windows in their default paths. 
+
 To run the Integration Demo, simply launch the executable found in the directory mentioned above.
 
-Follow the instructions in "Readme Windows.txt" to build and run the sample for Windows.
+   
+
+
 
 ### Mac
 Confirm that the version of XCode installed on your machine matches the one mentioned in Platform Requirements . 

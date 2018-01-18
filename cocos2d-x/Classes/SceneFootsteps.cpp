@@ -536,28 +536,29 @@ void SceneFootsteps::ManageSurfaces(int x, int y, int in_GameObject)
 
 void SceneFootsteps::ManageEnvironement(int x, int y, int)
 {
-    AkAuxSendValue aHangarEnv;
-    aHangarEnv.auxBusID = AK::SoundEngine::GetIDFromString("Hangar_Env");
-    aHangarEnv.fControlValue = 0.f;
+	AkAuxSendValue aHangarEnv;
+	aHangarEnv.auxBusID = AK::SoundEngine::GetIDFromString("Hangar_Env");
+	aHangarEnv.fControlValue = 0.f;
 
-    //There is a hangar in the middle of the screen with a transition zone around it where 
-    //the walker is still outside but starts to hear the effects of the hangar.
-    int iHalfWidth = m_pParentMenu->GetWidth() / 2;
-    int iHalfHeight = m_pParentMenu->GetHeight() / 2;
-    int iDiffX = abs(x - iHalfWidth);
-    int iDiffY = abs(y - iHalfHeight);
+	//There is a hangar in the middle of the screen with a transition zone around it where 
+	//the walker is still outside but starts to hear the effects of the hangar.
+	int iHalfWidth = m_pParentMenu->GetWidth() / 2;
+	int iHalfHeight = m_pParentMenu->GetHeight() / 2;
+	int iDiffX = abs(x - iHalfWidth);
+	int iDiffY = abs(y - iHalfHeight);
 
-    //Ramp the environment value in the transition zone.  If the object is outside this zone,
-    //the value will be capped anyway.  The result of this ramp is <0 when outside
-    //the hangar and >1 when totally inside.
-    float fPercentOutsideX = AkMax((iDiffX - HANGAR_SIZE) / HANGAR_TRANSITION_ZONE, 0.0f);
-    float fPercentOutsideY = AkMax((iDiffY - HANGAR_SIZE) / HANGAR_TRANSITION_ZONE, 0.0f);
+	//Ramp the environment value in the transition zone.  If the object is outside this zone,
+	//the value will be capped anyway.  The result of this ramp is <0 when outside
+	//the hangar and >1 when totally inside.
+	float fPercentOutsideX = AkMax((iDiffX - HANGAR_SIZE) / HANGAR_TRANSITION_ZONE, 0.0f);
+	float fPercentOutsideY = AkMax((iDiffY - HANGAR_SIZE) / HANGAR_TRANSITION_ZONE, 0.0f);
 
-    aHangarEnv.fControlValue = 1.0f - AkMax(fPercentOutsideX, fPercentOutsideY);
-    aHangarEnv.fControlValue = AkMax(0.0f, aHangarEnv.fControlValue);
+	aHangarEnv.fControlValue = 1.0f - AkMax(fPercentOutsideX, fPercentOutsideY);
+	aHangarEnv.fControlValue = AkMax(0.0f, aHangarEnv.fControlValue);
+	aHangarEnv.listenerID = LISTENER_ID;
 
-    AK::SoundEngine::SetGameObjectOutputBusVolume(GAME_OBJECT_HUMAN, 1.0f - aHangarEnv.fControlValue / 2.0f);
-    AK::SoundEngine::SetGameObjectAuxSendValues(GAME_OBJECT_HUMAN, &aHangarEnv, 1);
+	AK::SoundEngine::SetGameObjectOutputBusVolume(GAME_OBJECT_HUMAN, LISTENER_ID, 1.0f - aHangarEnv.fControlValue / 2.0f);
+	AK::SoundEngine::SetGameObjectAuxSendValues(GAME_OBJECT_HUMAN, &aHangarEnv, 1);
 }
 
 /*

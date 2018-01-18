@@ -73,13 +73,12 @@
 
 // plugins
 #define AK_PLUGINS
-#include <AK/Plugin/AllPluginsRegistrationHelpers.h>	// Plug-ins
 #if defined(WIN32)
 #pragma comment( lib, "AkConvolutionReverbFX.lib")
 #pragma comment( lib, "AkFlangerFX.lib")
 #pragma comment( lib, "AkTremoloFX.lib")
 #pragma comment( lib, "AuroHeadphoneFX.lib")
-#pragma comment( lib, "IOSONOProximityMixer.lib")
+// #pragma comment( lib, "IOSONOProximityMixer.lib") // Removed since 2017.1
 #pragma comment( lib, "AkMotionGenerator.lib")
 #pragma comment( lib, "AkSineSource.lib")
 #pragma comment( lib, "AkSoundSeedWind.lib")
@@ -113,7 +112,7 @@
 #pragma comment( lib, "AkMeterFX.lib")
 #pragma comment( lib, "iZTrashFiltersFX.lib")
 #pragma comment( lib, "AkSynthOne.lib")
-#pragma comment( lib, "AkMP3Source.lib")
+// #pragma comment( lib, "AkMP3Source.lib") // Removed since 2017.1
 #pragma comment( lib, "AkHarmonizerFX.lib")
 #pragma comment( lib, "AkTimeStretchFX.lib")
 #pragma comment( lib, "AkExpanderFX.lib")
@@ -536,18 +535,6 @@ bool Wwise::InitWwise(	AkMemSettings&          in_memSettings,
 	    __AK_OSCHAR_SNPRINTF(in_szErrorBuffer, in_unErrorBufferCharCount, AKTEXT("AK::Comm::Init() returned AKRESULT %d. Communication between the Wwise authoring application and the game will not be possible."), res);
 	    LOGAKW(in_szErrorBuffer);
 	}
-    }
-#endif
-
-#ifdef AK_PLUGINS
-    //
-    // Register plugins
-    /// Note: This a convenience method for rapid prototyping.
-    /// To reduce executable code size register/link only the plug-ins required by your game
-    res = AK::SoundEngine::RegisterAllPlugins();
-    if (res != AK_Success)
-    {
-	__AK_OSCHAR_SNPRINTF(in_szErrorBuffer, in_unErrorBufferCharCount, AKTEXT("AK::SoundEngine::RegisterAllPlugins() returned AKRESULT %d."), res);
     }
 #endif
     
