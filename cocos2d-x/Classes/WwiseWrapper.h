@@ -25,6 +25,8 @@
 #endif
 
 
+static const AkGameObjectID LISTENER_ID = 10000;
+
 namespace WWISE {
     bool initialize(void* mgr);
     void terminate();

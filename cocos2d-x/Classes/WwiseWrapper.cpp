@@ -8,6 +8,10 @@
 #include <AK/SoundEngine/Common/AkTypes.h>
 #include <wchar.h>
 
+#include <AK/Plugin/AkRoomVerbFXFactory.h>
+#include <AK/Plugin/AkStereoDelayFXFactory.h>
+#include <AK/Plugin/AkVorbisDecoderFactory.h>
+
 #ifdef AK_IOS
   #include "SoundInput.h"
 #endif // AK_IOS
@@ -17,6 +21,29 @@
 #ifdef AK_MOTION
   #include <AK/MotionEngine/Common/AkMotionEngine.h>	// Motion Engine (required only for playback of Motion objects)
 #endif // AK_MOTION
+
+#include "Platform.h"
+// #ifdef AK_WIN
+
+// #ifdef _DEBUG
+// #define MY_SOUND_BANK_PATH SOUNDBANK_PARH //L"../../WwiseProject/GeneratedSoundBanks/Windows/"
+// #else
+// #define MY_SOUND_BANK_PATH L"Wwise/"
+// #endif
+//#elif defined AK_ANDROID
+//const AkOSChar MY_SOUND_BANK_PATH[] = AKTEXT("GeneratedSoundBanks/Android/");
+//#elif defined AK_APPLE
+//#include "TargetConditionals.h"
+//#if TARGET_OS_IPHONE
+//// iOS
+//#define MY_SOUND_BANK_PATH g_szBasePath //"iOS/"
+//#else
+//// MacOS
+//#define MY_SOUND_BANK_PATH "Mac/"
+//#endif
+//#else
+//#error undefied platform
+//#endif
 
 #ifdef AK_ANDROID
     #include "android/asset_manager.h"
@@ -122,27 +149,6 @@
 static const AkUInt32 kMaxNumPools = 20;
 static const AkUInt32 kDefaultPoolSize = 2 * 1024 * 1024;
 static const AkUInt32 kLEngineDefaultPoolSize = 1 * 1024 * 1024;
-
-#ifdef AK_WIN
-  #ifdef _DEBUG
-    #define MY_SOUND_BANK_PATH L"../../WwiseProject/GeneratedSoundBanks/Windows/"
-  #else
-    #define MY_SOUND_BANK_PATH L"Wwise/"
-  #endif
-#elif defined AK_ANDROID
-  const AkOSChar MY_SOUND_BANK_PATH[] = AKTEXT("GeneratedSoundBanks/Android/");
-#elif defined AK_APPLE
-  #include "TargetConditionals.h"
-  #if TARGET_OS_IPHONE
-    // iOS
-    #define MY_SOUND_BANK_PATH g_szBasePath //"iOS/"
-  #else
-    // MacOS
-    #define MY_SOUND_BANK_PATH "Mac/"
-  #endif
-#else
-  #error undefied platform
-#endif
 
 #ifdef AK_IOS
 AkAudioSessionCategoryOptions GetAudioSessionCategoryOptionBitMask(bool in_bMixWithOthers, bool in_bDuckOthers, bool in_bAllowBluetooth, bool in_bDefaultToSpeaker)
@@ -298,7 +304,7 @@ namespace WWISE {
     Wwise::Instance().GetLowLevelIOHandler()->InitAndroidIO(m_platformInitSettings.pJavaVM, m_platformInitSettings.jNativeActivity);
 #endif
 	if (!Wwise::Instance().Init(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit,
-	    (AkOSChar*)MY_SOUND_BANK_PATH, m_strError, sizeof(m_strError))) {
+	    (AkOSChar*)SOUND_BANK_PATH, m_strError, sizeof(m_strError))) {
 	    LOGAKW(m_strError);
 	    abort();
 	}
@@ -528,8 +534,9 @@ bool Wwise::InitWwise(	AkMemSettings&          in_memSettings,
     //
     if (GetCommunicationEnabled()) {
 	AkCommSettings commSettings;
-	AK::Comm::GetDefaultInitSettings(commSettings);
-	res = AK::Comm::Init(commSettings);
+    AK::Comm::GetDefaultInitSettings( commSettings );
+    AKPLATFORM::SafeStrCpy(commSettings.szAppNetworkName, "Cocos2d-x Integration Demo", AK_COMM_SETTINGS_MAX_STRING_SIZE);
+    res = AK::Comm::Init( commSettings );
 	if (res != AK_Success)
 	{
 	    __AK_OSCHAR_SNPRINTF(in_szErrorBuffer, in_unErrorBufferCharCount, AKTEXT("AK::Comm::Init() returned AKRESULT %d. Communication between the Wwise authoring application and the game will not be possible."), res);
@@ -537,6 +544,9 @@ bool Wwise::InitWwise(	AkMemSettings&          in_memSettings,
 	}
     }
 #endif
+
+    AK::SoundEngine::RegisterGameObj(LISTENER_ID, "Listener (Default)");
+    AK::SoundEngine::SetDefaultListeners(&LISTENER_ID, 1);
     
     return true;
 }

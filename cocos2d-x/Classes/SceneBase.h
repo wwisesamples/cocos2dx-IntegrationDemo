@@ -21,8 +21,6 @@ static const AkUInt16 DESIRED_HEIGHT = 480;
 static const AkUInt16 DESIRED_FPS = 60;
 static const AkReal32 MS_PER_FRAME = (1000 / (AkReal32)DESIRED_FPS);
 
-static const AkGameObjectID LISTENER_ID = 10000;
-
 typedef void(*FUNC_CALLBACK)(cocos2d::EventKeyboard::KeyCode, cocos2d::Event*);
 typedef cocos2d::Scene * (*FUNC_MAIN_SCENE)();
 
