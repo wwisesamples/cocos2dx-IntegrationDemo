@@ -1,13 +1,32 @@
+/*******************************************************************************
+The content of this file includes portions of the AUDIOKINETIC Wwise Technology
+released in source code form as part of the SDK installer package.
+
+Commercial License Usage
+
+Licensees holding valid commercial licenses to the AUDIOKINETIC Wwise Technology
+may use this file in accordance with the end user license agreement provided 
+with the software or, alternatively, in accordance with the terms contained in a
+written agreement between you and Audiokinetic Inc.
+
+  Version: v2017.1.4  Build: 6407
+  Copyright (c) 2006-2017 Audiokinetic Inc.
+*******************************************************************************/
+
 // Platform.h
-// Copyright (C) 2010 Audiokinetic Inc
 /// \file 
 /// Contains platform-specific helpers for the Windows platform.
 
 #pragma once
 
 #define DEMO_DEFAULT_POOL_SIZE 2*1024*1024
-#define DEMO_LENGINE_DEFAULT_POOL_SIZE 2*1024*1024
+#define DEMO_LENGINE_DEFAULT_POOL_SIZE 16*1024*1024
+#ifdef COCOS_INTEGRATION
+#define SOUND_BANK_PATH L"../../WwiseProject/GeneratedSoundBanks/Windows/"
+#else
 #define SOUND_BANK_PATH L"../../../samples/IntegrationDemo/WwiseProject/GeneratedSoundBanks/Windows/"
+#endif
+// #define SOUND_BANK_PATH L"C:\\Program Files (x86)\\Audiokinetic\\Wwise_2017.1.4.6407\\SDK\\samples\\IntegrationDemo\\WwiseProject\\GeneratedSoundBanks\\Windows"
 
 
 // Defines for button name strings
@@ -37,7 +56,7 @@
 #define __AK_OSCHAR_SNPRINTF _snwprintf
 
 #define CODECTYPE_STANDARD	AKCODECID_ADPCM
-#if COCOS_INTEGRATION
+#ifdef COCOS_INTEGRATION
 #define FONT_SIZE_TITLE	    30
 #define FONT_SIZE_MENU	    24
 #endif

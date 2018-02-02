@@ -6,6 +6,10 @@
 #include "TargetConditionals.h"
 #endif
 
+
+#include <AK/Plugin/AkRoomVerbFXFactory.h>
+#include <AK/Plugin/AkStereoDelayFXFactory.h>
+
 USING_NS_CC;
 
 //static cocos2d::Size designResolutionSize = cocos2d::Size(640, 960);	//h
