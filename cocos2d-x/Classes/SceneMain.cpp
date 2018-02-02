@@ -287,7 +287,7 @@ bool SceneMain::init()
 
 void SceneMain::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event)
 {
-    SceneBase::onKeyPressed(keyCode, event);
+    //SceneBase::onKeyPressed(keyCode, event);
     switch (keyCode) {
     case EventKeyboard::KeyCode::KEY_KP_ENTER:
 	{
@@ -306,7 +306,7 @@ void SceneMain::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::E
 	break;
 
     default:
-	//SceneBase::onKeyPressed(keyCode, event);
+		SceneBase::onKeyPressed(keyCode, event);
 	return;
     }
 }
