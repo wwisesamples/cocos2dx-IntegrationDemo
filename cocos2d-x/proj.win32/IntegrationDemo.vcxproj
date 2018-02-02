@@ -135,7 +135,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <Link>
       <AdditionalDependencies>libcurl_imp.lib;websockets.lib;%(AdditionalDependencies);$(_COCOS_LIB_WIN32_BEGIN);$(_COCOS_LIB_WIN32_END)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>..\..\..\..\$(Platform)_vc140\$(Configuration)\lib;$(OutDir);%(AdditionalLibraryDirectories);$(_COCOS_LIB_PATH_WIN32_BEGIN);$(_COCOS_LIB_PATH_WIN32_END);$(DXSDK_DIR)\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\..\$(Platform)_vc150\$(Configuration)\lib;$(OutDir);%(AdditionalLibraryDirectories);$(_COCOS_LIB_PATH_WIN32_BEGIN);$(_COCOS_LIB_PATH_WIN32_END);$(DXSDK_DIR)\lib\x86</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
@@ -187,6 +187,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\..\..\SoundEngine\Common\AkMultipleFileLocation.h" />
     <ClInclude Include="..\..\..\SoundEngine\Win32\AkDefaultIOHookBlocking.h" />
     <ClInclude Include="..\..\Common\Helpers.h" />
+    <ClInclude Include="..\..\Common\IntegrationDemo.h" />
     <ClInclude Include="..\..\Common\SoundInputBase.h" />
     <ClInclude Include="..\..\Common\SoundInputMgrBase.h" />
     <ClInclude Include="..\..\Windows\SoundInput.h" />
