@@ -6,6 +6,7 @@
 #define INTEGRATIONDEMO_SCREEN_CHAR_WIDTH	95
 #endif
 #include "Platform.h"
+#include "PlatformCocos.h"
 
 /////////////////////////////////////////////////////////////////////
 // DemoMarkers Constant Member Initialization

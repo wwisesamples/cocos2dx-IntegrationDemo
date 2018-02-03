@@ -4,6 +4,7 @@
 #include <AK/SoundEngine/Common/AkSoundEngine.h>    // Sound engine
 #include "Helpers.h"
 #include "Platform.h"
+#include "PlatformCocos.h"
 
 #ifdef ANDROID
 #define INTEGRATIONDEMO_SCREEN_CHAR_WIDTH	95

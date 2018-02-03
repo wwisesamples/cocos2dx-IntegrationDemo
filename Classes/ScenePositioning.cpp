@@ -6,6 +6,7 @@
 #include "Helpers.h"
 #include <string>
 #include "Platform.h"
+#include "PlatformCocos.h"
 
 #define  LOG_TAG    __FILE__
 

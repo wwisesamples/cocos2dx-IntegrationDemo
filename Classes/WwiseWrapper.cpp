@@ -23,6 +23,8 @@
 #endif // AK_MOTION
 
 #include "Platform.h"
+#include "PlatformCocos.h"
+
 // #ifdef AK_WIN
 
 // #ifdef _DEBUG
@@ -384,25 +386,28 @@ bool Wwise::Init(   AkMemSettings&          in_memSettings,
     // Initialize Wwise
     bSuccess = InitWwise(in_memSettings, in_stmSettings, in_deviceSettings, in_initSettings, in_platformInitSettings, in_musicInit, in_szErrorBuffer, in_unErrorBufferCharCount);
     if (!bSuccess) {
-	goto cleanup;
+		goto cleanup;
     }
 
     // Set the path to the SoundBank Files.
     hr = m_pLowLevelIO->SetBasePath(in_soundBankPath);
+	if (hr != AK_Success) {
+		goto cleanup;
+	}
 
     // Set global language. Low-level I/O devices can use this string to find language-specific assets.
     if (AK::StreamMgr::SetCurrentLanguage(AKTEXT("English(US)")) != AK_Success)
     {
-	goto cleanup;
+		goto cleanup;
     }
 
     AkBankID bankID;
     if (AK::SoundEngine::LoadBank("Init.bnk", AK_DEFAULT_POOL_ID, bankID) != AK_Success)
     {
-	LOGAK("<Wwise::Init> Cannot load Init.bnk! error");
+		LOGAK("<Wwise::Init> Cannot load Init.bnk! error");
 
 #ifdef 	COCOS_INTEGRATION
-	cocos2d::MessageBox("Cannot load Init.bnk!", "Error");
+		cocos2d::MessageBox("Cannot load Init.bnk!", "Error");
 #endif
 	return false;
     }

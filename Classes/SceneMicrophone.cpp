@@ -3,6 +3,7 @@
 #include <AK/SoundEngine/Common/AkSoundEngine.h>    // Sound engine
 #include "WwiseWrapper.h"
 #include "Platform.h"
+#include "PlatformCocos.h"
 #include "SoundInputMgr.h"
 
 #define  LOG_TAG    "SceneMicrophone"

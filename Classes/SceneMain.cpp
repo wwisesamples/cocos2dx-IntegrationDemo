@@ -1,5 +1,6 @@
 #include "SceneMain.h"
 #include "Platform.h"
+#include "PlatformCocos.h"
 #include <AK/Tools/Common/AkPlatformFuncs.h>
 #include "SceneDialogueMenu.h"
 #include "SceneRTPCCarEngine.h"

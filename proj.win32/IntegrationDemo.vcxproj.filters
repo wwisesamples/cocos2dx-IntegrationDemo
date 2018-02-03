@@ -179,6 +179,10 @@
     <ClInclude Include="..\Classes\SceneBGM.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Common\IntegrationDemo.h" />
+    <ClInclude Include="PlatformCocos.h">
+      <Filter>win32</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">

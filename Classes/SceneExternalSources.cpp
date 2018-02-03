@@ -2,6 +2,7 @@
 #include "SceneMain.h"
 #include "WwiseWrapper.h"
 #include "Platform.h"
+#include "PlatformCocos.h"
 
 #define  LOG_TAG    __FILE__
 

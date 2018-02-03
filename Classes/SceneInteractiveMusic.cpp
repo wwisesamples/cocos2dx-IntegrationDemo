@@ -3,6 +3,7 @@
 #include "WwiseWrapper.h"
 #include "Helpers.h"
 #include "Platform.h"
+#include "PlatformCocos.h"
 
 USING_NS_CC;
 

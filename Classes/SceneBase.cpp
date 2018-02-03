@@ -2,6 +2,7 @@
 #include "SceneMain.h"
 #include "SceneRTPCCarEngine.h"
 #include "Platform.h"
+#include "PlatformCocos.h"
 #include <AK/Tools/Common/AkPlatformFuncs.h>
 #include "WwiseWrapper.h"
 

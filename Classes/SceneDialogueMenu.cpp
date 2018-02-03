@@ -3,6 +3,7 @@
 #include "SceneLocalization.h"
 #include "SceneDynamicDialogue.h"
 #include "Platform.h"
+#include "PlatformCocos.h"
 
 USING_NS_CC;
 
@@ -67,7 +68,7 @@ bool SceneDialogueMenu::init()
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
-    Menu* menu;
+    //Menu* menu;
     {
 /*
 	auto addItem = [&](MenuItem* item, const float& posx, const float& posy){

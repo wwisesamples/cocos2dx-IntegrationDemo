@@ -6,6 +6,7 @@
 #include "Helpers.h"
 #include <string>
 #include "Platform.h"
+#include "PlatformCocos.h"
 
 //#define  LOG_TAG    "SceneFootsteps"
 #define  LOG_TAG    __FILE__
@@ -313,7 +314,7 @@ void SceneFootsteps::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event)
     m_bIsTouch = false;
 #if defined(NDK_DEBUG) || defined(_DEBUG)
     char strBuf[50];
-    snprintf(strBuf, 50, "<onTouchEnded>  (%g, %g)\n",  (int)touch->getLocation().x, (int)touch->getLocation().y);
+    snprintf(strBuf, 50, "<onTouchEnded>  (%d, %d)\n",  (int)touch->getLocation().x, (int)touch->getLocation().y);
     LOGAK(strBuf);
 #endif
 }
