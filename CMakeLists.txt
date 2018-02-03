@@ -113,7 +113,7 @@ include_directories(
   ${COCOS2D_ROOT}/cocos
   ${COCOS2D_ROOT}/cocos/platform
   ${COCOS2D_ROOT}/cocos/audio/include/
-  Classes
+  Demos
 )
 if ( WIN32 )
   include_directories(
@@ -123,14 +123,14 @@ if ( WIN32 )
 endif( WIN32 )
 
 set(GAME_SRC
-  Classes/AppDelegate.cpp
-  Classes/HelloWorldScene.cpp
+  Demos/AppDelegate.cpp
+  Demos/HelloWorldScene.cpp
   ${PLATFORM_SPECIFIC_SRC}
 )
 
 set(GAME_HEADERS
-  Classes/AppDelegate.h
-  Classes/HelloWorldScene.h
+  Demos/AppDelegate.h
+  Demos/HelloWorldScene.h
   ${PLATFORM_SPECIFIC_HEADERS}
 )
 
