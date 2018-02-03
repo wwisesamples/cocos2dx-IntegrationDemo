@@ -394,7 +394,7 @@
 				503AE0FF17EB989F00D1A890 /* RootViewController.mm */,
 			);
 			name = ios;
-			path = Classes;
+			path = Demos;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -423,7 +423,7 @@
 				78EA97801C15DF5700D9BEC4 /* Mac */,
 				787070FD1BFDB5CE002EAAF4 /* iOS */,
 				787070DF1BFCEB51002EAAF4 /* Wwise LowLevelIO iOS */,
-				46880B8319C43A87006E1F66 /* Classes */,
+				46880B8319C43A87006E1F66 /* Demos */,
 				46880B7519C43A67006E1F66 /* Resources */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -488,7 +488,7 @@
 			path = ../Resources;
 			sourceTree = "<group>";
 		};
-		46880B8319C43A87006E1F66 /* Classes */ = {
+		46880B8319C43A87006E1F66 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
@@ -524,8 +524,8 @@
 				787070DC1BFCE09A002EAAF4 /* WwiseWrapper.cpp */,
 				787070DD1BFCE09A002EAAF4 /* WwiseWrapper.h */,
 			);
-			name = Classes;
-			path = ../Classes;
+			name = Demos;
+			path = ../Demos;
 			sourceTree = "<group>";
 		};
 		503AE0F517EB97AB00D1A890 /* Icons */ = {
@@ -993,7 +993,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../../iOS",
 					"$(WWISESDK)/include",
-					"$(SRCROOT)/../Classes",
+					"$(SRCROOT)/../Demos",
 					"$(SRCROOT)/../../MenuSystem",
 					"$(SRCROOT)/../../Common",
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios",
@@ -1090,7 +1090,7 @@
 					"$(inherited)",
 					"$(HOME)/Wwise/Wwise_v2015.1.2_build_5457/SDK/include",
 					"$(SRCROOT)/../../iOS",
-					"$(SRCROOT)/../Classes",
+					"$(SRCROOT)/../Demos",
 					"$(SRCROOT)/../../MenuSystem",
 					"$(SRCROOT)/../../Common",
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios",
@@ -1153,7 +1153,7 @@
 					"$(inherited)",
 					"$(WWISESDK)/include",
 					"$(SRCROOT)/../../Mac",
-					"$(SRCROOT)/../Classes",
+					"$(SRCROOT)/../Demos",
 					"$(SRCROOT)/../cocos2d/cocos/platform/mac",
 					"$(SRCROOT)/../cocos2d/external/glfw3/include/mac",
 					"$(WWISESDK)/samples/SoundEngine/POSIX",
@@ -1244,7 +1244,7 @@
 					"$(inherited)",
 					"$(WWISESDK)/include",
 					"$(SRCROOT)/../../Mac",
-					"$(SRCROOT)/../Classes",
+					"$(SRCROOT)/../Demos",
 					"$(SRCROOT)/../cocos2d/cocos/platform/mac",
 					"$(SRCROOT)/../cocos2d/external/glfw3/include/mac",
 					"$(WWISESDK)/samples/SoundEngine/POSIX",
@@ -1293,7 +1293,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../iOS",
 					"$(HOME)/Wwise/Wwise_v2015.1.2_build_5457/SDK/include",
-					"$(SRCROOT)/../Classes",
+					"$(SRCROOT)/../Demos",
 					"$(SRCROOT)/../cocos2d",
 					"$(SRCROOT)/../cocos2d/cocos",
 					"$(SRCROOT)/../cocos2d/cocos/base",
@@ -1376,7 +1376,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../iOS",
 					"$(HOME)/Wwise/Wwise_v2015.1.2_build_5457/SDK/include",
-					"$(SRCROOT)/../Classes",
+					"$(SRCROOT)/../Demos",
 					"$(SRCROOT)/../cocos2d",
 					"$(SRCROOT)/../cocos2d/cocos",
 					"$(SRCROOT)/../cocos2d/cocos/base",
