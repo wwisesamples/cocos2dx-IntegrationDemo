@@ -1,6 +1,8 @@
 *.tlog
 *.log
 *.bak
+proj.ios_mac/IntegrationDemo-cocos.xcodeproj/xcuserdata/*
+proj.ios_mac/IntegrationDemo-cocos.xcodeproj/*.xcworkspace/*
 proj.win32/.vs/*
 proj.win32/Debug.win32/
 proj.win32/Release.win32/
