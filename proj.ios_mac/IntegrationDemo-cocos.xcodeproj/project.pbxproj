@@ -63,8 +63,6 @@
 		784DE89E1C059A6F00667EFE /* AkFilePackageLUT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 787070F61BFCEC72002EAAF4 /* AkFilePackageLUT.cpp */; };
 		784DE8A81C05A9B400667EFE /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784DE8A71C05A9B400667EFE /* CoreAudio.framework */; };
 		784DE8AB1C05AB4D00667EFE /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784DE8AA1C05AB4D00667EFE /* AudioUnit.framework */; };
-		784DE8B01C05F58600667EFE /* Mac in Resources */ = {isa = PBXBuildFile; fileRef = 784DE8AE1C05EC0D00667EFE /* Mac */; };
-		784DE8B21C05F5F400667EFE /* iOS in Resources */ = {isa = PBXBuildFile; fileRef = 784DE8B11C05F5F400667EFE /* iOS */; };
 		784DE8B51C07091B00667EFE /* SceneBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 784DE8B31C07091B00667EFE /* SceneBase.cpp */; };
 		784DE8B61C07091B00667EFE /* SceneMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 784DE8B41C07091B00667EFE /* SceneMain.cpp */; };
 		784DE8B91C0709B600667EFE /* SceneBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 784DE8B31C07091B00667EFE /* SceneBase.cpp */; };
@@ -144,6 +142,8 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
+		CEDC55582025F7D300A0080D /* Mac in Resources */ = {isa = PBXBuildFile; fileRef = CEDC55572025F7D300A0080D /* Mac */; };
+		CEDC555A2025F7E500A0080D /* iOS in Resources */ = {isa = PBXBuildFile; fileRef = CEDC55592025F7E500A0080D /* iOS */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -236,8 +236,6 @@
 		780D7A1D1C185D9400238AFA /* SceneBGM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneBGM.h; sourceTree = "<group>"; };
 		784DE8A71C05A9B400667EFE /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		784DE8AA1C05AB4D00667EFE /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
-		784DE8AE1C05EC0D00667EFE /* Mac */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Mac; path = GeneratedSoundBanks/Mac; sourceTree = "<group>"; };
-		784DE8B11C05F5F400667EFE /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = GeneratedSoundBanks/iOS; sourceTree = "<group>"; };
 		784DE8B31C07091B00667EFE /* SceneBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneBase.cpp; sourceTree = "<group>"; };
 		784DE8B41C07091B00667EFE /* SceneMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneMain.cpp; sourceTree = "<group>"; };
 		784DE8B71C07094600667EFE /* SceneBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneBase.h; sourceTree = "<group>"; };
@@ -328,6 +326,9 @@
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CEDC55572025F7D300A0080D /* Mac */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Mac; path = ../../WwiseProject/GeneratedSoundBanks/Mac; sourceTree = "<group>"; };
+		CEDC55592025F7E500A0080D /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = ../../WwiseProject/GeneratedSoundBanks/iOS; sourceTree = "<group>"; };
+		CEDC555B20268D1E00A0080D /* PlatformCocos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformCocos.h; path = mac/PlatformCocos.h; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -468,6 +469,8 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CEDC55592025F7E500A0080D /* iOS */,
+				CEDC55572025F7D300A0080D /* Mac */,
 				787D41E51C0870990063B5E0 /* human.png */,
 				787D41E61C0870990063B5E0 /* PlayNormal.png */,
 				787D41E71C0870990063B5E0 /* PlayPush.png */,
@@ -477,7 +480,6 @@
 				787D41EB1C0870990063B5E0 /* Slider_button.png */,
 				787D41EC1C0870990063B5E0 /* StopNormal.png */,
 				787D41ED1C0870990063B5E0 /* StopPush.png */,
-				784DE8AD1C05EBD000667EFE /* GeneratedSoundBanks */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
@@ -541,6 +543,7 @@
 		503AE10617EB990700D1A890 /* mac */ = {
 			isa = PBXGroup;
 			children = (
+				CEDC555B20268D1E00A0080D /* PlatformCocos.h */,
 				503AE0F517EB97AB00D1A890 /* Icons */,
 				503AE10317EB98FF00D1A890 /* main.cpp */,
 				503AE10417EB98FF00D1A890 /* Prefix.pch */,
@@ -574,15 +577,6 @@
 			name = Icons;
 			path = ios;
 			sourceTree = SOURCE_ROOT;
-		};
-		784DE8AD1C05EBD000667EFE /* GeneratedSoundBanks */ = {
-			isa = PBXGroup;
-			children = (
-				784DE8B11C05F5F400667EFE /* iOS */,
-				784DE8AE1C05EC0D00667EFE /* Mac */,
-			);
-			name = GeneratedSoundBanks;
-			sourceTree = "<group>";
 		};
 		787070DF1BFCEB51002EAAF4 /* Wwise LowLevelIO iOS */ = {
 			isa = PBXGroup;
@@ -801,13 +795,13 @@
 				787D41F51C0870990063B5E0 /* StopNormal.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				787070FB1BFCEC72002EAAF4 /* AkFilePackageLowLevelIO.inl in Resources */,
-				784DE8B21C05F5F400667EFE /* iOS in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				787D41F31C0870990063B5E0 /* Slider_base.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				787D41F21C0870990063B5E0 /* SELECT_SCENE_Push.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
+				CEDC555A2025F7E500A0080D /* iOS in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
@@ -824,12 +818,12 @@
 				787D41F81C0870AF0063B5E0 /* PlayNormal.png in Resources */,
 				787D41F91C0870AF0063B5E0 /* PlayPush.png in Resources */,
 				787D41FA1C0870AF0063B5E0 /* SELECT_SCENE_Normal.png in Resources */,
+				CEDC55582025F7D300A0080D /* Mac in Resources */,
 				787D41FB1C0870AF0063B5E0 /* SELECT_SCENE_Push.png in Resources */,
 				787D41FC1C0870AF0063B5E0 /* Slider_base.png in Resources */,
 				787D41FD1C0870AF0063B5E0 /* Slider_button.png in Resources */,
 				787D41FE1C0870AF0063B5E0 /* StopNormal.png in Resources */,
 				787D41FF1C0870AF0063B5E0 /* StopPush.png in Resources */,
-				784DE8B01C05F58600667EFE /* Mac in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
@@ -1064,7 +1058,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
 				VALID_ARCHS = "arm64 armv7";
-				WWISESDK = "$(HOME)/Wwise/Wwise_v2015.1.4_build_5497/SDK";
+				WWISESDK = "$(PROJECT_DIR)/../../../../../SDK";
 			};
 			name = Debug;
 		};
@@ -1123,7 +1117,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
 				VALID_ARCHS = "arm64 armv7";
-				WWISESDK = "$(HOME)/Wwise/Wwise_v2015.1.4_build_5497/SDK";
+				WWISESDK = "$(PROJECT_DIR)/../../../../../SDK";
 			};
 			name = Release;
 		};
@@ -1135,6 +1129,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/mac/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/bin";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1218,7 +1213,7 @@
 				PRODUCT_NAME = "IntegrationDemo-cocos-desktop";
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_MAC_BEGIN) $(_COCOS_HEADER_MAC_END)";
-				WWISESDK = "$(HOME)/Wwise/Wwise_v2015.1.4_build_5497/SDK";
+				WWISESDK = "$(PROJECT_DIR)/../../../../../SDK";
 			};
 			name = Debug;
 		};
@@ -1230,6 +1225,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/mac/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/bin";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mac/Prefix.pch;
@@ -1274,7 +1270,7 @@
 				PRODUCT_NAME = "IntegrationDemo-cocos-desktop";
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_MAC_BEGIN) $(_COCOS_HEADER_MAC_END)";
-				WWISESDK = "$(HOME)/Wwise/Wwise_v2015.1.4_build_5497/SDK";
+				WWISESDK = "$(PROJECT_DIR)/../../../../../SDK";
 			};
 			name = Release;
 		};
@@ -1291,8 +1287,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../iOS",
-					"$(HOME)/Wwise/Wwise_v2015.1.2_build_5457/SDK/include",
+					"$(WWISESDK)/include",
 					"$(SRCROOT)/../Demos",
 					"$(SRCROOT)/../cocos2d",
 					"$(SRCROOT)/../cocos2d/cocos",
@@ -1307,7 +1302,6 @@
 					"$(SRCROOT)/../cocos2d/extensions",
 					"$(SRCROOT)/../cocos2d/external",
 					"$(SRCROOT)/../cocos2d/external/chipmunk/include/chipmunk",
-					"$(HOME)/Wwise/Wwise_v2015.1.2_build_5457/SDK/samples/SoundEngine/POSIX",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -1359,7 +1353,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				WWISESDK = "$(HOME)/Wwise/Wwise_v2015.1.2_build_5457/SDK";
+				WWISESDK = "$(PROJECT_DIR)/../../../../../SDK";
 			};
 			name = Debug;
 		};
@@ -1374,8 +1368,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../../iOS",
-					"$(HOME)/Wwise/Wwise_v2015.1.2_build_5457/SDK/include",
+					"$(WWISESDK)/include",
 					"$(SRCROOT)/../Demos",
 					"$(SRCROOT)/../cocos2d",
 					"$(SRCROOT)/../cocos2d/cocos",
@@ -1390,15 +1383,18 @@
 					"$(SRCROOT)/../cocos2d/extensions",
 					"$(SRCROOT)/../cocos2d/external",
 					"$(SRCROOT)/../cocos2d/external/chipmunk/include/chipmunk",
-					"$(HOME)/Wwise/Wwise_v2015.1.2_build_5457/SDK/samples/SoundEngine/POSIX",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(WWISESDK)/iOS/$(CONFIGURATION)-iphoneos/lib",
+					"$(WWISESDK)/iOS/$(CONFIGURATION)-$(EFFECTIVE_PLATFORM_NAME)/lib",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				VALIDATE_PRODUCT = YES;
-				WWISESDK = "$(HOME)/Wwise/Wwise_v2015.1.2_build_5457/SDK";
+				WWISESDK = "$(PROJECT_DIR)/../../../../../SDK";
 			};
 			name = Release;
 		};
