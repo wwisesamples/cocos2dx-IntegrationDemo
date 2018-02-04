@@ -8,9 +8,7 @@
 #include <AK/SoundEngine/Common/AkTypes.h>
 #include <wchar.h>
 
-#include <AK/Plugin/AkRoomVerbFXFactory.h>
-#include <AK/Plugin/AkStereoDelayFXFactory.h>
-#include <AK/Plugin/AkVorbisDecoderFactory.h>
+#include <AK/Plugin/AllPluginsFactories.h>
 
 #ifdef AK_IOS
   #include "SoundInput.h"

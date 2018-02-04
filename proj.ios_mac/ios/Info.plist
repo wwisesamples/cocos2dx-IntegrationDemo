@@ -57,6 +57,8 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Required by a microphone demo for audio input tests.</string>
 	<key>UIAppFonts</key>
 	<array/>
 	<key>UILaunchImages</key>

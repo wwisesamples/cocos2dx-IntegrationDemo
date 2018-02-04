@@ -111,12 +111,10 @@
 		78EA97561C15908200D9BEC4 /* SceneExternalSources.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97501C15908200D9BEC4 /* SceneExternalSources.cpp */; };
 		78EA97571C15908200D9BEC4 /* SceneMicrophone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97521C15908200D9BEC4 /* SceneMicrophone.cpp */; };
 		78EA97581C15908200D9BEC4 /* ScenePositioning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97541C15908200D9BEC4 /* ScenePositioning.cpp */; };
-		78EA975D1C15B3FF00D9BEC4 /* SoundInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97591C15B3FF00D9BEC4 /* SoundInput.cpp */; };
 		78EA975E1C15B3FF00D9BEC4 /* SoundInputMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA975B1C15B3FF00D9BEC4 /* SoundInputMgr.cpp */; };
 		78EA97631C15B49400D9BEC4 /* SoundInputBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA975F1C15B49400D9BEC4 /* SoundInputBase.cpp */; };
 		78EA97641C15B49400D9BEC4 /* SoundInputMgrBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97611C15B49400D9BEC4 /* SoundInputMgrBase.cpp */; };
 		78EA97671C15BD9B00D9BEC4 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97651C15BD9B00D9BEC4 /* stdafx.cpp */; };
-		78EA97691C15C0FA00D9BEC4 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97681C15C0FA00D9BEC4 /* stdafx.cpp */; };
 		78EA976F1C15C2EC00D9BEC4 /* IOBufferQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA976C1C15C2EC00D9BEC4 /* IOBufferQueue.cpp */; };
 		78EA97731C15C57500D9BEC4 /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97711C15C57500D9BEC4 /* Platform.cpp */; };
 		78EA977D1C15CD5300D9BEC4 /* AkDefaultIOHookBlocking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97741C15CD5300D9BEC4 /* AkDefaultIOHookBlocking.cpp */; };
@@ -140,6 +138,9 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
+		CE9CB9F3202723E600B6E261 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97681C15C0FA00D9BEC4 /* stdafx.cpp */; };
+		CE9CB9F5202729B600B6E261 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CB9F4202729B500B6E261 /* CoreText.framework */; };
+		CE9CB9F720272B8C00B6E261 /* SoundInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE9CB9F620272B8B00B6E261 /* SoundInput.cpp */; };
 		CEDC55582025F7D300A0080D /* Mac in Resources */ = {isa = PBXBuildFile; fileRef = CEDC55572025F7D300A0080D /* Mac */; };
 		CEDC555A2025F7E500A0080D /* iOS in Resources */ = {isa = PBXBuildFile; fileRef = CEDC55592025F7E500A0080D /* iOS */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
@@ -316,6 +317,8 @@
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE9CB9F4202729B500B6E261 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		CE9CB9F620272B8B00B6E261 /* SoundInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SoundInput.cpp; path = ios/SoundInput.cpp; sourceTree = SOURCE_ROOT; };
 		CEDC55572025F7D300A0080D /* Mac */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Mac; path = ../../WwiseProject/GeneratedSoundBanks/Mac; sourceTree = "<group>"; };
 		CEDC55592025F7E500A0080D /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = ../../WwiseProject/GeneratedSoundBanks/iOS; sourceTree = "<group>"; };
 		CEDC555B20268D1E00A0080D /* PlatformCocos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformCocos.h; path = mac/PlatformCocos.h; sourceTree = "<group>"; };
@@ -333,6 +336,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9CB9F5202729B600B6E261 /* CoreText.framework in Frameworks */,
 				78DD57331C1865CF00A93020 /* CoreAudio.framework in Frameworks */,
 				ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
@@ -382,6 +386,7 @@
 				503AE0FD17EB989F00D1A890 /* Prefix.pch */,
 				503AE0FE17EB989F00D1A890 /* RootViewController.h */,
 				503AE0FF17EB989F00D1A890 /* RootViewController.mm */,
+				CE9CB9F620272B8B00B6E261 /* SoundInput.cpp */,
 			);
 			name = ios;
 			path = Demos;
@@ -419,6 +424,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE9CB9F4202729B500B6E261 /* CoreText.framework */,
 				78DD57341C1865E400A93020 /* AudioUnit.framework */,
 				78DD57321C1865CF00A93020 /* CoreAudio.framework */,
 				784DE8AA1C05AB4D00667EFE /* AudioUnit.framework */,
@@ -870,23 +876,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
-				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
-				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
-				780D7A1E1C185D9400238AFA /* SceneBGM.cpp in Sources */,
-				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
-				787070FA1BFCEC72002EAAF4 /* AkFilePackage.cpp in Sources */,
-				787070FC1BFCEC72002EAAF4 /* AkFilePackageLUT.cpp in Sources */,
-				787070F91BFCEC72002EAAF4 /* AkFileLocationBase.cpp in Sources */,
-				787070F81BFCEC72002EAAF4 /* AkDefaultLowLevelIODispatcher.cpp in Sources */,
-				78EA977D1C15CD5300D9BEC4 /* AkDefaultIOHookBlocking.cpp in Sources */,
-				78EA977E1C15CD5300D9BEC4 /* AkDefaultIOHookDeferred.cpp in Sources */,
-				787D41DF1C08654C0063B5E0 /* Helpers.cpp in Sources */,
-				78EA97731C15C57500D9BEC4 /* Platform.cpp in Sources */,
-				78EA97691C15C0FA00D9BEC4 /* stdafx.cpp in Sources */,
-				78EA977F1C15CD5300D9BEC4 /* stdafx.cpp in Sources */,
-				78EA97671C15BD9B00D9BEC4 /* stdafx.cpp in Sources */,
-				784DE8B51C07091B00667EFE /* SceneBase.cpp in Sources */,
-				784DE8B61C07091B00667EFE /* SceneMain.cpp in Sources */,
 				787D41D81C0863D40063B5E0 /* SceneDynamicDialogue.cpp in Sources */,
 				787D420A1C089C0E0063B5E0 /* SceneInteractiveMusic.cpp in Sources */,
 				787D41D11C0860260063B5E0 /* SceneDialogueMenu.cpp in Sources */,
@@ -898,12 +887,29 @@
 				78EA97581C15908200D9BEC4 /* ScenePositioning.cpp in Sources */,
 				78EA97571C15908200D9BEC4 /* SceneMicrophone.cpp in Sources */,
 				787D420C1C089C0E0063B5E0 /* SceneMusicCallbacks.cpp in Sources */,
-				78EA975D1C15B3FF00D9BEC4 /* SoundInput.cpp in Sources */,
-				78EA975E1C15B3FF00D9BEC4 /* SoundInputMgr.cpp in Sources */,
-				78EA97631C15B49400D9BEC4 /* SoundInputBase.cpp in Sources */,
-				78EA97641C15B49400D9BEC4 /* SoundInputMgrBase.cpp in Sources */,
-				78EA976F1C15C2EC00D9BEC4 /* IOBufferQueue.cpp in Sources */,
+				780D7A1E1C185D9400238AFA /* SceneBGM.cpp in Sources */,
+				784DE8B61C07091B00667EFE /* SceneMain.cpp in Sources */,
+				784DE8B51C07091B00667EFE /* SceneBase.cpp in Sources */,
+				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				787070F81BFCEC72002EAAF4 /* AkDefaultLowLevelIODispatcher.cpp in Sources */,
+				787070F91BFCEC72002EAAF4 /* AkFileLocationBase.cpp in Sources */,
+				787070FA1BFCEC72002EAAF4 /* AkFilePackage.cpp in Sources */,
+				787070FC1BFCEC72002EAAF4 /* AkFilePackageLUT.cpp in Sources */,
+				78EA977D1C15CD5300D9BEC4 /* AkDefaultIOHookBlocking.cpp in Sources */,
+				78EA977E1C15CD5300D9BEC4 /* AkDefaultIOHookDeferred.cpp in Sources */,
+				787D41DF1C08654C0063B5E0 /* Helpers.cpp in Sources */,
 				787070DE1BFCE09A002EAAF4 /* WwiseWrapper.cpp in Sources */,
+				78EA97631C15B49400D9BEC4 /* SoundInputBase.cpp in Sources */,
+				78EA97731C15C57500D9BEC4 /* Platform.cpp in Sources */,
+				CE9CB9F3202723E600B6E261 /* stdafx.cpp in Sources */,
+				78EA977F1C15CD5300D9BEC4 /* stdafx.cpp in Sources */,
+				CE9CB9F720272B8C00B6E261 /* SoundInput.cpp in Sources */,
+				78EA975E1C15B3FF00D9BEC4 /* SoundInputMgr.cpp in Sources */,
+				78EA97641C15B49400D9BEC4 /* SoundInputMgrBase.cpp in Sources */,
+				78EA97671C15BD9B00D9BEC4 /* stdafx.cpp in Sources */,
+				78EA976F1C15C2EC00D9BEC4 /* IOBufferQueue.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -951,7 +957,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/ios/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -976,6 +982,7 @@
 					"$(inherited)",
 					"$(WWISESDK)/include",
 					"$(SRCROOT)/../../iOS",
+					"$(PROJECT_DIR)/ios",
 					"$(SRCROOT)/../Demos",
 					"$(SRCROOT)/../../MenuSystem",
 					"$(SRCROOT)/../../Common",
@@ -999,8 +1006,8 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../cocos2d/build/$(CONFIGURATION)-iphoneos",
 					"$(WWISESDK)/iOS/$(CONFIGURATION)-iphoneos/lib",
-					"$(WWISESDK)/iOS/$(CONFIGURATION)-$(EFFECTIVE_PLATFORM_NAME)/lib",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -1041,9 +1048,11 @@
 					"-lCommunicationCentral",
 					"-lAkSoundEngine",
 					"-lObjC",
+					"-l\"cocos2d iOS\"",
 				);
 				PRODUCT_NAME = "IntegrationDemo-cocos-mobile";
 				SDKROOT = iphoneos;
+				STRIP_PNG_TEXT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
 				VALID_ARCHS = "arm64 armv7";
@@ -1055,7 +1064,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/ios/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
@@ -1075,6 +1084,7 @@
 					"$(inherited)",
 					"$(WWISESDK)/include",
 					"$(SRCROOT)/../../iOS",
+					"$(PROJECT_DIR)/ios",
 					"$(SRCROOT)/../Demos",
 					"$(SRCROOT)/../../MenuSystem",
 					"$(SRCROOT)/../../Common",
@@ -1097,14 +1107,53 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../cocos2d/build/$(CONFIGURATION)-iphoneos",
+					"$(WWISESDK)/iOS/$(CONFIGURATION)-iphoneos/lib",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
+					"-lAkHarmonizerFX",
+					"-lAkPitchShifterFX",
+					"-lAkStereoDelayFX",
+					"-lAkTimeStretchFX",
+					"-lAkMeterFX",
+					"-lAkConvolutionReverbFX",
+					"-lAkAACDecoder",
+					"-lAkAudioInputSource",
+					"-lAkSilenceSource",
+					"-lAkSynthOne",
+					"-lAkPeakLimiterFX",
+					"-lAkRoomVerbFX",
+					"-lAkParametricEQFX",
+					"-lAkGainFX",
+					"-lAkDelayFX",
+					"-lAkMatrixReverbFX",
+					"-lAkExpanderFX",
+					"-lAkCompressorFX",
+					"-lAkSineSource",
+					"-lAkGuitarDistortionFX",
+					"-lAkTremoloFX",
+					"-lAkFlangerFX",
+					"-lAkToneSource",
+					"-lAkSoundSeedImpactFX",
+					"-lAkMemoryMgr",
+					"-lAkMusicEngine",
+					"-lMcDSPLimiterFX",
+					"-lMcDSPFutzBoxFX",
+					"-lAkSoundSeedWoosh",
+					"-lAkSoundSeedWind",
+					"-lAkStreamMgr",
+					"-lAkVorbisDecoder",
+					"-lAkSoundEngine",
+					"-lObjC",
+					"-l\"cocos2d iOS\"",
 				);
 				PRODUCT_NAME = "IntegrationDemo-cocos-mobile";
 				SDKROOT = iphoneos;
+				STRIP_PNG_TEXT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
 				VALID_ARCHS = "arm64 armv7";
