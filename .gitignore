@@ -3,6 +3,8 @@
 *.bak
 proj.ios_mac/IntegrationDemo-cocos.xcodeproj/xcuserdata/*
 proj.ios_mac/IntegrationDemo-cocos.xcodeproj/*.xcworkspace/*
+proj.ios_mac/mac/Debug/
+proj.ios_mac/mac/Release/
 proj.win32/.vs/*
 proj.win32/Debug.win32/
 proj.win32/Release.win32/
@@ -16,3 +18,4 @@ cocos2d/external/recast/proj.win32/Debug.win32/
 cocos2d/external/recast/proj.win32/Release.win32/
 cocos2d/cocos/2d/Debug.win32/
 cocos2d/cocos/2d/Release.win32/
+cocos2d/build/cocos2d_libs.xcodeproj/xcuserdata

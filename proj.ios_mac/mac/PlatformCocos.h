@@ -7,7 +7,7 @@
 
 #ifdef SOUND_BANK_PATH
 #undef SOUND_BANK_PATH
-#define SOUND_BANK_PATH L"../../WwiseProject/GeneratedSoundBanks/Mac/"
+#define SOUND_BANK_PATH "../../../../../../../../WwiseProject/GeneratedSoundBanks/Mac" // AkOSChar is char. Don't use L-stirng here. CWD on Mac is the POSIX-executable dir.
 #endif
 
 #define FONT_SIZE_TITLE  30

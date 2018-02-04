@@ -98,7 +98,8 @@ void SceneBase::SetLoadFileErrorMessage(const char* fileName)
 {
     char errorMessage[INTEGRATIONDEMO_MAX_MESSAGE];
 #if defined (AK_IOS) || defined (AK_MAC_OS_X)
-    char* soundBankPath = SOUND_BANK_PATH;
+    char soundBankPath[AK_MAX_PATH];
+    snprintf(soundBankPath, AK_MAX_PATH, "%s", SOUND_BANK_PATH);
     sprintf(errorMessage, "Failed to load file \"%s\" under Soundbank path: \n\n%s", fileName, soundBankPath);
 #else
     char* soundBankPath = NULL;
