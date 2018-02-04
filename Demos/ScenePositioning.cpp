@@ -166,7 +166,7 @@ void ScenePositioning::update(float dt)
 void ScenePositioning::onMouseDown(Event *event)
 {
     EventMouse* e = (EventMouse*)event;
-    if (e->getMouseButton() == 0) {
+    if (e->getMouseButton() == EventMouse::MouseButton::BUTTON_LEFT) {
 	bool bRet = false;
 	CCPoint pt(e->getCursorX(), e->getCursorY());
 	CCRect  rc = m_sprite->boundingBox();

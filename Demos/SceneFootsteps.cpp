@@ -237,7 +237,7 @@ void SceneFootsteps::update(float dt)
 void SceneFootsteps::onMouseDown(Event *event)
 {
     EventMouse* e = (EventMouse*)event;
-    if (e->getMouseButton() == 0) {
+    if (e->getMouseButton() == EventMouse::MouseButton::BUTTON_LEFT) {
 	bool bRet = false;
 	//CCPoint pt = m_sprite->getPosition();
 	CCPoint pt(e->getCursorX(), e->getCursorY());
