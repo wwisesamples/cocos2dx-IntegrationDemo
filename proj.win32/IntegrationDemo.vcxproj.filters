@@ -13,46 +13,13 @@
     <Filter Include="AK">
       <UniqueIdentifier>{fa144a55-f9bd-4188-9f2e-62b7ef18ea7e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Demos">
+      <UniqueIdentifier>{b28a07ad-01fc-4036-bd1c-23d3753578e4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\AppDelegate.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\SceneBase.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\SceneDialogueMenu.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\SceneDynamicDialogue.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\SceneFootsteps.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\SceneInteractiveMusic.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\SceneLocalization.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\SceneMain.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\SceneMarkers.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\SceneMusicCallbacks.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\SceneRTPCCarEngine.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\WwiseWrapper.cpp">
-      <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\SoundEngine\Win32\AkDefaultIOHookBlocking.cpp">
       <Filter>AK</Filter>
@@ -69,9 +36,6 @@
     <ClCompile Include="..\..\Common\Helpers.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\SceneMicrophone.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Windows\SoundInput.cpp">
       <Filter>AK</Filter>
     </ClCompile>
@@ -84,55 +48,58 @@
     <ClCompile Include="..\..\Common\SoundInputMgrBase.cpp">
       <Filter>AK</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\ScenePositioning.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="..\Demos\AppDelegate.cpp">
+      <Filter>Demos</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\SceneExternalSources.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="..\Demos\SceneBase.cpp">
+      <Filter>Demos</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\SceneBGM.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="..\Demos\SceneBGM.cpp">
+      <Filter>Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Demos\SceneDialogueMenu.cpp">
+      <Filter>Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Demos\SceneDynamicDialogue.cpp">
+      <Filter>Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Demos\SceneExternalSources.cpp">
+      <Filter>Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Demos\SceneFootsteps.cpp">
+      <Filter>Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Demos\SceneInteractiveMusic.cpp">
+      <Filter>Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Demos\SceneLocalization.cpp">
+      <Filter>Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Demos\SceneMain.cpp">
+      <Filter>Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Demos\SceneMarkers.cpp">
+      <Filter>Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Demos\SceneMicrophone.cpp">
+      <Filter>Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Demos\SceneMusicCallbacks.cpp">
+      <Filter>Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Demos\ScenePositioning.cpp">
+      <Filter>Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Demos\SceneRTPCCarEngine.cpp">
+      <Filter>Demos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Demos\WwiseWrapper.cpp">
+      <Filter>Demos</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SceneBase.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SceneDialogueMenu.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SceneDynamicDialogue.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SceneFootsteps.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SceneInteractiveMusic.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SceneLocalization.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SceneMain.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SceneMarkers.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SceneMusicCallbacks.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SceneRTPCCarEngine.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\WwiseWrapper.h">
-      <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\SoundEngine\Win32\AkDefaultIOHookBlocking.h">
       <Filter>AK</Filter>
@@ -155,9 +122,6 @@
     <ClInclude Include="..\..\Common\Helpers.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\SceneMicrophone.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Windows\SoundInput.h">
       <Filter>AK</Filter>
     </ClInclude>
@@ -170,18 +134,59 @@
     <ClInclude Include="..\..\Common\SoundInputMgrBase.h">
       <Filter>AK</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\ScenePositioning.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SceneExternalSources.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SceneBGM.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Common\IntegrationDemo.h" />
     <ClInclude Include="PlatformCocos.h">
       <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\AppDelegate.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\IntegrationDemo.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\SceneBase.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\SceneBGM.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\SceneDialogueMenu.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\SceneDynamicDialogue.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\SceneExternalSources.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\SceneFootsteps.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\SceneInteractiveMusic.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\SceneLocalization.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\SceneMain.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\SceneMarkers.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\SceneMicrophone.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\SceneMusicCallbacks.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\ScenePositioning.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\SceneRTPCCarEngine.h">
+      <Filter>Demos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Demos\WwiseWrapper.h">
+      <Filter>Demos</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

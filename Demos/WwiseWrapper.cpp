@@ -1,13 +1,12 @@
-#ifdef 	COCOS_INTEGRATION
-  #include "cocos2d.h"
-#else
-  #include <stdio.h>  // vsprintf...
-#endif // COCOS_INTEGRATION
-
-#include "WwiseWrapper.h"
-#include <AK/SoundEngine/Common/AkTypes.h>
 #include <wchar.h>
 
+#ifdef 	COCOS_INTEGRATION
+#include "cocos2d.h"
+#else
+#include <stdio.h>  // vsprintf...
+#endif // COCOS_INTEGRATION
+
+#include <AK/SoundEngine/Common/AkTypes.h>
 #include <AK/Plugin/AllPluginsFactories.h>
 
 #ifdef AK_IOS
@@ -23,27 +22,7 @@
 #include "Platform.h"
 #include "PlatformCocos.h"
 
-// #ifdef AK_WIN
-
-// #ifdef _DEBUG
-// #define MY_SOUND_BANK_PATH SOUNDBANK_PARH //L"../../WwiseProject/GeneratedSoundBanks/Windows/"
-// #else
-// #define MY_SOUND_BANK_PATH L"Wwise/"
-// #endif
-//#elif defined AK_ANDROID
-//const AkOSChar MY_SOUND_BANK_PATH[] = AKTEXT("GeneratedSoundBanks/Android/");
-//#elif defined AK_APPLE
-//#include "TargetConditionals.h"
-//#if TARGET_OS_IPHONE
-//// iOS
-//#define MY_SOUND_BANK_PATH g_szBasePath //"iOS/"
-//#else
-//// MacOS
-//#define MY_SOUND_BANK_PATH "Mac/"
-//#endif
-//#else
-//#error undefied platform
-//#endif
+#include "WwiseWrapper.h"
 
 #ifdef AK_ANDROID
     #include "android/asset_manager.h"
@@ -143,6 +122,8 @@
 #pragma comment( lib, "AkHarmonizerFX.lib")
 #pragma comment( lib, "AkTimeStretchFX.lib")
 #pragma comment( lib, "AkExpanderFX.lib")
+#pragma comment( lib, "AkRecorderFX.lib")
+#pragma comment( lib, "AkReflectFX.lib")
 #pragma comment( lib, "Msacm32.lib") // Microsoft ACM Library
 #endif
 
