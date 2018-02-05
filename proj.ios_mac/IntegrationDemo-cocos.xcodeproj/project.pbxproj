@@ -142,6 +142,7 @@
 		CE9CB9F5202729B600B6E261 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CB9F4202729B500B6E261 /* CoreText.framework */; };
 		CE9CB9F720272B8C00B6E261 /* SoundInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE9CB9F620272B8B00B6E261 /* SoundInput.cpp */; };
 		CE9CB9F92028063000B6E261 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CB9F82028063000B6E261 /* libstdc++.6.0.9.tbd */; };
+		CE9CB9FB20280DB500B6E261 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CB9FA20280DB400B6E261 /* libstdc++.6.0.9.tbd */; };
 		CEDC55582025F7D300A0080D /* Mac in Resources */ = {isa = PBXBuildFile; fileRef = CEDC55572025F7D300A0080D /* Mac */; };
 		CEDC555A2025F7E500A0080D /* iOS in Resources */ = {isa = PBXBuildFile; fileRef = CEDC55592025F7E500A0080D /* iOS */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
@@ -321,6 +322,7 @@
 		CE9CB9F4202729B500B6E261 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		CE9CB9F620272B8B00B6E261 /* SoundInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SoundInput.cpp; path = ios/SoundInput.cpp; sourceTree = SOURCE_ROOT; };
 		CE9CB9F82028063000B6E261 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		CE9CB9FA20280DB400B6E261 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/usr/lib/libstdc++.6.0.9.tbd"; sourceTree = DEVELOPER_DIR; };
 		CEDC55572025F7D300A0080D /* Mac */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Mac; path = ../../WwiseProject/GeneratedSoundBanks/Mac; sourceTree = "<group>"; };
 		CEDC55592025F7E500A0080D /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = ../../WwiseProject/GeneratedSoundBanks/iOS; sourceTree = "<group>"; };
 		CEDC555B20268D1E00A0080D /* PlatformCocos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformCocos.h; path = mac/PlatformCocos.h; sourceTree = "<group>"; };
@@ -338,20 +340,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9CB9F5202729B600B6E261 /* CoreText.framework in Frameworks */,
-				78DD57331C1865CF00A93020 /* CoreAudio.framework in Frameworks */,
+				CE9CB9FB20280DB500B6E261 /* libstdc++.6.0.9.tbd in Frameworks */,
 				ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */,
-				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
-				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
-				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
-				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
-				BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */,
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
+				D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */,
+				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
+				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
+				78DD57331C1865CF00A93020 /* CoreAudio.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				CE9CB9F5202729B600B6E261 /* CoreText.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */,
 				D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */,
-				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
-				D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */,
+				BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */,
+				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9CB9F82028063000B6E261 /* libstdc++.6.0.9.tbd */,
+				CE9CB9FA20280DB400B6E261 /* libstdc++.6.0.9.tbd */,
 				CE9CB9F4202729B500B6E261 /* CoreText.framework */,
 				78DD57341C1865E400A93020 /* AudioUnit.framework */,
 				78DD57321C1865CF00A93020 /* CoreAudio.framework */,
@@ -1017,40 +1021,45 @@
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
-					"-lAkHarmonizerFX",
-					"-lAkPitchShifterFX",
-					"-lAkStereoDelayFX",
-					"-lAkTimeStretchFX",
-					"-lAkMeterFX",
-					"-lAkConvolutionReverbFX",
 					"-lAkAACDecoder",
 					"-lAkAudioInputSource",
-					"-lAkSilenceSource",
-					"-lAkSynthOne",
-					"-lAkPeakLimiterFX",
-					"-lAkRoomVerbFX",
-					"-lAkParametricEQFX",
-					"-lAkGainFX",
-					"-lAkDelayFX",
-					"-lAkMatrixReverbFX",
-					"-lAkExpanderFX",
 					"-lAkCompressorFX",
-					"-lAkSineSource",
-					"-lAkGuitarDistortionFX",
-					"-lAkTremoloFX",
+					"-lAkConvolutionReverbFX",
+					"-lAkDelayFX",
+					"-lAkExpanderFX",
 					"-lAkFlangerFX",
-					"-lAkToneSource",
-					"-lAkSoundSeedImpactFX",
+					"-lAkGainFX",
+					"-lAkGuitarDistortionFX",
+					"-lAkHarmonizerFX",
+					"-lAkMatrixReverbFX",
 					"-lAkMemoryMgr",
+					"-lAkMeterFX",
 					"-lAkMusicEngine",
+					"-lAkParametricEQFX",
+					"-lAkPeakLimiterFX",
+					"-lAkPitchShifterFX",
+					"-lAkRecorderFX",
+					"-lAkReflectFX",
+					"-lAkRoomVerbFX",
+					"-lAkSilenceSource",
+					"-lAkSineSource",
+					"-lAkSoundEngine",
+					"-lAkSoundSeedImpactFX",
+					"-lAkSoundSeedWind",
+					"-lAkSoundSeedWoosh",
+					"-lAkStereoDelayFX",
+					"-lAkStreamMgr",
+					"-lAkSynthOne",
+					"-lAkTimeStretchFX",
+					"-lAkToneSource",
+					"-lAkTremoloFX",
+					"-lAkVorbisDecoder",
+					"-lAuroHeadphoneFX",
+					"-lAuroPannerMixer",
+					"-lCrankcaseAudioREVModelPlayerFX",
 					"-lMcDSPLimiterFX",
 					"-lMcDSPFutzBoxFX",
-					"-lAkSoundSeedWoosh",
-					"-lAkSoundSeedWind",
-					"-lAkStreamMgr",
-					"-lAkVorbisDecoder",
 					"-lCommunicationCentral",
-					"-lAkSoundEngine",
 					"-lObjC",
 					"-l\"cocos2d iOS\"",
 				);
