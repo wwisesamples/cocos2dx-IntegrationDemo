@@ -141,6 +141,7 @@
 		CE9CB9F3202723E600B6E261 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97681C15C0FA00D9BEC4 /* stdafx.cpp */; };
 		CE9CB9F5202729B600B6E261 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CB9F4202729B500B6E261 /* CoreText.framework */; };
 		CE9CB9F720272B8C00B6E261 /* SoundInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE9CB9F620272B8B00B6E261 /* SoundInput.cpp */; };
+		CE9CB9F92028063000B6E261 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CB9F82028063000B6E261 /* libstdc++.6.0.9.tbd */; };
 		CEDC55582025F7D300A0080D /* Mac in Resources */ = {isa = PBXBuildFile; fileRef = CEDC55572025F7D300A0080D /* Mac */; };
 		CEDC555A2025F7E500A0080D /* iOS in Resources */ = {isa = PBXBuildFile; fileRef = CEDC55592025F7E500A0080D /* iOS */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
@@ -319,6 +320,7 @@
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CE9CB9F4202729B500B6E261 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		CE9CB9F620272B8B00B6E261 /* SoundInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SoundInput.cpp; path = ios/SoundInput.cpp; sourceTree = SOURCE_ROOT; };
+		CE9CB9F82028063000B6E261 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		CEDC55572025F7D300A0080D /* Mac */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Mac; path = ../../WwiseProject/GeneratedSoundBanks/Mac; sourceTree = "<group>"; };
 		CEDC55592025F7E500A0080D /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = ../../WwiseProject/GeneratedSoundBanks/iOS; sourceTree = "<group>"; };
 		CEDC555B20268D1E00A0080D /* PlatformCocos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformCocos.h; path = mac/PlatformCocos.h; sourceTree = "<group>"; };
@@ -357,19 +359,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				784DE8AB1C05AB4D00667EFE /* AudioUnit.framework in Frameworks */,
-				784DE8A81C05A9B400667EFE /* CoreAudio.framework in Frameworks */,
+				CE9CB9F92028063000B6E261 /* libstdc++.6.0.9.tbd in Frameworks */,
 				ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */,
 				5087E76717EB910900C73F5D /* libz.dylib in Frameworks */,
-				8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */,
-				503AE11B17EB9C5A00D1A890 /* IOKit.framework in Frameworks */,
-				5087E78B17EB975400C73F5D /* OpenGL.framework in Frameworks */,
 				5087E78917EB974C00C73F5D /* AppKit.framework in Frameworks */,
-				5087E76317EB910900C73F5D /* Foundation.framework in Frameworks */,
-				5087E76817EB910900C73F5D /* QuartzCore.framework in Frameworks */,
-				5087E76917EB910900C73F5D /* OpenAL.framework in Frameworks */,
 				5087E76A17EB910900C73F5D /* AVFoundation.framework in Frameworks */,
 				5087E76B17EB910900C73F5D /* AudioToolbox.framework in Frameworks */,
+				784DE8AB1C05AB4D00667EFE /* AudioUnit.framework in Frameworks */,
+				784DE8A81C05A9B400667EFE /* CoreAudio.framework in Frameworks */,
+				5087E76317EB910900C73F5D /* Foundation.framework in Frameworks */,
+				503AE11B17EB9C5A00D1A890 /* IOKit.framework in Frameworks */,
+				5087E76917EB910900C73F5D /* OpenAL.framework in Frameworks */,
+				5087E78B17EB975400C73F5D /* OpenGL.framework in Frameworks */,
+				5087E76817EB910900C73F5D /* QuartzCore.framework in Frameworks */,
+				8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +427,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE9CB9F82028063000B6E261 /* libstdc++.6.0.9.tbd */,
 				CE9CB9F4202729B500B6E261 /* CoreText.framework */,
 				78DD57341C1865E400A93020 /* AudioUnit.framework */,
 				78DD57321C1865CF00A93020 /* CoreAudio.framework */,
@@ -1172,6 +1176,7 @@
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/mac/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/bin";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mac/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1217,39 +1222,44 @@
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_MAC_BEGIN)",
 					"$(_COCOS_LIB_MAC_END)",
-					"-lAkHarmonizerFX",
-					"-lAkPitchShifterFX",
-					"-lAkStereoDelayFX",
-					"-lAkTimeStretchFX",
-					"-lAkMeterFX",
-					"-lAkConvolutionReverbFX",
 					"-lAkAACDecoder",
 					"-lAkAudioInputSource",
-					"-lAkSilenceSource",
-					"-lAkSynthOne",
-					"-lAkPeakLimiterFX",
-					"-lAkRoomVerbFX",
-					"-lAkParametricEQFX",
-					"-lAkGainFX",
-					"-lAkDelayFX",
-					"-lAkMatrixReverbFX",
-					"-lAkExpanderFX",
 					"-lAkCompressorFX",
-					"-lAkSineSource",
-					"-lAkGuitarDistortionFX",
-					"-lAkTremoloFX",
+					"-lAkConvolutionReverbFX",
+					"-lAkDelayFX",
+					"-lAkExpanderFX",
 					"-lAkFlangerFX",
-					"-lAkToneSource",
-					"-lAkSoundSeedImpactFX",
+					"-lAkGainFX",
+					"-lAkGuitarDistortionFX",
+					"-lAkHarmonizerFX",
+					"-lAkMatrixReverbFX",
 					"-lAkMemoryMgr",
+					"-lAkMeterFX",
 					"-lAkMusicEngine",
+					"-lAkParametricEQFX",
+					"-lAkPeakLimiterFX",
+					"-lAkPitchShifterFX",
+					"-lAkRecorderFX",
+					"-lAkReflectFX",
+					"-lAkRoomVerbFX",
+					"-lAkSilenceSource",
+					"-lAkSineSource",
+					"-lAkSoundEngine",
+					"-lAkSoundSeedImpactFX",
+					"-lAkSoundSeedWind",
+					"-lAkSoundSeedWoosh",
+					"-lAkStereoDelayFX",
+					"-lAkStreamMgr",
+					"-lAkSynthOne",
+					"-lAkTimeStretchFX",
+					"-lAkToneSource",
+					"-lAkTremoloFX",
+					"-lAkVorbisDecoder",
+					"-lAuroHeadphoneFX",
+					"-lAuroPannerMixer",
+					"-lCrankcaseAudioREVModelPlayerFX",
 					"-lMcDSPLimiterFX",
 					"-lMcDSPFutzBoxFX",
-					"-lAkSoundSeedWoosh",
-					"-lAkSoundSeedWind",
-					"-lAkStreamMgr",
-					"-lAkVorbisDecoder",
-					"-lAkSoundEngine",
 					"-lCommunicationCentral",
 					"-lObjC",
 					"-l\"cocos2d Mac\"",
@@ -1271,6 +1281,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/mac/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/bin";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mac/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1313,6 +1324,46 @@
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_MAC_BEGIN)",
 					"$(_COCOS_LIB_MAC_END)",
+					"-lAkAACDecoder",
+					"-lAkAudioInputSource",
+					"-lAkCompressorFX",
+					"-lAkConvolutionReverbFX",
+					"-lAkDelayFX",
+					"-lAkExpanderFX",
+					"-lAkFlangerFX",
+					"-lAkGainFX",
+					"-lAkGuitarDistortionFX",
+					"-lAkHarmonizerFX",
+					"-lAkMatrixReverbFX",
+					"-lAkMemoryMgr",
+					"-lAkMeterFX",
+					"-lAkMusicEngine",
+					"-lAkParametricEQFX",
+					"-lAkPeakLimiterFX",
+					"-lAkPitchShifterFX",
+					"-lAkRecorderFX",
+					"-lAkReflectFX",
+					"-lAkRoomVerbFX",
+					"-lAkSilenceSource",
+					"-lAkSineSource",
+					"-lAkSoundEngine",
+					"-lAkSoundSeedImpactFX",
+					"-lAkSoundSeedWind",
+					"-lAkSoundSeedWoosh",
+					"-lAkStereoDelayFX",
+					"-lAkStreamMgr",
+					"-lAkSynthOne",
+					"-lAkTimeStretchFX",
+					"-lAkToneSource",
+					"-lAkTremoloFX",
+					"-lAkVorbisDecoder",
+					"-lAuroHeadphoneFX",
+					"-lAuroPannerMixer",
+					"-lCrankcaseAudioREVModelPlayerFX",
+					"-lMcDSPLimiterFX",
+					"-lMcDSPFutzBoxFX",
+					"-lObjC",
+					"-l\"cocos2d Mac\"",
 				);
 				PRODUCT_NAME = "IntegrationDemo-cocos-desktop";
 				SDKROOT = macosx;
