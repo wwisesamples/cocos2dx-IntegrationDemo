@@ -271,6 +271,7 @@ LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Android/libzip/lib
 
 
 LOCAL_SRC_FILES := main.cpp \
+				   ../PlatformCocos.cpp \
                    ../../Classes/AppDelegate.cpp \
                    ../../Classes/WwiseWrapper.cpp \
                    ${WWISESDK}/samples/SoundEngine/Common/AkFileLocationBase.cpp \
