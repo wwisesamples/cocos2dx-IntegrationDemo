@@ -96,6 +96,9 @@
     <ClCompile Include="..\Classes\WwiseWrapper.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="PlatformCocos.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
