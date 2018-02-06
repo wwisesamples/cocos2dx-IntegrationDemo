@@ -364,10 +364,12 @@ void SceneFootsteps::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos
 
 void SceneFootsteps::onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* unused_event)
 {
+    if (m_key != EventKeyboard::KeyCode::KEY_ESCAPE) {
+        UpdateGameObjPos(m_LastX, m_LastY);
+    }
+    
     m_bPressed = false;
     m_key = EventKeyboard::KeyCode::KEY_NONE;
-
-    UpdateGameObjPos(m_LastX, m_LastY);
 }
 
 
