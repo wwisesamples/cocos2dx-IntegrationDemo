@@ -198,16 +198,6 @@ static AKRESULT DemoInterruptCallback(bool in_bEnterInterruption, void* in_pCook
 // and MUST be defined by the game developer.
 namespace AK
 {
-#ifndef AK_MAC
-    void * AllocHook(size_t in_size)
-    {
-	return malloc(in_size);
-    }
-    void FreeHook(void * in_ptr)
-    {
-	free(in_ptr);
-    }
-#endif
 #ifdef WIN32
     // Note: VirtualAllocHook() may be used by I/O pools of the default implementation
     // of the Stream Manager, to allow "true" unbuffered I/O (using FILE_FLAG_NO_BUFFERING

@@ -292,7 +292,7 @@ LD_NO_PIE=NO
 CACHE_ROOT=/var/folders/43/8yff4p7x57z7d1wdgjzglfgw0000gn/C/com.apple.DeveloperTools/9.2-9C40b/Xcode
 SYSTEM_DEVELOPER_DEMOS_DIR=/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples
 PROJECT_DERIVED_FILE_DIR=/Users/kakyo/Library/Developer/Xcode/DerivedData/IntegrationDemo-cocos-aiejwgfxuzofrhchfrpckoznwlph/Build/Intermediates.noindex/IntegrationDemo-cocos.build/DerivedSources
-GCC_PREPROCESSOR_DEFINITIONS=USE_FILE32API CC_TARGET_OS_MAC COCOS2D_DEBUG=1 CC_ENABLE_CHIPMUNK_INTEGRATION=1 _DEBUG AK_MAC
+GCC_PREPROCESSOR_DEFINITIONS=USE_FILE32API CC_TARGET_OS_MAC COCOS2D_DEBUG=1 CC_ENABLE_CHIPMUNK_INTEGRATION=1 _DEBUG
 JAVA_ARCHIVE_TYPE=JAR
 LEGACY_DEVELOPER_DIR=/Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer
 ALWAYS_USE_SEPARATE_HEADERMAPS=NO
