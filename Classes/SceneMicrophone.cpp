@@ -57,15 +57,8 @@ bool SceneMicrophone::init()
 	return false;
     }
     cocos2d::Size windowSize = Director::getInstance()->getWinSize();
-#if defined(AK_ANDROID) || defined(AK_APPLE)
-    float descriptionPosX = windowSize.width  * 0.50f;
-    float descriptionPosY = windowSize.height * 0.90f;
-    float selectButtonPosX = windowSize.height * 0.50f;
-#else
-    float descriptionPosX = windowSize.width  * 0.50f;
-    float descriptionPosY = windowSize.height * 0.90f;
-    float selectButtonPosX = windowSize.width  * 0.15f;
-#endif // AK_ANDROID
+    float descriptionPosY = windowSize.height * SCREEN_POS_SCALER_DESCRIPTION_Y;
+    float selectButtonPosX = g_isLandscape ? windowSize.width * SCREEN_POS_SCALER_SELBUTTON_X : windowSize.height * SCREEN_POS_SCALER_SELBUTTON_X;
 
 
     /////////////////////////////

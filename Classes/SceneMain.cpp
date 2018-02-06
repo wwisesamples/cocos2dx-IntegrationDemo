@@ -76,7 +76,6 @@ bool SceneMain::init()
     cocos2d::Size windowSize = Director::getInstance()->getWinSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-//    float descriptionPosX = windowSize.width  * 0.50f;
     float descriptionPosY = windowSize.height * SCREEN_POS_SCALER_DESCRIPTION_Y;
     float selectButtonPosX = windowSize.height * SCREEN_POS_SCALER_SELBUTTON_X;
 

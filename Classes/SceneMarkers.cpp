@@ -78,11 +78,7 @@ bool SceneMarkers::init()
 
     float descriptionPosX = windowSize.width  * 0.50f;
     float descriptionPosY = windowSize.height * 0.80f;
-#if  defined(AK_IOS)
-    float selectButtonPosX = windowSize.height * 0.50f;
-#else
-    float selectButtonPosX = windowSize.width  * 0.30f;
-#endif
+    float selectButtonPosX = g_isLandscape ? windowSize.width * 0.30f : windowSize.height * 0.50f;
 
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program

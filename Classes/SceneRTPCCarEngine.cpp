@@ -61,17 +61,9 @@ bool SceneRTPCCarEngine::init()
     LOGAK("<SceneRTPCCarEngine> windowVisibleSize x:y =(%d:%d)", (int)window_size.width, (int)window_size.height);
     //windowSize = window_size;
 
-
-#if defined(AK_ANDROID) || defined(AK_IOS)
     float descriptionPosX = windowSize.width  * 0.50f;
-    float descriptionPosY = windowSize.height * 0.90f;
-    float selectButtonPosX = windowSize.width  * 0.50f;
-
-#else
-    float descriptionPosX = windowSize.width  * 0.50f;
-    float descriptionPosY = windowSize.height * 0.90f;
-    float selectButtonPosX = windowSize.width  * 0.15f;
-#endif // AK_ANDROID
+    float descriptionPosY = windowSize.height * SCREEN_POS_SCALER_DESCRIPTION_Y;
+    float selectButtonPosX = g_isLandscape ? windowSize.width * SCREEN_POS_SCALER_SELBUTTON_X : windowSize.height * SCREEN_POS_SCALER_SELBUTTON_X;
 
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
