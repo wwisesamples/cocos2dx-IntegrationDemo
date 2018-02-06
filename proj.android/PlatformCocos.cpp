@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-bool g_isLandscape = true;
+bool g_isLandscape = false;
 
 // Alloc hook that need to be define by the game
 namespace AK

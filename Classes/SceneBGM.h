@@ -12,8 +12,8 @@ public:
     virtual bool init();
     virtual void onRelease();
 
-    void Recordable_Pressed(cocos2d::Ref* pSender);
-    void NonRecordable_Pressed(cocos2d::Ref* pSender);
+    void Recordable_LabelPressed(cocos2d::Ref* pSender);
+    void NonRecordable_LabelPressed(cocos2d::Ref* pSender);
 
     // implement the "static create()" method manually
     CREATE_FUNC(SceneBGM);
