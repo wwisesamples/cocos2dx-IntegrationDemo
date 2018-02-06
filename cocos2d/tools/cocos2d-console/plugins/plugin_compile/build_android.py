@@ -272,7 +272,7 @@ class AndroidBuilder(object):
         else:
             # update project
             sdk_tool_path = os.path.join(sdk_tools_folder, "android")
-            command = "%s update project -t %s -p %s" % (cocos.CMDRunner.convert_path_to_cmd(sdk_tool_path), target_str, manifest_path)
+            command = '%s update project -t %s -p "%s" --subprojects' % (cocos.CMDRunner.convert_path_to_cmd(sdk_tool_path), target_str, manifest_path)
             self._run_cmd(command)
 
             # update lib-projects
@@ -337,9 +337,9 @@ class AndroidBuilder(object):
         ndk_module_path= 'NDK_MODULE_PATH=' + ndk_module_path
 
         if ndk_build_param is None:
-            ndk_build_cmd = '%s -C %s %s' % (ndk_path, ndk_work_dir, ndk_module_path)
+            ndk_build_cmd = '%s -C "%s" "%s"' % (ndk_path, ndk_work_dir, ndk_module_path)
         else:
-            ndk_build_cmd = '%s -C %s %s %s' % (ndk_path, ndk_work_dir, ' '.join(ndk_build_param), ndk_module_path)
+            ndk_build_cmd = '%s -C "%s" %s "%s"' % (ndk_path, ndk_work_dir, ' '.join(ndk_build_param), ndk_module_path)
 
         ndk_build_cmd = '%s NDK_TOOLCHAIN_VERSION=%s' % (ndk_build_cmd, toolchain_version)
 
@@ -370,7 +370,7 @@ class AndroidBuilder(object):
                 abs_lib_path = os.path.normpath(abs_lib_path)
                 if os.path.isdir(abs_lib_path):
                     target_str = self.check_android_platform(sdk_root, android_platform, abs_lib_path)
-                    command = "%s update lib-project -p %s -t %s" % (cocos.CMDRunner.convert_path_to_cmd(sdk_tool_path), abs_lib_path, target_str)
+                    command = '%s update lib-project -p "%s" -t %s' % (cocos.CMDRunner.convert_path_to_cmd(sdk_tool_path), abs_lib_path, target_str)
                     self._run_cmd(command)
 
                     self.update_lib_projects(sdk_root, sdk_tool_path, android_platform, abs_lib_path)
