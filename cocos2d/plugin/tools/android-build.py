@@ -76,9 +76,9 @@ def do_build(plugin_root, cocos_root, ndk_root, app_android_root, ndk_build_para
         ndk_module_path = 'NDK_MODULE_PATH=%s/publish:%s:%s/external:%s/cocos' % (plugin_root, cocos_root, cocos_root, cocos_root)
 
     if ndk_build_param == None:
-        command = '%s -C "%s" "%s"' % (ndk_path, app_android_root, ndk_module_path)
+        command = '%s -C \"%s\" "%s"' % (ndk_path, app_android_root, ndk_module_path)
     else:
-        command = '%s -C "%s" %s "%s"' % (ndk_path, app_android_root, ndk_build_param, ndk_module_path)
+        command = '%s -C \"%s\" %s "%s"' % (ndk_path, app_android_root, ndk_build_param, ndk_module_path)
     os.system(command)
 
 def copy_files(src, dst):

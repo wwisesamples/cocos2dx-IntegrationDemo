@@ -1,4 +1,4 @@
-#include "AppDelegate.h"
+#include "C:\\Audiokinetic\\Wwise_2017.1.4.6407\\SDK\\samples\\IntegrationDemo\\cocos2dx-Demo\\Classes\\AppDelegate.h"
 #include "cocos2d.h"
 //#include "platform/android/jni/JniHelper.h"
 //#include <jni.h>

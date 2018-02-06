@@ -337,9 +337,9 @@ class AndroidBuilder(object):
         ndk_module_path= 'NDK_MODULE_PATH=' + ndk_module_path
 
         if ndk_build_param is None:
-            ndk_build_cmd = '%s -C "%s" "%s"' % (ndk_path, ndk_work_dir, ndk_module_path)
+            ndk_build_cmd = '%s -C \"%s\" "%s"' % (ndk_path, ndk_work_dir, ndk_module_path)
         else:
-            ndk_build_cmd = '%s -C "%s" %s "%s"' % (ndk_path, ndk_work_dir, ' '.join(ndk_build_param), ndk_module_path)
+            ndk_build_cmd = '%s -C \"%s\" %s "%s"' % (ndk_path, ndk_work_dir, ' '.join(ndk_build_param), ndk_module_path)
 
         ndk_build_cmd = '%s NDK_TOOLCHAIN_VERSION=%s' % (ndk_build_cmd, toolchain_version)
 

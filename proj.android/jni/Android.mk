@@ -43,6 +43,7 @@ include $(CLEAR_VARS)
 #SDK_LIB_DIR := ../../../../../../../$(TARGET_PLATFORM)_$(TARGET_ARCH_ABI)/$(AK_CONFIG)/lib
 #SDK_LIB_DIR := $(LOCAL_PATH)/$(TARGET_PLATFORM)_$(TARGET_ARCH_ABI)/$(AK_CONFIG)/lib
 SDK_LIB_DIR := ${WWISESDK}/$(TARGET_PLATFORM)_$(TARGET_ARCH_ABI)/$(AK_CONFIG)/lib
+$(warning $(SDK_LIB_DIR))
 ifneq ($(AK_CONFIG), Release)
 	LOCAL_MODULE            := CommunicationCentral
 	LOCAL_SRC_FILES         := $(SDK_LIB_DIR)/libCommunicationCentral.a 
@@ -52,7 +53,6 @@ else
 	LOCAL_EXPORT_CFLAGS 	+= -DAK_OPTIMIZED
 endif
 
-#include $(CLEAR_VARS)
 LOCAL_MODULE            := AkMemoryMgr
 LOCAL_SRC_FILES         := $(SDK_LIB_DIR)/libAkMemoryMgr.a 
 include $(PREBUILT_STATIC_LIBRARY)
@@ -63,6 +63,11 @@ LOCAL_SRC_FILES 		:= $(SDK_LIB_DIR)/libAkSoundEngine.a
 include $(PREBUILT_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE            := AkSpatialAudio
+LOCAL_SRC_FILES 		:= $(SDK_LIB_DIR)/libAkSpatialAudio.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE            := AkMeterFX
 LOCAL_SRC_FILES 		:= $(SDK_LIB_DIR)/libAkMeterFX.a
 include $(PREBUILT_STATIC_LIBRARY)
@@ -70,6 +75,11 @@ include $(PREBUILT_STATIC_LIBRARY)
 include $(CLEAR_VARS)
 LOCAL_MODULE            := AkRecorderFX
 LOCAL_SRC_FILES 		:= $(SDK_LIB_DIR)/libAkRecorderFX.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE            := AkReflectFX
+LOCAL_SRC_FILES 		:= $(SDK_LIB_DIR)/libAkReflectFX.a
 include $(PREBUILT_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -218,6 +228,20 @@ LOCAL_SRC_FILES 		:= $(SDK_LIB_DIR)/libAkGainFX.a
 include $(PREBUILT_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE            := AuroHeadphoneFX
+LOCAL_SRC_FILES 		:= $(SDK_LIB_DIR)/libAuroHeadphoneFX.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE            := AuroPannerMixer
+LOCAL_SRC_FILES 		:= $(SDK_LIB_DIR)/libAuroPannerMixer.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE            := CrankcaseAudioREVModelPlayerFX
+LOCAL_SRC_FILES 		:= $(SDK_LIB_DIR)/libCrankcaseAudioREVModelPlayerFX.a
+include $(PREBUILT_STATIC_LIBRARY)
+
 LOCAL_MODULE            := zip
 LOCAL_SRC_FILES         := $(SDK_LIB_DIR)/libzip.a 
 include $(PREBUILT_STATIC_LIBRARY)
@@ -232,6 +256,7 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../proj.android
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Android
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Common
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Android/libzip/lib
@@ -247,7 +272,7 @@ LOCAL_C_INCLUDES += ${WWISESDK}/samples/IntegrationDemo/cocos2d-x/cocos2d/extern
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Android/libzip/lib
 
 
-LOCAL_SRC_FILES := hellocpp/main.cpp  \
+LOCAL_SRC_FILES := main.cpp \
                    ../../Classes/AppDelegate.cpp \
                    ../../Classes/WwiseWrapper.cpp \
                    ${WWISESDK}/samples/SoundEngine/Common/AkFileLocationBase.cpp \
@@ -309,35 +334,40 @@ AkConvolutionReverbFX \
 AkDelayFX \
 AkExpanderFX \
 AkFlangerFX \
+AkGainFX \
 AkGuitarDistortionFX \
 AkHarmonizerFX \
 AkMatrixReverbFX \
 AkMemoryMgr \
 AkMeterFX \
-AkRecorderFX \
 AkParametricEQFX \
 AkPeakLimiterFX \
 AkPitchShifterFX \
+AkRecorderFX \
+AkReflectFX \
 AkRoomVerbFX \
 AkSilenceSource \
-AkSynthOne \
 AkSineSource \
 AkSoundSeedImpactFX \
 AkSoundSeedWind \
 AkSoundSeedWoosh \
+AkSpatialAudio \
 AkStereoDelayFX \
 AkStreamMgr \
+AkSynthOne \
 AkTimeStretchFX \
 AkToneSource \
 AkTremoloFX \
 AkVorbisDecoder \
+AuroHeadphoneFX \
+AuroPannerMixer \
 McDSPFutzBoxFX \
-AkGainFX \
 McDSPLimiterFX \
+CrankcaseAudioREVModelPlayerFX \
 zip
 
 include $(BUILD_SHARED_LIBRARY)
-#include $(PREBUILT_STATIC_LIBRARY)
+
 $(call import-module,.)
 
 #$(call import-module,android/native_app_glue)
@@ -345,6 +375,5 @@ $(call import-module,.)
 #$(call import-module,3d)
 #$(call import-module,audio/android)
 #$(call import-module,Box2D)
-# ’Ç‰Á
 #$(call import-module,extensions)
 

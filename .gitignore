@@ -2,6 +2,12 @@
 *.log
 *.bak
 *.a
+*.d
+*.o
+bin/*
+proj.android/bin
+proj.android/obj
+proj.android/objs-debug
 proj.ios_mac/IntegrationDemo-cocos.xcodeproj/xcuserdata/*
 proj.ios_mac/IntegrationDemo-cocos.xcodeproj/*.xcworkspace/*
 proj.ios_mac/ios/Debug-iphoneos

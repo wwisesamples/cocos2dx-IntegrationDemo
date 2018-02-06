@@ -395,7 +395,7 @@
 				CE9CB9F620272B8B00B6E261 /* SoundInput.cpp */,
 			);
 			name = ios;
-			path = Demos;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -415,7 +415,7 @@
 				78EA97801C15DF5700D9BEC4 /* Mac */,
 				787070FD1BFDB5CE002EAAF4 /* iOS */,
 				787070DF1BFCEB51002EAAF4 /* Wwise LowLevelIO iOS */,
-				46880B8319C43A87006E1F66 /* Demos */,
+				46880B8319C43A87006E1F66 /* Classes */,
 				46880B7519C43A67006E1F66 /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				080E96DDFE201D6D7F000001 /* ios */,
@@ -484,7 +484,7 @@
 			path = ../Resources;
 			sourceTree = "<group>";
 		};
-		46880B8319C43A87006E1F66 /* Demos */ = {
+		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
@@ -520,8 +520,8 @@
 				787070DC1BFCE09A002EAAF4 /* WwiseWrapper.cpp */,
 				787070DD1BFCE09A002EAAF4 /* WwiseWrapper.h */,
 			);
-			name = Demos;
-			path = ../Demos;
+			name = Classes;
+			path = ../Classes;
 			sourceTree = "<group>";
 		};
 		503AE0F517EB97AB00D1A890 /* Icons */ = {
@@ -991,7 +991,7 @@
 					"$(WWISESDK)/include",
 					"$(SRCROOT)/../../iOS",
 					"$(PROJECT_DIR)/ios",
-					"$(SRCROOT)/../Demos",
+					"$(SRCROOT)/../Classes",
 					"$(SRCROOT)/../../MenuSystem",
 					"$(SRCROOT)/../../Common",
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios",
@@ -1098,7 +1098,7 @@
 					"$(WWISESDK)/include",
 					"$(SRCROOT)/../../iOS",
 					"$(PROJECT_DIR)/ios",
-					"$(SRCROOT)/../Demos",
+					"$(SRCROOT)/../Classes",
 					"$(SRCROOT)/../../MenuSystem",
 					"$(SRCROOT)/../../Common",
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios",
@@ -1202,7 +1202,7 @@
 					"$(inherited)",
 					"$(WWISESDK)/include",
 					"$(SRCROOT)/../../Mac",
-					"$(SRCROOT)/../Demos",
+					"$(SRCROOT)/../Classes",
 					"$(SRCROOT)/../cocos2d/cocos/platform/mac",
 					"$(SRCROOT)/../cocos2d/external/glfw3/include/mac",
 					"$(WWISESDK)/samples/SoundEngine/POSIX",
@@ -1304,7 +1304,7 @@
 					"$(inherited)",
 					"$(WWISESDK)/include",
 					"$(SRCROOT)/../../Mac",
-					"$(SRCROOT)/../Demos",
+					"$(SRCROOT)/../Classes",
 					"$(SRCROOT)/../cocos2d/cocos/platform/mac",
 					"$(SRCROOT)/../cocos2d/external/glfw3/include/mac",
 					"$(WWISESDK)/samples/SoundEngine/POSIX",
@@ -1395,7 +1395,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(WWISESDK)/include",
-					"$(SRCROOT)/../Demos",
+					"$(SRCROOT)/../Classes",
 					"$(SRCROOT)/../cocos2d",
 					"$(SRCROOT)/../cocos2d/cocos",
 					"$(SRCROOT)/../cocos2d/cocos/base",
@@ -1476,7 +1476,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(WWISESDK)/include",
-					"$(SRCROOT)/../Demos",
+					"$(SRCROOT)/../Classes",
 					"$(SRCROOT)/../cocos2d",
 					"$(SRCROOT)/../cocos2d/cocos",
 					"$(SRCROOT)/../cocos2d/cocos/base",

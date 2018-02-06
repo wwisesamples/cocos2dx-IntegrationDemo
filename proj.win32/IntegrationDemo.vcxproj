@@ -75,7 +75,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..;../Demos;../proj.win32;../../../../../SDK/include;../../Common;../../Windows;../../MenuSystem;../../../SoundEngine/Win32;../../../SoundEngine/Common;../cocos2d/cocos/audio/include;../cocos2d/external;../cocos2d/external/chipmunk/include/chipmunk;../cocos2d/extensions;../cocos2d/cocos/platform;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END);$(DXSDK_DIR)/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..;../Classes;../proj.win32;../../../../../SDK/include;../../Common;../../Windows;../../MenuSystem;../../../SoundEngine/Win32;../../../SoundEngine/Common;../cocos2d/cocos/audio/include;../cocos2d/external;../cocos2d/external/chipmunk/include/chipmunk;../cocos2d/extensions;../cocos2d/cocos/platform;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END);$(DXSDK_DIR)/include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;INTEGRATIONDEMO_BGM;COCOS_INTEGRATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -121,7 +121,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..;../Demos;../proj.win32;../../../../../SDK/include;../../Common;../../Windows;../../MenuSystem;../../../SoundEngine/Win32;../../../SoundEngine/Common;../cocos2d/cocos/audio/include;../cocos2d/external;../cocos2d/external/chipmunk/include/chipmunk;../cocos2d/extensions;../cocos2d/cocos/platform;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END);$(DXSDK_DIR)/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..;../Classes;../proj.win32;../../../../../SDK/include;../../Common;../../Windows;../../MenuSystem;../../../SoundEngine/Win32;../../../SoundEngine/Common;../cocos2d/cocos/audio/include;../cocos2d/external;../cocos2d/external/chipmunk/include/chipmunk;../cocos2d/extensions;../cocos2d/cocos/platform;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END);$(DXSDK_DIR)/include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;COCOS_INTEGRATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -161,22 +161,22 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\..\Common\SoundInputMgrBase.cpp" />
     <ClCompile Include="..\..\Windows\SoundInput.cpp" />
     <ClCompile Include="..\..\Windows\SoundInputMgr.cpp" />
-    <ClCompile Include="..\Demos\AppDelegate.cpp" />
-    <ClCompile Include="..\Demos\SceneBase.cpp" />
-    <ClCompile Include="..\Demos\SceneBGM.cpp" />
-    <ClCompile Include="..\Demos\SceneDialogueMenu.cpp" />
-    <ClCompile Include="..\Demos\SceneDynamicDialogue.cpp" />
-    <ClCompile Include="..\Demos\SceneExternalSources.cpp" />
-    <ClCompile Include="..\Demos\SceneFootsteps.cpp" />
-    <ClCompile Include="..\Demos\SceneInteractiveMusic.cpp" />
-    <ClCompile Include="..\Demos\SceneLocalization.cpp" />
-    <ClCompile Include="..\Demos\SceneMain.cpp" />
-    <ClCompile Include="..\Demos\SceneMarkers.cpp" />
-    <ClCompile Include="..\Demos\SceneMicrophone.cpp" />
-    <ClCompile Include="..\Demos\SceneMusicCallbacks.cpp" />
-    <ClCompile Include="..\Demos\ScenePositioning.cpp" />
-    <ClCompile Include="..\Demos\SceneRTPCCarEngine.cpp" />
-    <ClCompile Include="..\Demos\WwiseWrapper.cpp" />
+    <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\SceneBase.cpp" />
+    <ClCompile Include="..\Classes\SceneBGM.cpp" />
+    <ClCompile Include="..\Classes\SceneDialogueMenu.cpp" />
+    <ClCompile Include="..\Classes\SceneDynamicDialogue.cpp" />
+    <ClCompile Include="..\Classes\SceneExternalSources.cpp" />
+    <ClCompile Include="..\Classes\SceneFootsteps.cpp" />
+    <ClCompile Include="..\Classes\SceneInteractiveMusic.cpp" />
+    <ClCompile Include="..\Classes\SceneLocalization.cpp" />
+    <ClCompile Include="..\Classes\SceneMain.cpp" />
+    <ClCompile Include="..\Classes\SceneMarkers.cpp" />
+    <ClCompile Include="..\Classes\SceneMicrophone.cpp" />
+    <ClCompile Include="..\Classes\SceneMusicCallbacks.cpp" />
+    <ClCompile Include="..\Classes\ScenePositioning.cpp" />
+    <ClCompile Include="..\Classes\SceneRTPCCarEngine.cpp" />
+    <ClCompile Include="..\Classes\WwiseWrapper.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -192,22 +192,22 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\..\Common\SoundInputMgrBase.h" />
     <ClInclude Include="..\..\Windows\SoundInput.h" />
     <ClInclude Include="..\..\Windows\SoundInputMgr.h" />
-    <ClInclude Include="..\Demos\AppDelegate.h" />
-    <ClInclude Include="..\Demos\SceneBase.h" />
-    <ClInclude Include="..\Demos\SceneBGM.h" />
-    <ClInclude Include="..\Demos\SceneDialogueMenu.h" />
-    <ClInclude Include="..\Demos\SceneDynamicDialogue.h" />
-    <ClInclude Include="..\Demos\SceneExternalSources.h" />
-    <ClInclude Include="..\Demos\SceneFootsteps.h" />
-    <ClInclude Include="..\Demos\SceneInteractiveMusic.h" />
-    <ClInclude Include="..\Demos\SceneLocalization.h" />
-    <ClInclude Include="..\Demos\SceneMain.h" />
-    <ClInclude Include="..\Demos\SceneMarkers.h" />
-    <ClInclude Include="..\Demos\SceneMicrophone.h" />
-    <ClInclude Include="..\Demos\SceneMusicCallbacks.h" />
-    <ClInclude Include="..\Demos\ScenePositioning.h" />
-    <ClInclude Include="..\Demos\SceneRTPCCarEngine.h" />
-    <ClInclude Include="..\Demos\WwiseWrapper.h" />
+    <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\SceneBase.h" />
+    <ClInclude Include="..\Classes\SceneBGM.h" />
+    <ClInclude Include="..\Classes\SceneDialogueMenu.h" />
+    <ClInclude Include="..\Classes\SceneDynamicDialogue.h" />
+    <ClInclude Include="..\Classes\SceneExternalSources.h" />
+    <ClInclude Include="..\Classes\SceneFootsteps.h" />
+    <ClInclude Include="..\Classes\SceneInteractiveMusic.h" />
+    <ClInclude Include="..\Classes\SceneLocalization.h" />
+    <ClInclude Include="..\Classes\SceneMain.h" />
+    <ClInclude Include="..\Classes\SceneMarkers.h" />
+    <ClInclude Include="..\Classes\SceneMicrophone.h" />
+    <ClInclude Include="..\Classes\SceneMusicCallbacks.h" />
+    <ClInclude Include="..\Classes\ScenePositioning.h" />
+    <ClInclude Include="..\Classes\SceneRTPCCarEngine.h" />
+    <ClInclude Include="..\Classes\WwiseWrapper.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="PlatformCocos.h" />
   </ItemGroup>

@@ -21,7 +21,7 @@ APP_ABI := armeabi-v7a
 
 #APP_ABI := x86
 APP_CPPFLAGS += -Wno-error=format-security
-APP_PLATFORM := android-24
+APP_PLATFORM := android-9
 
 
 
