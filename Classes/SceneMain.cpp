@@ -74,23 +74,11 @@ bool SceneMain::init()
     }
 
     cocos2d::Size windowSize = Director::getInstance()->getWinSize();
-    cocos2d::Size visibleSize= Director::getInstance()->getVisibleSize();
-    Vec2 origin		     = Director::getInstance()->getVisibleOrigin();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-    float descriptionPosX = windowSize.width  * 0.50f;
-#if defined(AK_IOS)
-    float descriptionPosY = windowSize.height * 0.95f;
-    float selectButtonPosX = windowSize.height * 0.50f;
-#elif defined(AK_MAC)
-    float descriptionPosY = windowSize.height * 0.90f;
-    float selectButtonPosX = windowSize.height * 0.15f;
-#elif defined(AK_ANDROID)
-    float descriptionPosY = windowSize.height * 0.90f;
-    float selectButtonPosX = windowSize.height * 0.50f;
-#elif defined(AK_WIN)
-    float descriptionPosY = windowSize.height * 0.90f;
-    float selectButtonPosX = windowSize.width  * 0.15f;
-#endif 
+//    float descriptionPosX = windowSize.width  * 0.50f;
+    float descriptionPosY = windowSize.height * SCREEN_POS_SCALER_DESCRIPTION_Y;
+    float selectButtonPosX = windowSize.height * SCREEN_POS_SCALER_SELBUTTON_X;
 
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program

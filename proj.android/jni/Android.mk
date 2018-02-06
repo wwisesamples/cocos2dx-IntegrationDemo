@@ -296,7 +296,7 @@ LOCAL_SRC_FILES := main.cpp \
                     
 LOCAL_LDLIBS := -llog -lOpenSLES -landroid -lEGL -lGLESv1_CM
 LOCAL_CFLAGS := -DLUA_USE_POSIX
-LOCAL_CFLAGS += -DAK_DEBUG -DCOCOS_INTEGRATION
+LOCAL_CFLAGS += -DAK_DEBUG
 
 
 LOCAL_STATIC_LIBRARIES := android_native_app_glue

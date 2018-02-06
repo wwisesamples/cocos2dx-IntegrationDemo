@@ -1,10 +1,6 @@
 #include <wchar.h>
 
-#ifdef 	COCOS_INTEGRATION
 #include "cocos2d.h"
-#else
-#include <stdio.h>  // vsprintf...
-#endif // COCOS_INTEGRATION
 
 #include <AK/SoundEngine/Common/AkTypes.h>
 #include <AK/Plugin/AllPluginsFactories.h>
@@ -384,11 +380,8 @@ bool Wwise::Init(   AkMemSettings&          in_memSettings,
     if (AK::SoundEngine::LoadBank("Init.bnk", AK_DEFAULT_POOL_ID, bankID) != AK_Success)
     {
 		LOGAK("<Wwise::Init> Cannot load Init.bnk! error");
-
-#ifdef 	COCOS_INTEGRATION
 		cocos2d::MessageBox("Cannot load Init.bnk!", "Error");
-#endif
-	return false;
+        return false;
     }
 
     return true;
