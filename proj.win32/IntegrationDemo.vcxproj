@@ -178,6 +178,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\SceneRTPCCarEngine.cpp" />
     <ClCompile Include="..\Classes\WwiseWrapper.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PlatformCocos.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\SoundEngine\Common\AkFileLocationBase.h" />

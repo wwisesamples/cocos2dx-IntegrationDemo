@@ -1,8 +1,3 @@
-// Platform.h
-// Copyright (C) 2010 Audiokinetic Inc
-/// \file 
-/// Contains platform-specific helpers for the Windows platform.
-
 #pragma once
 
 #ifdef SOUND_BANK_PATH

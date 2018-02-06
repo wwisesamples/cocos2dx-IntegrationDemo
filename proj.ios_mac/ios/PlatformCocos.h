@@ -1,8 +1,3 @@
-// Platform.h
-// Copyright (C) 2010 Audiokinetic Inc
-/// \file 
-/// Contains platform-specific helpers for the iOS platform.
-
 #pragma once
 
 #define SOUND_BANK_PATH g_szBasePath
