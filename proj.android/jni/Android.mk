@@ -40,10 +40,8 @@ AK_ANDROID := 1
 # hideo added
 
 include $(CLEAR_VARS)
-#SDK_LIB_DIR := ../../../../../../../$(TARGET_PLATFORM)_$(TARGET_ARCH_ABI)/$(AK_CONFIG)/lib
-#SDK_LIB_DIR := $(LOCAL_PATH)/$(TARGET_PLATFORM)_$(TARGET_ARCH_ABI)/$(AK_CONFIG)/lib
 SDK_LIB_DIR := ${WWISESDK}/$(TARGET_PLATFORM)_$(TARGET_ARCH_ABI)/$(AK_CONFIG)/lib
-$(warning $(SDK_LIB_DIR))
+# $(warning $(SDK_LIB_DIR))
 ifneq ($(AK_CONFIG), Release)
 	LOCAL_MODULE            := CommunicationCentral
 	LOCAL_SRC_FILES         := $(SDK_LIB_DIR)/libCommunicationCentral.a 
@@ -294,26 +292,11 @@ LOCAL_SRC_FILES := main.cpp \
                    ../../Classes/ScenePositioning.cpp \
                    ../../Classes/SceneExternalSources.cpp \
                    ../../Classes/SceneBGM.cpp
-                    
-#                   ../../Classes/SceneMicrophone.cpp \
+                    # ../../Classes/SceneMicrophone.cpp \ # Not supported on Android yet
                     
 LOCAL_LDLIBS := -llog -lOpenSLES -landroid -lEGL -lGLESv1_CM
 LOCAL_CFLAGS := -DLUA_USE_POSIX
 LOCAL_CFLAGS += -DAK_DEBUG -DCOCOS_INTEGRATION
-#-DINTEGRATIONDEMO_MICROPHONE
-#-DINTEGRATIONDEMO_BGM
-
-
-####LOCAL_STATIC_LIBRARIES := cocos2dx_static
-
-#LOCAL_STATIC_LIBRARIES := cocos2dx_static
-#LOCAL_STATIC_LIBRARIES += android_native_app_glue
-#LOCAL_WHOLE_STATIC_LIBRARIES += gnustl_static
-#LOCAL_WHOLE_STATIC_LIBRARIES += cocosdenshion_static
-#LOCAL_WHOLE_STATIC_LIBRARIES += box2d_static
-# ’Ç‰Á
-#LOCAL_WHOLE_STATIC_LIBRARIES += cocos_extension_static
-#LOCAL_WHOLE_STATIC_LIBRARIES += android_native_app_glue
 
 
 LOCAL_STATIC_LIBRARIES := android_native_app_glue
@@ -324,7 +307,6 @@ ifneq ($(AK_CONFIG), Release)
 #	LOCAL_STATIC_LIBRARIES += CommunicationCentral 
 	LOCAL_WHOLE_STATIC_LIBRARIES += CommunicationCentral 
 endif
-#LOCAL_WHOLE_STATIC_LIBRARIES  += AkMusicEngine \
 
 LOCAL_STATIC_LIBRARIES += AkMusicEngine \
 AkSoundEngine \
