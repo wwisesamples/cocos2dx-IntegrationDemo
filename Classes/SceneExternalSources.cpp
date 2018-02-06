@@ -47,16 +47,8 @@ bool SceneExternalSources::init()
 	return false;
     }
     cocos2d::Size windowSize = Director::getInstance()->getWinSize();
-#if defined(AK_ANDROID) || defined(AK_IOS)
-    float descriptionPosX = windowSize.width  * 0.50f;
-    float descriptionPosY = windowSize.height * 0.90f;
-    float selectButtonPosX = windowSize.height * 0.50f;
-#else
-    float descriptionPosX = windowSize.width  * 0.50f;
-    float descriptionPosY = windowSize.height * 0.90f;
-    float selectButtonPosX = windowSize.width  * 0.15f;
-#endif // AK_ANDROID
-
+    float descriptionPosY = windowSize.height * SCREEN_POS_SCALER_DESCRIPTION_Y;
+    float selectButtonPosX = g_isLandscape ? windowSize.width * SCREEN_POS_SCALER_SELBUTTON_X : windowSize.height * SCREEN_POS_SCALER_SELBUTTON_X;
 
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
@@ -69,7 +61,6 @@ bool SceneExternalSources::init()
 	    auto selectItem = MenuItemImage::create("PlayNormal.png", "PlayPush.png", CC_CALLBACK_1(SceneExternalSources::onPlay123_Pressed, this));
 	    y -= selectItem->getContentSize().height;
 	    addItem(selectItem, selectButtonPosX, y, this);
-	    cocos2d::MenuItemLabel* pMenu = addLabelEx("Play \"1 2 3\"", selectItem->getPosition().x + selectItem->getContentSize().width, selectItem->getPosition().y, FONT_SIZE_MENU, this, CC_CALLBACK_1(SceneExternalSources::onPlay123_Pressed, this));
 	}
 
 	// Add button linking to RTPC Demo (Car Engine)
@@ -77,7 +68,6 @@ bool SceneExternalSources::init()
 	    auto selectItem = MenuItemImage::create("PlayNormal.png", "PlayPush.png", CC_CALLBACK_1(SceneExternalSources::onPlay456_Pressed, this));
 	    y -= selectItem->getContentSize().height;
 	    addItem(selectItem, selectButtonPosX, y, this);
-	    cocos2d::MenuItemLabel* pMenu = addLabelEx("Play \"4 5 6\"", selectItem->getPosition().x + selectItem->getContentSize().width, selectItem->getPosition().y, FONT_SIZE_MENU, this, CC_CALLBACK_1(SceneExternalSources::onPlay456_Pressed, this));
 	}
     }
 

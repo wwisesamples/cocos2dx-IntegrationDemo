@@ -129,10 +129,6 @@ bool SceneFootsteps::init()
     }
 
     cocos2d::Size windowSize = Director::getInstance()->getWinSize();
-    float descriptionPosX = windowSize.width  * 0.50f;
-    float descriptionPosY = windowSize.height * 0.90f;
-    float selectButtonPosX = windowSize.width  * 0.15f;
-
 
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program

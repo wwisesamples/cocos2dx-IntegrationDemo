@@ -1,8 +1,3 @@
-// Platform.h
-// Copyright (C) 2011 Audiokinetic Inc
-/// \file 
-/// Contains platform-specific helpers for the iOS platform.
-
 #pragma once
 
 #ifdef SOUND_BANK_PATH
@@ -13,5 +8,6 @@
 #define FONT_SIZE_TITLE  30
 #define FONT_SIZE_MENU   24
 
+extern bool g_isLandscape;
 #define SCREEN_POS_SCALER_DESCRIPTION_Y 0.90f
 #define SCREEN_POS_SCALER_SELBUTTON_X 0.15f

@@ -54,26 +54,20 @@ bool SceneMusicCallbacksRoot::init()
     // 1. super init first
     if (!SceneBase::init())
     {
-	return false;
+        return false;
     }
 
     cocos2d::Size windowSize = Director::getInstance()->getWinSize();
-    float descriptionPosX = windowSize.width  * 0.50f;
     float descriptionPosY = windowSize.height * 0.80f;
-#if  defined(AK_IOS)
-    float selectButtonPosX = windowSize.height * 0.50f;
-#else
-    float selectButtonPosX = windowSize.width  * 0.30f;
-#endif
+    float selectButtonPosX = g_isLandscape ? windowSize.width  * 0.30f : windowSize.height * 0.50f;
 
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
-    int x = 0, y = descriptionPosY, yy = 0;
+    int y = descriptionPosY;
     //TTFConfig ttfConfig("fonts/arial.ttf", 24);
 
     // for "Music Sync Callback Demo" Menu
-    y = descriptionPosY;
     MenuItemLabel* label = addLabelEx("Music Sync Callback Demo", selectButtonPosX, y, FONT_SIZE_MENU, this);
     label->setCallback(replaceScene<SceneMusicSyncCallbacks>);
     m_menu[0] = (Label*)label->getChildren().at(0);

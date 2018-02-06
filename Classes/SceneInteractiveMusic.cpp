@@ -79,14 +79,13 @@ bool SceneInteractiveMusic::init()
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
-    int x = 0, y = descriptionPosY, yy = 0;
-    int ix = 0;
     TTFConfig ttfConfig("fonts/arial.ttf", 24);
     
+    int y = descriptionPosY;
     for (int i = 0; i < SIZEOF(g_tbl_menu); i++) {
-	MenuItemLabel* label = SceneBase::addLabelEx(g_tbl_menu[i].str, selectButtonPosX, y, FONT_SIZE_MENU, this, CC_CALLBACK_1(SceneInteractiveMusic::PostEvent_, this, i));
-	m_menu[i] = (Label*)label->getChildren().at(0);
-	y -= m_menu[i]->getContentSize().height;
+        MenuItemLabel* label = SceneBase::addLabelEx(g_tbl_menu[i].str, selectButtonPosX, y, FONT_SIZE_MENU, this, CC_CALLBACK_1(SceneInteractiveMusic::PostEvent_, this, i));
+        m_menu[i] = (Label*)label->getChildren().at(0);
+        y -= m_menu[i]->getContentSize().height;
     }
 
     setMenuColor(m_menuix);
