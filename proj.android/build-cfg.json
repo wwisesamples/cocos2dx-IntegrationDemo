@@ -8,6 +8,10 @@
         {
             "from": "../Resources",
             "to": ""
+        },
+        {
+            "from": "../../Android/assets",
+            "to": ""
         }
     ]
 }
