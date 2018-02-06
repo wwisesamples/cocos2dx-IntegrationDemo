@@ -5,6 +5,7 @@
 *.d
 *.o
 bin/*
+proj.android/assets/*
 proj.android/bin
 proj.android/libs
 proj.android/obj
