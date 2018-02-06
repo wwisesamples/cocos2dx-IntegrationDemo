@@ -138,6 +138,7 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
+		CE93D5A92029FA10003FC20D /* SceneBGM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 780D7A1C1C185D9400238AFA /* SceneBGM.cpp */; };
 		CE9CB9F3202723E600B6E261 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97681C15C0FA00D9BEC4 /* stdafx.cpp */; };
 		CE9CB9F5202729B600B6E261 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CB9F4202729B500B6E261 /* CoreText.framework */; };
 		CE9CB9F720272B8C00B6E261 /* SoundInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE9CB9F620272B8B00B6E261 /* SoundInput.cpp */; };
@@ -955,6 +956,7 @@
 				787D41DA1C0863E80063B5E0 /* SceneDynamicDialogue.cpp in Sources */,
 				787D41DB1C0863E80063B5E0 /* SceneLocalization.cpp in Sources */,
 				787D41D31C0860640063B5E0 /* SceneDialogueMenu.cpp in Sources */,
+				CE93D5A92029FA10003FC20D /* SceneBGM.cpp in Sources */,
 				78EA978D1C15E17900D9BEC4 /* SoundInput.cpp in Sources */,
 				78EA97901C15E23B00D9BEC4 /* SoundInputBase.cpp in Sources */,
 				78EA978F1C15E23300D9BEC4 /* SoundInputMgr.cpp in Sources */,

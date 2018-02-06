@@ -14,9 +14,9 @@
 #endif
 #include "ScenePositioning.h"
 #include "SceneExternalSources.h"
-#if defined INTEGRATIONDEMO_BGM
+//#if defined INTEGRATIONDEMO_BGM
   #include "SceneBGM.h"
-#endif
+//#endif
 
 
 extern int g_menu_ix;
@@ -236,8 +236,8 @@ bool SceneMain::init()
 #endif
 
 //#undef INTEGRATIONDEMO_BGM // disable for now.... hideo
-#if defined INTEGRATIONDEMO_BGM
-	// 
+//#if defined INTEGRATIONDEMO_BGM
+	//
 	{
 	    auto selectItem = MenuItemImage::create("PlayNormal.png", "PlayPush.png", replaceScene<SceneBGM>);
 	    y -= selectItem->getContentSize().height;
@@ -249,7 +249,7 @@ bool SceneMain::init()
 	    m_funcEnt.push_back(SceneBGM::createScene);
 	    y -= selectItem->getContentSize().height;
 	}
-#endif
+//#endif
 
 	// Exit button and label
 	{
