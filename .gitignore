@@ -6,6 +6,7 @@
 *.o
 bin/*
 proj.android/bin
+proj.android/libs
 proj.android/obj
 proj.android/objs-debug
 proj.ios_mac/IntegrationDemo-cocos.xcodeproj/xcuserdata/*
