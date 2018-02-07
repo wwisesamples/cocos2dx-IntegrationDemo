@@ -254,7 +254,6 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
-LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../proj.android
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Android
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Common
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Android/libzip/lib
@@ -271,7 +270,7 @@ LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Android/libzip/lib
 
 
 LOCAL_SRC_FILES := main.cpp \
-				   ../PlatformCocos.cpp \
+				   PlatformCocos.cpp \
                    ../../Classes/AppDelegate.cpp \
                    ../../Classes/WwiseWrapper.cpp \
                    ${WWISESDK}/samples/SoundEngine/Common/AkFileLocationBase.cpp \

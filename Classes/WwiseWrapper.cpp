@@ -32,7 +32,6 @@
 	__android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, (const char*)&szBuff);
     }
 #elif WIN32
-    #define __AK_OSCHAR_SNPRINTF    	_snwprintf
     void LOGAK(char *format, ...)
     {
         char buffer[1000];
@@ -61,10 +60,6 @@
     #error undefied platform
 #endif
 
-
-static const AkUInt32 kMaxNumPools = 20;
-static const AkUInt32 kDefaultPoolSize = 2 * 1024 * 1024;
-static const AkUInt32 kLEngineDefaultPoolSize = 1 * 1024 * 1024;
 
 #ifdef AK_IOS
 AkAudioSessionCategoryOptions GetAudioSessionCategoryOptionBitMask(bool in_bMixWithOthers, bool in_bDuckOthers, bool in_bAllowBluetooth, bool in_bDefaultToSpeaker)
@@ -332,16 +327,16 @@ void Wwise::GetDefaultSettings(	AkMemSettings&          out_memSettings,
 				AkPlatformInitSettings& out_platformInitSettings,
 				AkMusicSettings&        out_musicInit)
 {
-    out_memSettings.uMaxNumPools = kMaxNumPools;
+    out_memSettings.uMaxNumPools = 20;
     AK::StreamMgr::GetDefaultSettings(out_stmSettings);
 
     AK::StreamMgr::GetDefaultDeviceSettings(out_deviceSettings);
 
     AK::SoundEngine::GetDefaultInitSettings(out_initSettings);
-    out_initSettings.uDefaultPoolSize = kDefaultPoolSize;
+    out_initSettings.uDefaultPoolSize = 2 * 1024 * 1024;
 
     AK::SoundEngine::GetDefaultPlatformInitSettings(out_platformInitSettings);
-    out_platformInitSettings.uLEngineDefaultPoolSize = kLEngineDefaultPoolSize;
+    out_platformInitSettings.uLEngineDefaultPoolSize = 1 * 1024 * 1024;
 
     AK::MusicEngine::GetDefaultInitSettings(out_musicInit);
 }
