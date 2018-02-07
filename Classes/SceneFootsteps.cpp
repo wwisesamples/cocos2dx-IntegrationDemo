@@ -154,8 +154,6 @@ bool SceneFootsteps::init()
 	this->addChild(m_sprite, 1);
 
 	char strBuf[50];
-	int iPosX = m_pParentMenu->GetWidth() * 0.4;
-	int iPosY = m_pParentMenu->GetHeight() * 0.8;
 	snprintf(strBuf, 50, "Weight is: %.2f", m_weight);
 
 	// Draw the play position and subtitles

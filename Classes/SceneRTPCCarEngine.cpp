@@ -62,31 +62,12 @@ bool SceneRTPCCarEngine::init()
     //windowSize = window_size;
 
     float descriptionPosX = windowSize.width  * 0.50f;
-    float descriptionPosY = windowSize.height * SCREEN_POS_SCALER_DESCRIPTION_Y;
     float selectButtonPosX = g_isLandscape ? windowSize.width * SCREEN_POS_SCALER_SELBUTTON_X : windowSize.height * SCREEN_POS_SCALER_SELBUTTON_X;
 
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
-    Menu* menu;
     {
-/*
-	auto addItem = [&](MenuItem* item, const float& posx, const float& posy){
-	    item->setPosition(cocos2d::Point(posx, posy));
-	    menu = Menu::create(item, NULL);
-	    menu->setPosition(Vec2::ZERO);
-	    this->addChild(menu, 1);
-	};
-
-	auto addLabel = [&](const std::string& text, const float& posx, const float& posy, const int& size){
-	    //auto label = Label::createWithSystemFont(text, "Arial", size, cocos2d::Size(500, size * 2),
-	    auto label = Label::createWithSystemFont(text, "Arial", size, cocos2d::Size::ZERO,
-		    TextHAlignment::LEFT, TextVAlignment::CENTER);
-	    label->setPosition(cocos2d::Point(posx, posy));
-	    this->addChild(label, 1);
-	    return label;
-	};*/
-
 	// for Start Engine button
 	{
 	    // SelectButton
