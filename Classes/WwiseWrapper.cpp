@@ -170,7 +170,7 @@ namespace {
 }
 
 namespace WWISE {
-    bool initialize(void* mgr)
+    bool initialize()
     {
 	Wwise::Instance().GetDefaultSettings(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit);
 

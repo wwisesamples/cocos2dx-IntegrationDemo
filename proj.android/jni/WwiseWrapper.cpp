@@ -29,30 +29,18 @@ void LOGAKW(AkOSChar* _Buffer)
     __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, (const char*)&szBuff);
 }
 
-
-namespace {
-    //	Wwise		    m_wwise;
-    AkMemSettings	    m_memSettings;
-    AkStreamMgrSettings	    m_stmSettings;
-    AkDeviceSettings	    m_deviceSettings;
-    AkInitSettings	    m_initSettings;
-    AkPlatformInitSettings  m_platformInitSettings;
-    AkMusicSettings	    m_musicInit;
-    AkOSChar		    m_strError[1024];
-}
-
 namespace WWISE {
-bool initialize(void* mgr)
-{
-	Wwise::Instance().GetDefaultSettings(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit);
 
+bool InitPlatform(AkPlatformInitSettings& platformInitSettings)
+{
     JavaVM* jvm = cocos2d::JniHelper::getJavaVM();
     if (!jvm)
     {
         LOGAK("<Wwise::Init> Failed to get JVM. Aborted.");
         return false;
     }
-    m_platformInitSettings.pJavaVM = jvm;
+
+    platformInitSettings.pJavaVM = jvm;
     // Get activity.
     JNIEnv* env = cocos2d::JniHelper::getEnv();
     if (!env)
@@ -60,24 +48,52 @@ bool initialize(void* mgr)
         LOGAK("<Wwise::Init> Failed to get JNIEnv to retrieve Activity. Aborted.");
         return false;
     }
+
     jclass classID = env->FindClass("org/cocos2dx/cpp/AppActivity");
     if (!classID)
     {
         LOGAK("<Wwise::Init> Failed to find class AppActivity to retrieve Activity. Aborted.");
         return false;
     }
+
     jmethodID methodID = env->GetStaticMethodID(classID, "getInstance", "()Ljava/lang/Object;");
     if (!methodID)
     {
         LOGAK("<Wwise::Init> Failed to find method getInstance to retrieve Activity. Aborted.");
         return false;
     }
-    m_platformInitSettings.jNativeActivity = env->CallStaticObjectMethod(classID, methodID);
-    Wwise::Instance().GetLowLevelIOHandler()->InitAndroidIO(m_platformInitSettings.pJavaVM, m_platformInitSettings.jNativeActivity);
 
-	if (!Wwise::Instance().Init(m_memSettings, m_stmSettings, m_deviceSettings, m_initSettings, m_platformInitSettings, m_musicInit,
-	    (AkOSChar*)SOUND_BANK_PATH, m_strError, sizeof(m_strError))) {
-	    LOGAKW(m_strError);
+    platformInitSettings.jNativeActivity = env->CallStaticObjectMethod(classID, methodID);
+    if ( Wwise::Instance().GetLowLevelIOHandler()->InitAndroidIO(platformInitSettings.pJavaVM, platformInitSettings.jNativeActivity) != AK_Success)
+    {
+        LOGAK("<Wwise::Init> Failed to initialize I/O. Aborted.");
+        return false;
+    };
+
+    return true;
+}
+
+
+bool initialize()
+{
+    AkMemSettings       memSettings;
+    AkStreamMgrSettings     stmSettings;
+    AkDeviceSettings        deviceSettings;
+    AkInitSettings      initSettings;
+    AkPlatformInitSettings  platformInitSettings;
+    AkMusicSettings     musicInit;
+    AkOSChar            strError[1024];
+
+	Wwise::Instance().GetDefaultSettings(memSettings, stmSettings, deviceSettings, initSettings, platformInitSettings, musicInit);
+
+    if (!InitPlatform(platformInitSettings))
+    {
+        return false;
+    }
+
+	if (!Wwise::Instance().Init(memSettings, stmSettings, deviceSettings, initSettings, platformInitSettings, musicInit,
+	    (AkOSChar*)SOUND_BANK_PATH, strError, sizeof(strError))) {
+	    LOGAKW(strError);
 	    abort();
 	}
 	return true;

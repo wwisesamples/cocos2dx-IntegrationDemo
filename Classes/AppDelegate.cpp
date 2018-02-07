@@ -98,13 +98,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     register_all_packages();
 
-    #ifdef AK_ANDROID
-	AAssetManager* mgr = FileUtilsAndroid::getAssetManager();
-	__android_log_print(ANDROID_LOG_DEBUG, "AppDelegate::applicationDidFinishLaunching", "AAssetManager:0x%x", mgr);
-	#else
-	void*		mgr = NULL;
-    #endif
-    WWISE::initialize(mgr);
+    WWISE::initialize();
     // create a scene. it's an autorelease object
     auto scene = SceneMain::createScene();
 
