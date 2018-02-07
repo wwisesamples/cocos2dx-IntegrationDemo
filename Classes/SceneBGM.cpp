@@ -71,8 +71,7 @@ bool SceneBGM::init()
 	    auto selectItem = MenuItemImage::create("PlayNormal.png", "PlayPush.png");
 	    y -= selectItem->getContentSize().height;
 	    addItem(selectItem, selectButtonPosX, y, this);
-	    cocos2d::MenuItemLabel* pMenu = addLabelEx("Play recordable music", selectItem->getPosition().x + selectItem->getContentSize().width, selectItem->getPosition().y, FONT_SIZE_MENU, this, CC_CALLBACK_1(SceneBGM::Recordable_LabelPressed, this));
-        addItem(pMenu, selectButtonPosX, y, this);
+	    addLabelEx("Play recordable music", selectItem->getPosition().x + selectItem->getContentSize().width, selectItem->getPosition().y, FONT_SIZE_MENU, this, CC_CALLBACK_1(SceneBGM::Recordable_LabelPressed, this));
 	}
 
 	// Add button linking to RTPC Demo (Car Engine)
@@ -80,8 +79,7 @@ bool SceneBGM::init()
 	    auto selectItem = MenuItemImage::create("PlayNormal.png", "PlayPush.png");
 	    y -= selectItem->getContentSize().height;
 	    addItem(selectItem, selectButtonPosX, y, this);
-	    cocos2d::MenuItemLabel* pMenu = addLabelEx("Play non-recordable music", selectItem->getPosition().x + selectItem->getContentSize().width, selectItem->getPosition().y, FONT_SIZE_MENU, this, CC_CALLBACK_1(SceneBGM::NonRecordable_LabelPressed, this));
-	    addItem(pMenu, selectButtonPosX, y, this);
+		addLabelEx("Play non-recordable music", selectItem->getPosition().x + selectItem->getContentSize().width, selectItem->getPosition().y, FONT_SIZE_MENU, this, CC_CALLBACK_1(SceneBGM::NonRecordable_LabelPressed, this));
     }
     }
 

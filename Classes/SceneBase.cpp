@@ -200,6 +200,7 @@ void SceneBase::onRelease()
 void SceneBase::addItem(cocos2d::MenuItem* item, const float posx, const float posy, SceneBase* pScence)
 {
     item->setPosition(cocos2d::Point(posx, posy));
+	CCASSERT(item->getParent() == nullptr, "child already added. It can't be added again");
     Menu *menu = Menu::create(item, NULL);
     menu->setPosition(Vec2::ZERO);
     pScence->addChild(menu, 1);
