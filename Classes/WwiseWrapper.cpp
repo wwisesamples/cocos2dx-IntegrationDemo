@@ -61,67 +61,6 @@
     #error undefied platform
 #endif
 
-// Ak core libs
-#if defined(WIN32)
-#pragma comment( lib, "AkMemoryMgr")
-#pragma comment( lib, "AkSoundEngine")
-#pragma comment( lib, "AkStreamMgr")
-#pragma comment( lib, "AkMusicEngine")
-#pragma comment( lib, "dxguid.lib")	//DirectSound
-#ifdef _DEBUG    
-#pragma comment( lib, "CommunicationCentral")
-#endif
-#endif
-
-// plugins
-#define AK_PLUGINS
-#if defined(WIN32)
-#pragma comment( lib, "AkConvolutionReverbFX.lib")
-#pragma comment( lib, "AkFlangerFX.lib")
-#pragma comment( lib, "AkTremoloFX.lib")
-#pragma comment( lib, "AuroHeadphoneFX.lib")
-// #pragma comment( lib, "IOSONOProximityMixer.lib") // Removed since 2017.1
-#pragma comment( lib, "AkMotionGenerator.lib")
-#pragma comment( lib, "AkSineSource.lib")
-#pragma comment( lib, "AkSoundSeedWind.lib")
-#pragma comment( lib, "AkStereoDelayFX.lib")
-#pragma comment( lib, "AkGuitarDistortionFX.lib")
-#pragma comment( lib, "AkRumble.lib")
-#pragma comment( lib, "AkSilenceSource.lib")
-#pragma comment( lib, "AuroPannerMixer.lib")
-#pragma comment( lib, "AkPeakLimiterFX.lib")
-#pragma comment( lib, "iZTrashBoxModelerFX.lib")
-#pragma comment( lib, "AkSoundSeedImpactFX.lib")
-#pragma comment( lib, "AkRoomVerbFX.lib")
-#pragma comment( lib, "iZTrashDelayFX.lib")
-#pragma comment( lib, "McDSPLimiterFX.lib")
-#pragma comment( lib, "McDSPFutzBoxFX.lib")
-#pragma comment( lib, "AkParametricEQFX.lib")
-#pragma comment( lib, "AkToneSource.lib")
-#pragma comment( lib, "AkMatrixReverbFX.lib")
-#pragma comment( lib, "AkCompressorFX.lib")
-#pragma comment( lib, "AkAudioInputSource.lib")
-#pragma comment( lib, "AkSoundSeedWoosh.lib")
-#pragma comment( lib, "CrankcaseAudioREVModelPlayerFX.lib")
-#pragma comment( lib, "iZTrashMultibandDistortionFX.lib")
-#pragma comment( lib, "iZHybridReverbFX.lib")
-#pragma comment( lib, "AkPitchShifterFX.lib")
-#pragma comment( lib, "iZTrashDynamicsFX.lib")
-#pragma comment( lib, "iZTrashDistortionFX.lib")
-#pragma comment( lib, "AkDelayFX.lib")
-#pragma comment( lib, "AkGainFX.lib")
-#pragma comment( lib, "AkVorbisDecoder.lib")
-#pragma comment( lib, "AkMeterFX.lib")
-#pragma comment( lib, "iZTrashFiltersFX.lib")
-#pragma comment( lib, "AkSynthOne.lib")
-// #pragma comment( lib, "AkMP3Source.lib") // Removed since 2017.1
-#pragma comment( lib, "AkHarmonizerFX.lib")
-#pragma comment( lib, "AkTimeStretchFX.lib")
-#pragma comment( lib, "AkExpanderFX.lib")
-#pragma comment( lib, "AkRecorderFX.lib")
-#pragma comment( lib, "AkReflectFX.lib")
-#pragma comment( lib, "Msacm32.lib") // Microsoft ACM Library
-#endif
 
 static const AkUInt32 kMaxNumPools = 20;
 static const AkUInt32 kDefaultPoolSize = 2 * 1024 * 1024;

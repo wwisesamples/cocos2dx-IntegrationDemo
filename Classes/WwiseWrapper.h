@@ -14,14 +14,11 @@
   #include <AK/Comm/AkCommunication.h>			// Communication between Wwise and the game (excluded in release build)
 #endif
 
-#ifdef AK_ANDROID
-  #include "../../../SoundEngine/Android/AkFilePackageLowLevelIOBlocking.h"
-#elif defined AK_APPLE
-  #include "../../../SoundEngine/POSIX/AkFilePackageLowLevelIOBlocking.h"// Low level io
+#include "AkFilePackageLowLevelIOBlocking.h"
+
+#ifdef AK_APPLE
   #define  LOGAK                      CCLOG
   #define  LOGAKW                     CCLOG
-#else
-  #include "../../../SoundEngine/Win32/AkFilePackageLowLevelIOBlocking.h"
 #endif
 
 
