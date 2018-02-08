@@ -385,7 +385,7 @@ bool Wwise::ConfigurePlatform(AkPlatformInitSettings& platformInitSettings)
     }
 
     platformInitSettings.jNativeActivity = env->CallStaticObjectMethod(classID, methodID);
-    if ( Wwise::Instance().GetLowLevelIOHandler()->InitAndroidIO(platformInitSettings.pJavaVM, platformInitSettings.jNativeActivity) != AK_Success)
+    if ( GetLowLevelIOHandler()->InitAndroidIO(platformInitSettings.pJavaVM, platformInitSettings.jNativeActivity) != AK_Success)
     {
         LOGAK("<Wwise::Init> Failed to initialize I/O. Aborted.");
         return false;

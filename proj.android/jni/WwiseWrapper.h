@@ -36,7 +36,6 @@ class Wwise
 public:
     static Wwise& Instance();
     CAkFilePackageLowLevelIOBlocking& IOManager();
-    CAkFilePackageLowLevelIOBlocking* GetLowLevelIOHandler() { return m_pLowLevelIO; }
     
     void Term();
     
@@ -71,6 +70,8 @@ private:
     void TermWwise();
 
     bool ConfigurePlatform(AkPlatformInitSettings& platformInitSettings);
+
+    CAkFilePackageLowLevelIOBlocking* GetLowLevelIOHandler() { return m_pLowLevelIO; }
     
     CAkFilePackageLowLevelIOBlocking* m_pLowLevelIO;
 };
