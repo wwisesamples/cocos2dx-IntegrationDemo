@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include <AK/SoundEngine/Common/AkTypes.h>
 
 #include "Platform.h"

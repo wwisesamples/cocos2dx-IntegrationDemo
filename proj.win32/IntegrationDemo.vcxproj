@@ -176,9 +176,10 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\SceneMusicCallbacks.cpp" />
     <ClCompile Include="..\Classes\ScenePositioning.cpp" />
     <ClCompile Include="..\Classes\SceneRTPCCarEngine.cpp" />
+    <ClCompile Include="..\Classes\WwiseWrapper.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PlatformCocos.cpp" />
-    <ClCompile Include="WwiseWrapper.cpp" />
+    <ClCompile Include="WwisePlatformHelper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\SoundEngine\Common\AkFileLocationBase.h" />
@@ -208,9 +209,10 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\SceneMusicCallbacks.h" />
     <ClInclude Include="..\Classes\ScenePositioning.h" />
     <ClInclude Include="..\Classes\SceneRTPCCarEngine.h" />
+    <ClInclude Include="..\Classes\WwiseWrapper.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="PlatformCocos.h" />
-    <ClInclude Include="WwiseWrapper.h" />
+    <ClInclude Include="WwisePlatformHelper.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\cocos2d\cocos\2d\libcocos2d.vcxproj">

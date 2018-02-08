@@ -1,6 +1,6 @@
 #pragma once
 
-#include <wchar.h>
+#include "windows.h"
 
 #ifdef SOUND_BANK_PATH
 #undef SOUND_BANK_PATH
