@@ -90,12 +90,11 @@ void SceneBase::SetLoadFileErrorMessage(const char* fileName)
 #if defined (AK_IOS) || defined (AK_MAC_OS_X)
     char soundBankPath[AK_MAX_PATH];
     snprintf(soundBankPath, AK_MAX_PATH, "%s", SOUND_BANK_PATH);
-    sprintf(errorMessage, "Failed to load file \"%s\" under Soundbank path: \n\n%s", fileName, soundBankPath);
 #else
     char* soundBankPath = NULL;
     CONVERT_OSCHAR_TO_CHAR(SOUND_BANK_PATH, soundBankPath);
-    sprintf(errorMessage, "Failed to load file \"%s\" under Soundbank path: \n\n%s", fileName, soundBankPath);
 #endif //#if defined (AK_IOS) || defined (AK_MAC_OS_X)
+    sprintf(errorMessage, "Failed to load file \"%s\" under Soundbank path: \n\n%s", fileName, soundBankPath);
     SetErrorMessage(errorMessage);
 }
 
