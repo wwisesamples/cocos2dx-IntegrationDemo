@@ -24,12 +24,6 @@
 
 static const AkGameObjectID LISTENER_ID = 10000;
 
-namespace WWISE {
-    bool initialize();
-    void terminate();
-    void update();
-}
-
 
 class Wwise
 {

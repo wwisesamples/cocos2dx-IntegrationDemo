@@ -150,7 +150,6 @@ bool ScenePositioning::init()
 
 void ScenePositioning::update(float dt)
 {
-    
     if (m_bPressed) {
         switch (m_key) {
         case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
@@ -161,7 +160,7 @@ void ScenePositioning::update(float dt)
             break;
         }
     }
-    
+
     SceneBase::update(dt);
 }
 

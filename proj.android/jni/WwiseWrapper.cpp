@@ -28,10 +28,6 @@ void LOGAKW(AkOSChar* _Buffer)
     __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, (const char*)&szBuff);
 }
 
-namespace WWISE {
-   
-
-}
 
 Wwise& Wwise::Instance()
 {
