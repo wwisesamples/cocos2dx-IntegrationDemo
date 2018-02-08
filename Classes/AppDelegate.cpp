@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "SceneMain.h"
+#include "PlatformCocos.h"
 #include "WwiseWrapper.h"
 
 #if  __APPLE__
