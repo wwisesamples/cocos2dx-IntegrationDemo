@@ -23,7 +23,7 @@ AK_ANDROID := 1
 
 # _COCOS_HEADER_ANDROID_BEGIN
 # _COCOS_HEADER_ANDROID_END
-
+LOCAL_CFLAGS := -w
 
 #LOCAL_STATIC_LIBRARIES := cocos2dx_static
 
@@ -272,8 +272,9 @@ LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Android/libzip/lib
 
 LOCAL_SRC_FILES := main.cpp \
 				   PlatformCocos.cpp \
+				   WwisePlatformHelper.cpp \
                    ../../Classes/AppDelegate.cpp \
-                   WwiseWrapper.cpp \
+                   ../../Classes/WwiseWrapper.cpp \
                    ${WWISESDK}/samples/SoundEngine/Common/AkFileLocationBase.cpp \
                    ${WWISESDK}/samples/SoundEngine/Common/AkFilePackage.cpp \
                    ${WWISESDK}/samples/SoundEngine/Common/AkFilePackageLUT.cpp \

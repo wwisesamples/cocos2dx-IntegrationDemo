@@ -1,3 +1,5 @@
+#include <wchar.h>
+
 #include "cocos2d.h"
 
 #include <AK/SoundEngine/Common/AkTypes.h>
@@ -14,6 +16,15 @@
 #include "PlatformCocos.h"
 
 #include "WwiseWrapper.h"
+#include "WwisePlatformHelper.h"
+
+// #define  LOGAK(...)  		__android_log_print(ANDROID_LOG_DEBUG,LOG_TAG,__VA_ARGS__)
+// void LOGAKW(AkOSChar* _Buffer)  
+// {
+//     char szBuff[1024] = {0};
+//     AKPLATFORM::AkWideCharToChar((const wchar_t*)_Buffer, 1024, szBuff);
+//     __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, (const char*)&szBuff);
+// }
 
 
 Wwise& Wwise::Instance()
@@ -63,15 +74,10 @@ bool Wwise::Init()
         goto cleanup;
     }
 
-    // Set the path to the SoundBank Files.
-    if (m_pLowLevelIO->SetBasePath(SOUND_BANK_PATH) != AK_Success) 
+    if ( ! ConfigureSoundBankPaths() )
     {
-        goto cleanup;
+         goto cleanup;
     }
-
-    //
-    // TODO: AddBasePath() for mobile
-    //
 
     // Set global language. Low-level I/O devices can use this string to find language-specific assets.
     if (AK::StreamMgr::SetCurrentLanguage(AKTEXT("English(US)")) != AK_Success)
@@ -266,7 +272,10 @@ void Wwise::TermWwise()
 
 bool Wwise::ConfigurePlatform(AkPlatformInitSettings& platformInitSettings)
 {
-    // Add your code here.
+    return WwisePlatformHelper::Instance().ConfigurePlatform(platformInitSettings, m_pLowLevelIO);
+}
 
-    return true;
+bool Wwise::ConfigureSoundBankPaths()
+{
+    return WwisePlatformHelper::Instance().ConfigureSoundBankPaths(m_pLowLevelIO);
 }

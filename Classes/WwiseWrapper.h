@@ -19,6 +19,7 @@
 
 static const AkGameObjectID LISTENER_ID = 10000;
 
+
 class Wwise
 {
 public:
@@ -57,8 +58,7 @@ private:
     void TermWwise();
 
     bool ConfigurePlatform(AkPlatformInitSettings& platformInitSettings);
-
-    CAkFilePackageLowLevelIOBlocking* GetLowLevelIOHandler() { return m_pLowLevelIO; }
+    bool ConfigureSoundBankPaths();
     
     CAkFilePackageLowLevelIOBlocking* m_pLowLevelIO;
 };
