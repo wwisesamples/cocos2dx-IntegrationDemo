@@ -366,7 +366,6 @@ STRIP_PNG_TEXT=NO
 NATIVE_ARCH=i386
 FRAMEWORK_VERSION=A
 WRAPPER_NAME=IntegrationDemo-cocos-desktop.app
-SECURITYSESSIONID=186a6
 HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT=YES
 TEMP_ROOT=/Users/kakyo/Library/Developer/Xcode/DerivedData/IntegrationDemo-cocos-aiejwgfxuzofrhchfrpckoznwlph/Build/Intermediates.noindex
 FIXED_FILES_DIR=/Users/kakyo/Library/Developer/Xcode/DerivedData/IntegrationDemo-cocos-aiejwgfxuzofrhchfrpckoznwlph/Build/Intermediates.noindex/IntegrationDemo-cocos.build/Debug/IntegrationDemo-cocos-desktop.build/FixedFiles

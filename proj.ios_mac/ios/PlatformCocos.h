@@ -12,3 +12,6 @@ extern bool g_isLandscape;
 #define SCREEN_POS_SCALER_SELBUTTON_X 0.50f
 
 #define MOVEMENT_STEP_SIZE 5
+
+#define LOGAK CCLOG
+#define LOGAKW CCLOG

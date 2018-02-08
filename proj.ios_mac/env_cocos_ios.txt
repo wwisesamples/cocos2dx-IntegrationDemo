@@ -385,7 +385,6 @@ NATIVE_ARCH=armv7
 TARGET_TEMP_DIR=/Users/kakyo/Library/Developer/Xcode/DerivedData/IntegrationDemo-cocos-aiejwgfxuzofrhchfrpckoznwlph/Build/Intermediates.noindex/IntegrationDemo-cocos.build/Debug-iphoneos/IntegrationDemo-cocos-mobile.build
 STRIP_PNG_TEXT=NO
 ENTITLEMENTS_REQUIRED=YES
-SECURITYSESSIONID=186a6
 WRAPPER_NAME=IntegrationDemo-cocos-mobile.app
 HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT=YES
 FRAMEWORK_VERSION=A
