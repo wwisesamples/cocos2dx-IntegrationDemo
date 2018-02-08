@@ -1,7 +1,6 @@
 #include "stdafx.h"
 
 // Ak core libs
-#if defined(WIN32)
 #pragma comment( lib, "AkMemoryMgr")
 #pragma comment( lib, "AkSoundEngine")
 #pragma comment( lib, "AkStreamMgr")
@@ -10,11 +9,9 @@
 #ifdef _DEBUG    
 #pragma comment( lib, "CommunicationCentral")
 #endif
-#endif
 
 // plugins
 #define AK_PLUGINS
-#if defined(WIN32)
 #pragma comment( lib, "AkConvolutionReverbFX.lib")
 #pragma comment( lib, "AkFlangerFX.lib")
 #pragma comment( lib, "AkTremoloFX.lib")
@@ -60,7 +57,6 @@
 #pragma comment( lib, "AkRecorderFX.lib")
 #pragma comment( lib, "AkReflectFX.lib")
 #pragma comment( lib, "Msacm32.lib") // Microsoft ACM Library
-#endif
 
 
 bool g_isLandscape = true;
@@ -75,5 +71,28 @@ namespace AK
 	void FreeHook( void * in_ptr )
 	{
 		free( in_ptr );
+	}
+
+	// Note: VirtualAllocHook() may be used by I/O pools of the default implementation
+	// of the Stream Manager, to allow "true" unbuffered I/O (using FILE_FLAG_NO_BUFFERING
+	// - refer to the Windows SDK documentation for more details). This is NOT mandatory;
+	// you may implement it with a simple malloc().
+	void * VirtualAllocHook(
+		void * in_pMemAddress,
+		size_t in_size,
+		AkUInt32 in_dwAllocationType,
+		AkUInt32 in_dwProtect
+	)
+	{
+		return VirtualAlloc(in_pMemAddress, in_size, in_dwAllocationType, in_dwProtect);
+	}
+
+	void VirtualFreeHook(
+		void * in_pMemAddress,
+		size_t in_size,
+		AkUInt32 in_dwFreeType
+	)
+	{
+		VirtualFree(in_pMemAddress, in_size, in_dwFreeType);
 	}
 }

@@ -75,7 +75,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..;../Classes;../proj.win32;../../../../../SDK/include;../../Common;../../Windows;../../MenuSystem;../../../SoundEngine/Win32;../../../SoundEngine/Common;../cocos2d/cocos/audio/include;../cocos2d/external;../cocos2d/external/chipmunk/include/chipmunk;../cocos2d/extensions;../cocos2d/cocos/platform;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END);$(DXSDK_DIR)/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..;../proj.win32;../Classes;../../../../../SDK/include;../../Common;../../Windows;../../MenuSystem;../../../SoundEngine/Win32;../../../SoundEngine/Common;../cocos2d/cocos/audio/include;../cocos2d/external;../cocos2d/external/chipmunk/include/chipmunk;../cocos2d/extensions;../cocos2d/cocos/platform;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END);$(DXSDK_DIR)/include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;INTEGRATIONDEMO_BGM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -121,7 +121,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..;../Classes;../proj.win32;../../../../../SDK/include;../../Common;../../Windows;../../MenuSystem;../../../SoundEngine/Win32;../../../SoundEngine/Common;../cocos2d/cocos/audio/include;../cocos2d/external;../cocos2d/external/chipmunk/include/chipmunk;../cocos2d/extensions;../cocos2d/cocos/platform;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END);$(DXSDK_DIR)/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..;../proj.win32;../Classes;../../../../../SDK/include;../../Common;../../Windows;../../MenuSystem;../../../SoundEngine/Win32;../../../SoundEngine/Common;../cocos2d/cocos/audio/include;../cocos2d/external;../cocos2d/external/chipmunk/include/chipmunk;../cocos2d/extensions;../cocos2d/cocos/platform;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END);$(DXSDK_DIR)/include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -176,9 +176,9 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\SceneMusicCallbacks.cpp" />
     <ClCompile Include="..\Classes\ScenePositioning.cpp" />
     <ClCompile Include="..\Classes\SceneRTPCCarEngine.cpp" />
-    <ClCompile Include="..\Classes\WwiseWrapper.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PlatformCocos.cpp" />
+    <ClCompile Include="WwiseWrapper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\SoundEngine\Common\AkFileLocationBase.h" />
@@ -208,9 +208,9 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\SceneMusicCallbacks.h" />
     <ClInclude Include="..\Classes\ScenePositioning.h" />
     <ClInclude Include="..\Classes\SceneRTPCCarEngine.h" />
-    <ClInclude Include="..\Classes\WwiseWrapper.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="PlatformCocos.h" />
+    <ClInclude Include="WwiseWrapper.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\cocos2d\cocos\2d\libcocos2d.vcxproj">

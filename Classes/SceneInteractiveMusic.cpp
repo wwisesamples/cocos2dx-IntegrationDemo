@@ -157,8 +157,6 @@ void SceneInteractiveMusic::update(float dt)
 
     AK::MusicEngine::GetPlayingSegmentInfo(m_iPlayingID, info);
 
-    //Page::Draw();
-
     char strBuf[256];
 
     snprintf(strBuf,
