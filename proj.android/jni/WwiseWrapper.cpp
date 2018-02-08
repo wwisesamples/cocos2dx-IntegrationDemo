@@ -29,71 +29,8 @@ void LOGAKW(AkOSChar* _Buffer)
 }
 
 namespace WWISE {
-
-
-
-
-bool initialize()
-{
-//     AkMemSettings       memSettings;
-//     AkStreamMgrSettings     stmSettings;
-//     AkDeviceSettings        deviceSettings;
-//     AkInitSettings      initSettings;
-//     AkPlatformInitSettings  platformInitSettings;
-//     AkMusicSettings     musicInit;
-//     AkOSChar            strError[1024];
-
-// 	Wwise::Instance().GetDefaultSettings(memSettings, stmSettings, deviceSettings, initSettings, platformInitSettings, musicInit);
-
-//     if (!ConfigurePlatform(platformInitSettings))
-//     {
-//         return false;
-//     }
-
-//     bool bSuccess = false;
-    
-//     bSuccess = InitWwise(memSettings, stmSettings, deviceSettings, initSettings, platformInitSettings, musicInit, strError, sizeof(strError));
-//     if (!bSuccess) {
-//         LOGAKW(strError);
-//         goto cleanup;
-//     }
-
-//     // Set the path to the SoundBank Files.
-//     if (m_pLowLevelIO->SetBasePath(in_soundBankPath) != AK_Success) 
-//     {
-//         goto cleanup;
-//     }
-
-//     // Set global language. Low-level I/O devices can use this string to find language-specific assets.
-//     if (AK::StreamMgr::SetCurrentLanguage(AKTEXT("English(US)")) != AK_Success)
-//     {
-//         goto cleanup;
-//     }
-
-//     AkBankID bankID;
-//     if (AK::SoundEngine::LoadBank("Init.bnk", AK_DEFAULT_POOL_ID, bankID) != AK_Success)
-//     {
-//         LOGAK("<Wwise::Init> Cannot load Init.bnk! error");
-//         cocos2d::MessageBox("Cannot load Init.bnk!", "Error");
-//         goto cleanup;
-//     }
-
-//     return true;
-
-// cleanup:
-//     terminate();
-//     return false;
-}
-
-void terminate()
-{
-	Wwise::Instance().Term();
-}
    
-void update()
-{
-	AK::SoundEngine::RenderAudio();
-}
+
 }
 
 Wwise& Wwise::Instance()
@@ -179,12 +116,9 @@ void Wwise::Term()
     TermWwise();
 }
 
-const bool Wwise::GetCommunicationEnabled() {
-    #if !defined AK_OPTIMIZED && !defined INTEGRATIONDEMO_DISABLECOMM
-        return true;
-    #else
-        return false;
-    #endif
+void Wwise::Update()
+{
+    AK::SoundEngine::RenderAudio();
 }
 
 
@@ -298,17 +232,15 @@ bool Wwise::InitWwise(	AkMemSettings&          in_memSettings,
     //
     // Initialize communications (not in release build!)
     //
-    if (GetCommunicationEnabled()) {
-    	AkCommSettings commSettings;
-        AK::Comm::GetDefaultInitSettings( commSettings );
-        AKPLATFORM::SafeStrCpy(commSettings.szAppNetworkName, "Cocos2d-x Integration Demo", AK_COMM_SETTINGS_MAX_STRING_SIZE);
-        res = AK::Comm::Init( commSettings );
-    	if (res != AK_Success)
-    	{
-    	    __AK_OSCHAR_SNPRINTF(in_szErrorBuffer, in_unErrorBufferCharCount, AKTEXT("AK::Comm::Init() returned AKRESULT %d. Communication between the Wwise authoring application and the game will not be possible."), res);
-    	    LOGAKW(in_szErrorBuffer);
-    	}
-    }
+	AkCommSettings commSettings;
+    AK::Comm::GetDefaultInitSettings( commSettings );
+    AKPLATFORM::SafeStrCpy(commSettings.szAppNetworkName, "Cocos2d-x Integration Demo", AK_COMM_SETTINGS_MAX_STRING_SIZE);
+    res = AK::Comm::Init( commSettings );
+	if (res != AK_Success)
+	{
+	    __AK_OSCHAR_SNPRINTF(in_szErrorBuffer, in_unErrorBufferCharCount, AKTEXT("AK::Comm::Init() returned AKRESULT %d. Communication between the Wwise authoring application and the game will not be possible."), res);
+	    LOGAKW(in_szErrorBuffer);
+	}
 #endif
 
     AK::SoundEngine::RegisterGameObj(LISTENER_ID, "Listener (Default)");
@@ -322,9 +254,7 @@ void Wwise::TermWwise()
 //#ifndef AK_OPTIMIZED
 #if defined(NDK_DEBUG) || defined(AK_DEBUG) || defined(_DEBUG)
     // Terminate communications between Wwise and the game
-    if (GetCommunicationEnabled()) {
-	   AK::Comm::Term();
-    }
+	AK::Comm::Term();
 #endif
     // Terminate the music engine
     AK::MusicEngine::Term();

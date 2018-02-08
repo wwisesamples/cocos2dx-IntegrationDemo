@@ -38,10 +38,9 @@ public:
     
     bool Init();
     void Term();
+    void Update();
     
     CAkFilePackageLowLevelIOBlocking& IOManager();
-    
-    const bool GetCommunicationEnabled();
 
 private:
     Wwise();

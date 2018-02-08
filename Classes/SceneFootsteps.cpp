@@ -424,7 +424,6 @@ void SceneFootsteps::UpdateGameObjPos(float x, float y)
 
     m_LastX = x;
     m_LastY = y;
-    WWISE::update();
 }
 
 #if defined( _DEMOFOOTSTEPS_DYNAMIC_BANK_LOADING )

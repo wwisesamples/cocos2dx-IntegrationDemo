@@ -430,10 +430,6 @@ bool Wwise::InitWwise(	AkMemSettings&          in_memSettings,
     }
 
 #if defined(NDK_DEBUG) || defined(AK_DEBUG) || defined(_DEBUG)
-    //
-    // Initialize communications (not in release build!)
-    //
-    if (GetCommunicationEnabled()) {
 	AkCommSettings commSettings;
     AK::Comm::GetDefaultInitSettings( commSettings );
     AKPLATFORM::SafeStrCpy(commSettings.szAppNetworkName, "Cocos2d-x Integration Demo", AK_COMM_SETTINGS_MAX_STRING_SIZE);
@@ -443,7 +439,6 @@ bool Wwise::InitWwise(	AkMemSettings&          in_memSettings,
 	    __AK_OSCHAR_SNPRINTF(in_szErrorBuffer, in_unErrorBufferCharCount, AKTEXT("AK::Comm::Init() returned AKRESULT %d. Communication between the Wwise authoring application and the game will not be possible."), res);
 	    LOGAKW(in_szErrorBuffer);
 	}
-    }
 #endif
 
     AK::SoundEngine::RegisterGameObj(LISTENER_ID, "Listener (Default)");

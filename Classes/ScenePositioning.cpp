@@ -324,5 +324,4 @@ void ScenePositioning::UpdateGameObjPos(float x, float y)
     m_LastX = x;
     m_LastY = y;
 
-    WWISE::update();
 }

@@ -253,7 +253,8 @@ LOCAL_MODULE := cocos2dcpp_shared
 LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
+LOCAL_C_INCLUDES := $(LOCAL_PATH)
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../Classes
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Android
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Common
 LOCAL_C_INCLUDES += ${WWISESDK}/samples/SoundEngine/Android/libzip/lib

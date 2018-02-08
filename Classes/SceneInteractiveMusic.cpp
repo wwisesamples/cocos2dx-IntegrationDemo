@@ -151,7 +151,8 @@ void SceneInteractiveMusic::onRelease()
 
 void SceneInteractiveMusic::update(float dt)
 {
-    WWISE::update();
+    SceneBase::update(dt);
+
     AkSegmentInfo info;
 
     AK::MusicEngine::GetPlayingSegmentInfo(m_iPlayingID, info);
