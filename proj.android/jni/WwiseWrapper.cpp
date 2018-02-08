@@ -31,72 +31,59 @@ void LOGAKW(AkOSChar* _Buffer)
 
 namespace WWISE {
 
-bool InitPlatform(AkPlatformInitSettings& platformInitSettings)
-{
-    JavaVM* jvm = cocos2d::JniHelper::getJavaVM();
-    if (!jvm)
-    {
-        LOGAK("<Wwise::Init> Failed to get JVM. Aborted.");
-        return false;
-    }
 
-    platformInitSettings.pJavaVM = jvm;
-    // Get activity.
-    JNIEnv* env = cocos2d::JniHelper::getEnv();
-    if (!env)
-    {
-        LOGAK("<Wwise::Init> Failed to get JNIEnv to retrieve Activity. Aborted.");
-        return false;
-    }
-
-    jclass classID = env->FindClass("org/cocos2dx/cpp/AppActivity");
-    if (!classID)
-    {
-        LOGAK("<Wwise::Init> Failed to find class AppActivity to retrieve Activity. Aborted.");
-        return false;
-    }
-
-    jmethodID methodID = env->GetStaticMethodID(classID, "getInstance", "()Ljava/lang/Object;");
-    if (!methodID)
-    {
-        LOGAK("<Wwise::Init> Failed to find method getInstance to retrieve Activity. Aborted.");
-        return false;
-    }
-
-    platformInitSettings.jNativeActivity = env->CallStaticObjectMethod(classID, methodID);
-    if ( Wwise::Instance().GetLowLevelIOHandler()->InitAndroidIO(platformInitSettings.pJavaVM, platformInitSettings.jNativeActivity) != AK_Success)
-    {
-        LOGAK("<Wwise::Init> Failed to initialize I/O. Aborted.");
-        return false;
-    };
-
-    return true;
-}
 
 
 bool initialize()
 {
-    AkMemSettings       memSettings;
-    AkStreamMgrSettings     stmSettings;
-    AkDeviceSettings        deviceSettings;
-    AkInitSettings      initSettings;
-    AkPlatformInitSettings  platformInitSettings;
-    AkMusicSettings     musicInit;
-    AkOSChar            strError[1024];
+//     AkMemSettings       memSettings;
+//     AkStreamMgrSettings     stmSettings;
+//     AkDeviceSettings        deviceSettings;
+//     AkInitSettings      initSettings;
+//     AkPlatformInitSettings  platformInitSettings;
+//     AkMusicSettings     musicInit;
+//     AkOSChar            strError[1024];
 
-	Wwise::Instance().GetDefaultSettings(memSettings, stmSettings, deviceSettings, initSettings, platformInitSettings, musicInit);
+// 	Wwise::Instance().GetDefaultSettings(memSettings, stmSettings, deviceSettings, initSettings, platformInitSettings, musicInit);
 
-    if (!InitPlatform(platformInitSettings))
-    {
-        return false;
-    }
+//     if (!ConfigurePlatform(platformInitSettings))
+//     {
+//         return false;
+//     }
 
-	if (!Wwise::Instance().Init(memSettings, stmSettings, deviceSettings, initSettings, platformInitSettings, musicInit,
-	    (AkOSChar*)SOUND_BANK_PATH, strError, sizeof(strError))) {
-	    LOGAKW(strError);
-	    abort();
-	}
-	return true;
+//     bool bSuccess = false;
+    
+//     bSuccess = InitWwise(memSettings, stmSettings, deviceSettings, initSettings, platformInitSettings, musicInit, strError, sizeof(strError));
+//     if (!bSuccess) {
+//         LOGAKW(strError);
+//         goto cleanup;
+//     }
+
+//     // Set the path to the SoundBank Files.
+//     if (m_pLowLevelIO->SetBasePath(in_soundBankPath) != AK_Success) 
+//     {
+//         goto cleanup;
+//     }
+
+//     // Set global language. Low-level I/O devices can use this string to find language-specific assets.
+//     if (AK::StreamMgr::SetCurrentLanguage(AKTEXT("English(US)")) != AK_Success)
+//     {
+//         goto cleanup;
+//     }
+
+//     AkBankID bankID;
+//     if (AK::SoundEngine::LoadBank("Init.bnk", AK_DEFAULT_POOL_ID, bankID) != AK_Success)
+//     {
+//         LOGAK("<Wwise::Init> Cannot load Init.bnk! error");
+//         cocos2d::MessageBox("Cannot load Init.bnk!", "Error");
+//         goto cleanup;
+//     }
+
+//     return true;
+
+// cleanup:
+//     terminate();
+//     return false;
 }
 
 void terminate()
@@ -116,7 +103,8 @@ Wwise& Wwise::Instance()
     return wwise;
 }
 
-Wwise::Wwise() {
+Wwise::Wwise() 
+{
     m_pLowLevelIO = new CAkFilePackageLowLevelIOBlocking();
 }
 
@@ -131,43 +119,53 @@ CAkFilePackageLowLevelIOBlocking& Wwise::IOManager()
     return *m_pLowLevelIO;
 }
 
-bool Wwise::Init(   AkMemSettings&          in_memSettings,
-		    AkStreamMgrSettings&    in_stmSettings,
-		    AkDeviceSettings&       in_deviceSettings,
-		    AkInitSettings&         in_initSettings,
-		    AkPlatformInitSettings& in_platformInitSettings,
-		    AkMusicSettings&        in_musicInit,
-		    AkOSChar*               in_soundBankPath,
-		    AkOSChar*               in_szErrorBuffer,
-		    unsigned int            in_unErrorBufferCharCount)
+bool Wwise::Init()
 {
-    bool bSuccess;
-    AKRESULT hr;
+    AkMemSettings       memSettings;
+    AkStreamMgrSettings     stmSettings;
+    AkDeviceSettings        deviceSettings;
+    AkInitSettings      initSettings;
+    AkPlatformInitSettings  platformInitSettings;
+    AkMusicSettings     musicInit;
+    AkOSChar            strError[1024];
+
+    GetDefaultSettings(memSettings, stmSettings, deviceSettings, initSettings, platformInitSettings, musicInit);
+
+    if (!ConfigurePlatform(platformInitSettings))
+    {
+        return false;
+    }
+
+    bool bSuccess = false;
     
-    // Initialize Wwise
-    bSuccess = InitWwise(in_memSettings, in_stmSettings, in_deviceSettings, in_initSettings, in_platformInitSettings, in_musicInit, in_szErrorBuffer, in_unErrorBufferCharCount);
+    bSuccess = InitWwise(memSettings, stmSettings, deviceSettings, initSettings, platformInitSettings, musicInit, strError, sizeof(strError));
     if (!bSuccess) {
-		goto cleanup;
+        LOGAKW(strError);
+        goto cleanup;
     }
 
     // Set the path to the SoundBank Files.
-    hr = m_pLowLevelIO->SetBasePath(in_soundBankPath);
-	if (hr != AK_Success) {
-		goto cleanup;
-	}
+    if (m_pLowLevelIO->SetBasePath(SOUND_BANK_PATH) != AK_Success) 
+    {
+        goto cleanup;
+    }
+
+    //
+    // TODO: AddBasePath() for mobile
+    //
 
     // Set global language. Low-level I/O devices can use this string to find language-specific assets.
     if (AK::StreamMgr::SetCurrentLanguage(AKTEXT("English(US)")) != AK_Success)
     {
-		goto cleanup;
+        goto cleanup;
     }
 
     AkBankID bankID;
     if (AK::SoundEngine::LoadBank("Init.bnk", AK_DEFAULT_POOL_ID, bankID) != AK_Success)
     {
-		LOGAK("<Wwise::Init> Cannot load Init.bnk! error");
-		cocos2d::MessageBox("Cannot load Init.bnk!", "Error");
-        return false;
+        LOGAK("<Wwise::Init> Cannot load Init.bnk! error");
+        cocos2d::MessageBox("Cannot load Init.bnk!", "Error");
+        goto cleanup;
     }
 
     return true;
@@ -182,12 +180,25 @@ void Wwise::Term()
     TermWwise();
 }
 
-void Wwise::GetDefaultSettings(	AkMemSettings&          out_memSettings,
-				AkStreamMgrSettings&    out_stmSettings,
-				AkDeviceSettings&       out_deviceSettings,
-				AkInitSettings&         out_initSettings,
-				AkPlatformInitSettings& out_platformInitSettings,
-				AkMusicSettings&        out_musicInit)
+const bool Wwise::GetCommunicationEnabled() {
+    #if !defined AK_OPTIMIZED && !defined INTEGRATIONDEMO_DISABLECOMM
+        return true;
+    #else
+        return false;
+    #endif
+}
+
+
+//
+// Private Methods
+//
+
+void Wwise::GetDefaultSettings( AkMemSettings&          out_memSettings,
+                AkStreamMgrSettings&    out_stmSettings,
+                AkDeviceSettings&       out_deviceSettings,
+                AkInitSettings&         out_initSettings,
+                AkPlatformInitSettings& out_platformInitSettings,
+                AkMusicSettings&        out_musicInit)
 {
     out_memSettings.uMaxNumPools = 20;
     AK::StreamMgr::GetDefaultSettings(out_stmSettings);
@@ -203,13 +214,6 @@ void Wwise::GetDefaultSettings(	AkMemSettings&          out_memSettings,
     AK::MusicEngine::GetDefaultInitSettings(out_musicInit);
 }
 
-const bool Wwise::GetCommunicationEnabled() {
-    #if !defined AK_OPTIMIZED && !defined INTEGRATIONDEMO_DISABLECOMM
-        return true;
-    #else
-        return false;
-    #endif
-}
 
 bool Wwise::InitWwise(	AkMemSettings&          in_memSettings,
 			AkStreamMgrSettings&    in_stmSettings,
@@ -346,4 +350,46 @@ void Wwise::TermWwise()
     {
 	   AK::MemoryMgr::Term();
     }
+}
+
+bool Wwise::ConfigurePlatform(AkPlatformInitSettings& platformInitSettings)
+{
+    JavaVM* jvm = cocos2d::JniHelper::getJavaVM();
+    if (!jvm)
+    {
+        LOGAK("<Wwise::Init> Failed to get JVM. Aborted.");
+        return false;
+    }
+
+    platformInitSettings.pJavaVM = jvm;
+    // Get activity.
+    JNIEnv* env = cocos2d::JniHelper::getEnv();
+    if (!env)
+    {
+        LOGAK("<Wwise::Init> Failed to get JNIEnv to retrieve Activity. Aborted.");
+        return false;
+    }
+
+    jclass classID = env->FindClass("org/cocos2dx/cpp/AppActivity");
+    if (!classID)
+    {
+        LOGAK("<Wwise::Init> Failed to find class AppActivity to retrieve Activity. Aborted.");
+        return false;
+    }
+
+    jmethodID methodID = env->GetStaticMethodID(classID, "getInstance", "()Ljava/lang/Object;");
+    if (!methodID)
+    {
+        LOGAK("<Wwise::Init> Failed to find method getInstance to retrieve Activity. Aborted.");
+        return false;
+    }
+
+    platformInitSettings.jNativeActivity = env->CallStaticObjectMethod(classID, methodID);
+    if ( Wwise::Instance().GetLowLevelIOHandler()->InitAndroidIO(platformInitSettings.pJavaVM, platformInitSettings.jNativeActivity) != AK_Success)
+    {
+        LOGAK("<Wwise::Init> Failed to initialize I/O. Aborted.");
+        return false;
+    };
+
+    return true;
 }

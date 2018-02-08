@@ -36,7 +36,7 @@ AppDelegate::AppDelegate()
 
 AppDelegate::~AppDelegate() 
 {
-   WWISE::terminate();
+	Wwise::Instance().Term();
 }
 
 //if you want a different context,just modify the value of glContextAttrs
@@ -98,7 +98,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     register_all_packages();
 
-    WWISE::initialize();
+    Wwise::Instance().Init();
     // create a scene. it's an autorelease object
     auto scene = SceneMain::createScene();
 

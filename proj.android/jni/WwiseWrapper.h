@@ -38,25 +38,9 @@ public:
     CAkFilePackageLowLevelIOBlocking& IOManager();
     CAkFilePackageLowLevelIOBlocking* GetLowLevelIOHandler() { return m_pLowLevelIO; }
     
-    void GetDefaultSettings(AkMemSettings&          out_memSettings,
-                            AkStreamMgrSettings&    out_stmSettings,
-                            AkDeviceSettings&       out_deviceSettings,
-                            AkInitSettings&         out_initSettings,
-                            AkPlatformInitSettings& out_platformInitSettings,
-                            AkMusicSettings&        out_musicInit);
-    
     void Term();
     
-    bool Init(AkMemSettings&          in_memSettings,
-              AkStreamMgrSettings&    in_stmSettings,
-              AkDeviceSettings&       in_deviceSettings,
-              AkInitSettings&         in_initSettings,
-              AkPlatformInitSettings& in_platformInitSettings,
-              AkMusicSettings&        in_musicInit,
-              AkOSChar*               in_soundBankPath,
-              AkOSChar*               in_szErrorBuffer,         ///< - Buffer where error details will be written (if the function returns false)
-              unsigned int            in_unErrorBufferCharCount ///< - Number of characters available in in_szErrorBuffer, including terminating NULL character
-              );
+    bool Init();
     
     const bool GetCommunicationEnabled();
 
@@ -65,6 +49,14 @@ private:
     Wwise( Wwise const& ){};
     Wwise& operator=( Wwise const& );
     ~Wwise();
+
+
+    void GetDefaultSettings(AkMemSettings&          out_memSettings,
+                            AkStreamMgrSettings&    out_stmSettings,
+                            AkDeviceSettings&       out_deviceSettings,
+                            AkInitSettings&         out_initSettings,
+                            AkPlatformInitSettings& out_platformInitSettings,
+                            AkMusicSettings&        out_musicInit);
 
     bool InitWwise(AkMemSettings&          in_memSettings,
                    AkStreamMgrSettings&    in_stmSettings,
@@ -77,6 +69,8 @@ private:
     );
     
     void TermWwise();
+
+    bool ConfigurePlatform(AkPlatformInitSettings& platformInitSettings);
     
     CAkFilePackageLowLevelIOBlocking* m_pLowLevelIO;
 };
