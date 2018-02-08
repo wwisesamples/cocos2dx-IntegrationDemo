@@ -56,7 +56,6 @@
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		780D7A1E1C185D9400238AFA /* SceneBGM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 780D7A1C1C185D9400238AFA /* SceneBGM.cpp */; };
-		784DE89A1C0599C000667EFE /* WwiseWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 787070DC1BFCE09A002EAAF4 /* WwiseWrapper.cpp */; };
 		784DE89D1C059A6F00667EFE /* AkFilePackage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 787070F21BFCEC72002EAAF4 /* AkFilePackage.cpp */; };
 		784DE89E1C059A6F00667EFE /* AkFilePackageLUT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 787070F61BFCEC72002EAAF4 /* AkFilePackageLUT.cpp */; };
 		784DE8A81C05A9B400667EFE /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784DE8A71C05A9B400667EFE /* CoreAudio.framework */; };
@@ -65,7 +64,6 @@
 		784DE8B61C07091B00667EFE /* SceneMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 784DE8B41C07091B00667EFE /* SceneMain.cpp */; };
 		784DE8B91C0709B600667EFE /* SceneBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 784DE8B31C07091B00667EFE /* SceneBase.cpp */; };
 		784DE8BA1C0709B600667EFE /* SceneMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 784DE8B41C07091B00667EFE /* SceneMain.cpp */; };
-		787070DE1BFCE09A002EAAF4 /* WwiseWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 787070DC1BFCE09A002EAAF4 /* WwiseWrapper.cpp */; };
 		787070F81BFCEC72002EAAF4 /* AkDefaultLowLevelIODispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 787070EE1BFCEC72002EAAF4 /* AkDefaultLowLevelIODispatcher.cpp */; };
 		787070F91BFCEC72002EAAF4 /* AkFileLocationBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 787070F01BFCEC72002EAAF4 /* AkFileLocationBase.cpp */; };
 		787070FA1BFCEC72002EAAF4 /* AkFilePackage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 787070F21BFCEC72002EAAF4 /* AkFilePackage.cpp */; };
@@ -138,6 +136,8 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
+		CE5DE9CC202C2F4D00035BB8 /* WwiseWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DE9CB202C2F4C00035BB8 /* WwiseWrapper.cpp */; };
+		CE5DE9CD202C2F7200035BB8 /* WwiseWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DE9CB202C2F4C00035BB8 /* WwiseWrapper.cpp */; };
 		CE93D5A92029FA10003FC20D /* SceneBGM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 780D7A1C1C185D9400238AFA /* SceneBGM.cpp */; };
 		CE9CB9F3202723E600B6E261 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97681C15C0FA00D9BEC4 /* stdafx.cpp */; };
 		CE9CB9F5202729B600B6E261 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CB9F4202729B500B6E261 /* CoreText.framework */; };
@@ -236,8 +236,6 @@
 		784DE8B41C07091B00667EFE /* SceneMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneMain.cpp; sourceTree = "<group>"; };
 		784DE8B71C07094600667EFE /* SceneBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneBase.h; sourceTree = "<group>"; };
 		784DE8B81C07094600667EFE /* SceneMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneMain.h; sourceTree = "<group>"; };
-		787070DC1BFCE09A002EAAF4 /* WwiseWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WwiseWrapper.cpp; sourceTree = "<group>"; };
-		787070DD1BFCE09A002EAAF4 /* WwiseWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WwiseWrapper.h; sourceTree = "<group>"; };
 		787070EE1BFCEC72002EAAF4 /* AkDefaultLowLevelIODispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AkDefaultLowLevelIODispatcher.cpp; path = ../../../SoundEngine/Common/AkDefaultLowLevelIODispatcher.cpp; sourceTree = "<group>"; };
 		787070EF1BFCEC72002EAAF4 /* AkDefaultLowLevelIODispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AkDefaultLowLevelIODispatcher.h; path = ../../../SoundEngine/Common/AkDefaultLowLevelIODispatcher.h; sourceTree = "<group>"; };
 		787070F01BFCEC72002EAAF4 /* AkFileLocationBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AkFileLocationBase.cpp; path = ../../../SoundEngine/Common/AkFileLocationBase.cpp; sourceTree = "<group>"; };
@@ -322,6 +320,8 @@
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE5DE9CA202C2F4C00035BB8 /* WwiseWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WwiseWrapper.h; path = mac/WwiseWrapper.h; sourceTree = "<group>"; };
+		CE5DE9CB202C2F4C00035BB8 /* WwiseWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseWrapper.cpp; path = mac/WwiseWrapper.cpp; sourceTree = "<group>"; };
 		CE9CB9F4202729B500B6E261 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		CE9CB9F620272B8B00B6E261 /* SoundInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SoundInput.cpp; path = ios/SoundInput.cpp; sourceTree = SOURCE_ROOT; };
 		CE9CB9F82028063000B6E261 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
@@ -525,8 +525,6 @@
 				78EA97511C15908200D9BEC4 /* SceneExternalSources.h */,
 				780D7A1C1C185D9400238AFA /* SceneBGM.cpp */,
 				780D7A1D1C185D9400238AFA /* SceneBGM.h */,
-				787070DC1BFCE09A002EAAF4 /* WwiseWrapper.cpp */,
-				787070DD1BFCE09A002EAAF4 /* WwiseWrapper.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -545,6 +543,8 @@
 		503AE10617EB990700D1A890 /* mac */ = {
 			isa = PBXGroup;
 			children = (
+				CE5DE9CB202C2F4C00035BB8 /* WwiseWrapper.cpp */,
+				CE5DE9CA202C2F4C00035BB8 /* WwiseWrapper.h */,
 				CE9CBA012029B85300B6E261 /* PlatformCocos.cpp */,
 				CEDC555B20268D1E00A0080D /* PlatformCocos.h */,
 				503AE0F517EB97AB00D1A890 /* Icons */,
@@ -893,6 +893,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9CBA042029CAA900B6E261 /* PlatformCocos.cpp in Sources */,
+				CE5DE9CC202C2F4D00035BB8 /* WwiseWrapper.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				787D41D81C0863D40063B5E0 /* SceneDynamicDialogue.cpp in Sources */,
 				787D420A1C089C0E0063B5E0 /* SceneInteractiveMusic.cpp in Sources */,
@@ -918,7 +919,6 @@
 				78EA977D1C15CD5300D9BEC4 /* AkDefaultIOHookBlocking.cpp in Sources */,
 				78EA977E1C15CD5300D9BEC4 /* AkDefaultIOHookDeferred.cpp in Sources */,
 				787D41DF1C08654C0063B5E0 /* Helpers.cpp in Sources */,
-				787070DE1BFCE09A002EAAF4 /* WwiseWrapper.cpp in Sources */,
 				78EA97631C15B49400D9BEC4 /* SoundInputBase.cpp in Sources */,
 				78EA97731C15C57500D9BEC4 /* Platform.cpp in Sources */,
 				CE9CB9F3202723E600B6E261 /* stdafx.cpp in Sources */,
@@ -946,6 +946,7 @@
 				78EA979A1C15E30A00D9BEC4 /* CoreAudioInputDevice.cpp in Sources */,
 				78EA97921C15E24300D9BEC4 /* IOBufferQueue.cpp in Sources */,
 				78EA978E1C15E19000D9BEC4 /* Platform.cpp in Sources */,
+				CE5DE9CD202C2F7200035BB8 /* WwiseWrapper.cpp in Sources */,
 				784DE8BA1C0709B600667EFE /* SceneMain.cpp in Sources */,
 				784DE8B91C0709B600667EFE /* SceneBase.cpp in Sources */,
 				787D420D1C089C260063B5E0 /* SceneInteractiveMusic.cpp in Sources */,
@@ -966,7 +967,6 @@
 				78EA97961C15E2B600D9BEC4 /* ScenePositioning.cpp in Sources */,
 				78EA97931C15E25300D9BEC4 /* stdafx.cpp in Sources */,
 				787D41E01C08655C0063B5E0 /* Helpers.cpp in Sources */,
-				784DE89A1C0599C000667EFE /* WwiseWrapper.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
