@@ -16,12 +16,6 @@
 
 #include "AkFilePackageLowLevelIOBlocking.h"
 
-#ifdef AK_APPLE
-  #define  LOGAK                      CCLOG
-  #define  LOGAKW                     CCLOG
-#endif
-
-
 static const AkGameObjectID LISTENER_ID = 10000;
 
 
