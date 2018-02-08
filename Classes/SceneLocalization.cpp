@@ -6,7 +6,7 @@
 #include "Platform.h"
 #include "PlatformCocos.h"
 
-#define  LOG_TAG    "SceneLocalization"
+#define  LOG_TAG    __FILE__
 
 USING_NS_CC;
 

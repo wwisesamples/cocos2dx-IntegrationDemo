@@ -8,7 +8,6 @@
 #include "Platform.h"
 #include "PlatformCocos.h"
 
-//#define  LOG_TAG    "SceneFootsteps"
 #define  LOG_TAG    __FILE__
 
 template <typename T> std::string tostr(const T& t) { std::ostringstream os; os << t; return os.str(); }

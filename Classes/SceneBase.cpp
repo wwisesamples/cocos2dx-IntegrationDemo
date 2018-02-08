@@ -6,7 +6,7 @@
 #include <AK/Tools/Common/AkPlatformFuncs.h>
 #include "WwiseWrapper.h"
 
-#define  LOG_TAG    "SceneBase"
+#define  LOG_TAG    __FILE__
 
 extern int g_menu_ix;
 

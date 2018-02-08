@@ -6,7 +6,7 @@
 #include "PlatformCocos.h"
 #include "SoundInputMgr.h"
 
-#define  LOG_TAG    "SceneMicrophone"
+#define  LOG_TAG    __FILE__
 
 USING_NS_CC;
 

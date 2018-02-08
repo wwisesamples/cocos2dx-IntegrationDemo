@@ -8,7 +8,7 @@
 
 USING_NS_CC;
 
-#define  LOG_TAG    "SceneRTPCCarEngine"
+#define  LOG_TAG    __FILE__
 
 
 SceneRTPCCarEngine::SceneRTPCCarEngine()
