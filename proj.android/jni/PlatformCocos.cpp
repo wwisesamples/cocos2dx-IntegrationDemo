@@ -15,3 +15,9 @@ namespace AK
 	}
 }
 
+void LOGAKW(AkOSChar* _Buffer)  
+{
+    char szBuff[1024] = {0};
+    AKPLATFORM::AkWideCharToChar((const wchar_t*)_Buffer, 1024, szBuff);
+    __android_log_print(ANDROID_LOG_DEBUG, __FILE__, (const char*)&szBuff);
+}

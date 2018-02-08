@@ -1,4 +1,5 @@
 #pragma once
+#include <AK/SoundEngine/Common/AkTypes.h>
 
 #ifdef SOUND_BANK_PATH
 #undef SOUND_BANK_PATH
@@ -15,4 +16,6 @@ extern bool g_isLandscape;
 
 #define MOVEMENT_STEP_SIZE 1
 
-#define  LOGAK(...)  __android_log_print(ANDROID_LOG_DEBUG,LOG_TAG,__VA_ARGS__)
+#define __AK_OSCHAR_SNPRINTF 	snprintf
+#define  LOGAK(...)  __android_log_print(ANDROID_LOG_DEBUG, __FILE__ ,__VA_ARGS__)
+void LOGAKW(AkOSChar* _Buffer);
