@@ -12,3 +12,7 @@
 extern bool g_isLandscape;
 #define SCREEN_POS_SCALER_DESCRIPTION_Y 0.90f
 #define SCREEN_POS_SCALER_SELBUTTON_X 0.50f
+
+#define MOVEMENT_STEP_SIZE 1
+
+#define  LOGAK(...)  __android_log_print(ANDROID_LOG_DEBUG,LOG_TAG,__VA_ARGS__)

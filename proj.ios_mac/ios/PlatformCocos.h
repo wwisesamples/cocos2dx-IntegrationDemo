@@ -10,3 +10,5 @@ extern char g_szBasePath[AK_IOS_MAX_BANK_PATH];
 extern bool g_isLandscape;
 #define SCREEN_POS_SCALER_DESCRIPTION_Y 0.95f
 #define SCREEN_POS_SCALER_SELBUTTON_X 0.50f
+
+#define MOVEMENT_STEP_SIZE 5

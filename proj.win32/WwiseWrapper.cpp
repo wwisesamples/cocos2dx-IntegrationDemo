@@ -1,5 +1,3 @@
-#include <wchar.h>
-
 #include "cocos2d.h"
 
 #include <AK/SoundEngine/Common/AkTypes.h>
@@ -17,26 +15,6 @@
 
 #include "WwiseWrapper.h"
 
-void LOGAK(char *format, ...)
-{
-	char buffer[1000];
-
-	va_list argptr;
-	va_start(argptr, format);
-	vsprintf(buffer, format, argptr);
-	va_end(argptr);
-	OutputDebugStringA(buffer);
-}
-void LOGAKW(TCHAR *format, ...)
-{
-	TCHAR buffer[1000];
-
-	va_list argptr;
-	va_start(argptr, format);
-	wvsprintf(buffer, format, argptr);
-	va_end(argptr);
-	OutputDebugString(buffer);
-}
 
 Wwise& Wwise::Instance()
 {

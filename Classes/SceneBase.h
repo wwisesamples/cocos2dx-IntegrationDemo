@@ -24,12 +24,6 @@ static const AkReal32 MS_PER_FRAME = (1000 / (AkReal32)DESIRED_FPS);
 typedef void(*FUNC_CALLBACK)(cocos2d::EventKeyboard::KeyCode, cocos2d::Event*);
 typedef cocos2d::Scene * (*FUNC_MAIN_SCENE)();
 
-#ifdef AK_ANDROID
-#define  LOGAK(...)  __android_log_print(ANDROID_LOG_DEBUG,LOG_TAG,__VA_ARGS__)
-#else
-void LOGAK(char *format, ...);
-//void LOGAKW(TCHAR *format, ...);
-#endif
 
 /////////////////////////
 //  SceneBase

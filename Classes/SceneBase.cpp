@@ -39,11 +39,7 @@ bool SceneBase::init()
     cocos2d::Size windowSize = Director::getInstance()->getWinSize();
     LOGAK("<ScenBase> windowSize x:y =(%d:%d)", (int)windowSize.width, (int)windowSize.height);
     float descriptionPosX = windowSize.width  * 0.50f;
-#if defined(AK_APPLE)
     float descriptionPosY = windowSize.height * 0.95f;
-#else
-    float descriptionPosY = windowSize.height * 0.90f;
-#endif    
      
     // Menu title
     {
@@ -54,42 +50,36 @@ bool SceneBase::init()
     // Press F1/START for help...
 #if !defined(AK_ANDROID) && !defined(AK_IOS)
     {
-	auto label = addLabel("(Press F1/START for help...)", 0, 0, FONT_SIZE_MENU, this, Vec2::ANCHOR_BOTTOM_RIGHT);
-	label->setPosition(windowSize.width - label->getContentSize().width, 0);
+    	auto label = addLabel("(Press F1/START for help...)", 0, 0, FONT_SIZE_MENU, this, Vec2::ANCHOR_BOTTOM_RIGHT);
+    	label->setPosition(windowSize.width - label->getContentSize().width, 0);
     }
 #endif // AK_ANDROID
 
     // Scene back to parent Button
     {
-	if (m_funcMainScene) {
-	    auto *item = MenuItemImage::create(
-		"SELECT_SCENE_Normal.png",
-		"SELECT_SCENE_Push.png",
-		CC_CALLBACK_1(SceneBase::menuCloseCallback, this));
-	    if (item){
-#if defined(AK_APPLE)
-  #if defined(AK_IOS)
-                item->setPosition(cocos2d::Point(windowSize.width / 2.00f, item->getContentSize().height / 2.00f));
-  #else
-                item->setPosition(cocos2d::Point(windowSize.width - (item->getContentSize().height * 2.0f),
-                                                 item->getContentSize().height * 3.0f));
-  #endif
-#else
-		item->setPosition(cocos2d::Point(windowSize.width / 2.00f, item->getContentSize().height));
-#endif	      
-		auto menu = Menu::create(item, NULL);
-		menu->setPosition(cocos2d::Point::ZERO);
-		this->addChild(menu, 1);
-	    }
-	}
+    	if (m_funcMainScene) {
+    	    auto *item = MenuItemImage::create("SELECT_SCENE_Normal.png", "SELECT_SCENE_Push.png", CC_CALLBACK_1(SceneBase::menuCloseCallback, this));
+    	    if (item) {
+                if (g_isLandscape) {
+                    item->setPosition(cocos2d::Point(windowSize.width / 2.00f, item->getContentSize().height));
+                }
+                else {
+                    item->setPosition(cocos2d::Point(windowSize.width / 2.00f, item->getContentSize().height / 2.00f));
+                }
+         
+        		auto menu = Menu::create(item, NULL);
+        		menu->setPosition(cocos2d::Point::ZERO);
+        		this->addChild(menu, 1);
+    	    }
+    	}
     }
 
 
     if (!m_key_listener){
-	m_key_listener = EventListenerKeyboard::create();
-	m_key_listener->onKeyPressed = CC_CALLBACK_2(SceneBase::onKeyPressed, this);
-	m_key_listener->onKeyReleased = CC_CALLBACK_2(SceneBase::onKeyReleased, this);
-	this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_key_listener, this);
+    	m_key_listener = EventListenerKeyboard::create();
+    	m_key_listener->onKeyPressed = CC_CALLBACK_2(SceneBase::onKeyPressed, this);
+    	m_key_listener->onKeyReleased = CC_CALLBACK_2(SceneBase::onKeyReleased, this);
+    	this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(m_key_listener, this);
     }
     return true;
 }
@@ -155,24 +145,6 @@ void SceneBase::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::E
 	return;
     }
 }
-
-/*
-void SceneBase::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event)
-{
-    switch (keyCode) {
-    case EventKeyboard::KeyCode::KEY_F1:
-	if (m_szHelp.empty())
-	    cocos2d::MessageBox("No help is available for this page", "Help");
-	else
-	    cocos2d::MessageBox(m_szHelp.c_str(), "Help");
-	break;
-    case EventKeyboard::KeyCode::KEY_ESCAPE:
-	menuCloseCallback(NULL);
-	return;
-    default:
-	return;
-    }
-}*/
 
 void SceneBase::onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* unused_event)
 {

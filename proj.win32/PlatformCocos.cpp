@@ -1,4 +1,7 @@
 #include "stdafx.h"
+#include <stdio.h>  
+#include "PlatformCocos.h"
+
 
 // Ak core libs
 #pragma comment( lib, "AkMemoryMgr")
@@ -95,4 +98,25 @@ namespace AK
 	{
 		VirtualFree(in_pMemAddress, in_size, in_dwFreeType);
 	}
+}
+
+void LOGAK(char *format, ...)
+{
+	char buffer[1000];
+
+	va_list argptr;
+	va_start(argptr, format);
+	vsprintf(buffer, format, argptr);
+	va_end(argptr);
+	OutputDebugStringA(buffer);
+}
+void LOGAKW(TCHAR *format, ...)
+{
+	TCHAR buffer[1000];
+
+	va_list argptr;
+	va_start(argptr, format);
+	wvsprintf(buffer, format, argptr);
+	va_end(argptr);
+	OutputDebugString(buffer);
 }

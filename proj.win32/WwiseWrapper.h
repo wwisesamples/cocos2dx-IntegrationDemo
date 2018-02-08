@@ -16,8 +16,8 @@
 
 #include "AkFilePackageLowLevelIOBlocking.h"
 
-static const AkGameObjectID LISTENER_ID = 10000;
 
+static const AkGameObjectID LISTENER_ID = 10000;
 
 class Wwise
 {

@@ -11,3 +11,5 @@
 extern bool g_isLandscape;
 #define SCREEN_POS_SCALER_DESCRIPTION_Y 0.90f
 #define SCREEN_POS_SCALER_SELBUTTON_X 0.15f
+
+#define MOVEMENT_STEP_SIZE 5

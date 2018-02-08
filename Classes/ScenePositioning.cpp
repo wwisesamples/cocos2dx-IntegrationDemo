@@ -96,12 +96,13 @@ bool ScenePositioning::init()
 	m_labelPos = addLabel(strBuf, 0, 0, FONT_SIZE_MENU, this);
 	int iTextWidth = m_labelPos->getContentSize().width; // 40;//label->getWidth(); //dm.width;
 	int iTextHeight = m_labelPos->getContentSize().height; //40;//label->getHeight(); //dm.height;
-#if defined(AK_ANDROID) || defined(AK_IOS)
-        //m_labelPos->setPosition(cocos2d::Point(iHalfWidth + 50, /*iHalfHeight +*/ 130));
-	m_labelPos->setPosition(cocos2d::Point(iHalfWidth + 50, iTextHeight));
-#else
-	m_labelPos->setPosition(cocos2d::Point(m_pParentMenu->GetWidth() - BUFFER_ZONE - iTextWidth, m_pParentMenu->GetHeight() - BUFFER_ZONE - iTextHeight));
-#endif
+    if (g_isLandscape) {
+        m_labelPos->setPosition(cocos2d::Point(m_pParentMenu->GetWidth() - BUFFER_ZONE - iTextWidth, m_pParentMenu->GetHeight() - BUFFER_ZONE - iTextHeight));
+    }
+    else {
+        m_labelPos->setPosition(cocos2d::Point(iHalfWidth + 50, iTextHeight));
+    }
+
 	// moving object image
 	m_sprite = CCSprite::create("human.png");
 	m_sprite->setPosition(ccp(iHalfWidth, iHalfHeight));
@@ -244,33 +245,28 @@ void ScenePositioning::onTouchCancelled(cocos2d::Touch *touch, cocos2d::Event *e
 
 void ScenePositioning::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* unused_event)
 {
-#ifdef AK_ANDROID
-#define INCREASE_DECREASE  1
-#else
-#define INCREASE_DECREASE  5
-#endif
     int x = m_LastX;
     int y = m_LastY;
     m_key = keyCode;
 
     switch (keyCode) {
     case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
-	x -= INCREASE_DECREASE;
+	x -= MOVEMENT_STEP_SIZE;
 	if (x < 0)  x = 0;
 	m_bPressed = true;
 	break;
     case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
-	x += INCREASE_DECREASE;
+	x += MOVEMENT_STEP_SIZE;
 //	if (x > m_pParentMenu->GetWidth())  x = m_pParentMenu->GetWidth();
 	m_bPressed = true;
 	break;
     case EventKeyboard::KeyCode::KEY_UP_ARROW:
-	y += INCREASE_DECREASE;
+	y += MOVEMENT_STEP_SIZE;
 //	if (y > m_pParentMenu->GetHeight())  y = m_pParentMenu->GetHeight();
 	m_bPressed = true;
 	break;
     case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
-	y -= INCREASE_DECREASE;
+	y -= MOVEMENT_STEP_SIZE;
 	if (y < 0)  y = 0;
 	m_bPressed = true;
 	break;

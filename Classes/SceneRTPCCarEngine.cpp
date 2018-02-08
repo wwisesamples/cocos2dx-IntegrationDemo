@@ -85,12 +85,15 @@ bool SceneRTPCCarEngine::init()
 	    slider->loadSlidBallTextures("Slider_button.png", "Slider_button.png", "");
 	    slider->setScale9Enabled(true);
 	    slider->setCapInsets(cocos2d::Rect(0, 0, 0, 0));
-#if defined(AK_ANDROID) || defined(AK_IOS)
-	    LOGAK("<SceneRTPCCarEngine> Slider size=(%d:%d) pos=(%d:%d)", (int)(windowSize.width*0.50f), (int)19, (int)(windowSize.width / 2.00f), (int)(windowSize.height *0.50f));
-	    slider->setContentSize(cocos2d::Size(windowSize.height*0.50f/*250.0f*/, 19.00f)); 
-#else
-	    slider->setContentSize(cocos2d::Size(windowSize.width*0.800f/*250.0f*/, 19.00f));
-#endif
+
+        if (g_isLandscape) {
+            slider->setContentSize(cocos2d::Size(windowSize.width*0.800f/*250.0f*/, 19.00f));
+        }
+        else {
+    	    LOGAK("<SceneRTPCCarEngine> Slider size=(%d:%d) pos=(%d:%d)", (int)(windowSize.width*0.50f), (int)19, (int)(windowSize.width / 2.00f), (int)(windowSize.height *0.50f));
+    	    slider->setContentSize(cocos2d::Size(windowSize.height*0.50f/*250.0f*/, 19.00f));
+        }
+
 	    slider->setPosition(Vec2(windowSize.width / 2.00f, windowSize.height *0.50f));
 	    slider->addEventListener(CC_CALLBACK_2(SceneRTPCCarEngine::slideEvent, this));
 	    slider->setPercent(50);

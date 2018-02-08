@@ -1,5 +1,7 @@
 #pragma once
 
+#include <wchar.h>
+
 #ifdef SOUND_BANK_PATH
 #undef SOUND_BANK_PATH
 #define SOUND_BANK_PATH L"../../WwiseProject/GeneratedSoundBanks/Windows/"
@@ -11,3 +13,8 @@
 extern bool g_isLandscape;
 #define SCREEN_POS_SCALER_DESCRIPTION_Y 0.90f
 #define SCREEN_POS_SCALER_SELBUTTON_X 0.15f
+
+#define MOVEMENT_STEP_SIZE 5
+
+void LOGAK(char *format, ...);
+void LOGAKW(TCHAR *format, ...);
