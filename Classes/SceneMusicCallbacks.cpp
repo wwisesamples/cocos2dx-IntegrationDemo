@@ -199,6 +199,7 @@ bool SceneMusicCallbacksBase::init()
 void SceneMusicCallbacksBase::update(float dt)
 {
     SceneBase::update(dt);
+    
     if (!m_bIsPlaying)
     {
 	if (m_label) m_label->setString("Test Finished");

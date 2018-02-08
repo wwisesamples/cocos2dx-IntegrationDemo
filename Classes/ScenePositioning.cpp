@@ -150,17 +150,19 @@ bool ScenePositioning::init()
 
 void ScenePositioning::update(float dt)
 {
-    SceneBase::update(dt);
+    
     if (m_bPressed) {
-	switch (m_key) {
-	case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
-	case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
-	case EventKeyboard::KeyCode::KEY_UP_ARROW:
-	case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
-	    onKeyPressed(m_key, NULL);
-	    break;
-	}
+        switch (m_key) {
+        case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
+        case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
+        case EventKeyboard::KeyCode::KEY_UP_ARROW:
+        case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
+            onKeyPressed(m_key, NULL);
+            break;
+        }
     }
+    
+    SceneBase::update(dt);
 }
 
 void ScenePositioning::onMouseDown(Event *event)

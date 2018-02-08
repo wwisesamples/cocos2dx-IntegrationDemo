@@ -184,6 +184,7 @@ void SceneMarkers::onRelease()
 void SceneMarkers::update(float dt)
 {
     SceneBase::update(dt);
+    
     if (m_bPlayingMarkers)
     {
 	AkTimeMs uPosition;

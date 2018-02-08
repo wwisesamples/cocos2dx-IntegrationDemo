@@ -207,9 +207,6 @@ void SceneFootsteps::menuCloseCallback(Ref* pSender)
 
 void SceneFootsteps::update(float dt)
 {
-    SceneBase::update(dt);
-
-
     if (m_bPressed) {
 	//char strBuf[50];
 	//snprintf(strBuf, 50, "<update> m_bPressed:%d m_key:%x \n", m_bPressed, m_key);
@@ -225,7 +222,7 @@ void SceneFootsteps::update(float dt)
 	}
     }
 
-    //UpdateGameObjPos();
+    SceneBase::update(dt);
 }
 
 void SceneFootsteps::onMouseDown(Event *event)
