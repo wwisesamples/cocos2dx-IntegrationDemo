@@ -314,13 +314,10 @@ void SceneMain::onNotImplemented(cocos2d::Ref* pSender)
 // Exit
 cocos2d::Scene* SceneMain::DoExit()
 {
-#if defined AK_IOS
-    WWISE::terminate();
-#endif
     Director::getInstance()->end();
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    exit(0);
+    LOGAK("You pressed Exit. But according to Apple's dev guideline, an iOS app must not exit by itself. You can quit the app your own way that fits the iOS platform.");
 #endif
     return NULL;
 }

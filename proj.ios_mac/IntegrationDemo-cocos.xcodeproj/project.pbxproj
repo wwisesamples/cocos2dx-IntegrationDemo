@@ -136,8 +136,8 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
-		CE5DE9CC202C2F4D00035BB8 /* WwiseWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DE9CB202C2F4C00035BB8 /* WwiseWrapper.cpp */; };
 		CE5DE9CD202C2F7200035BB8 /* WwiseWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DE9CB202C2F4C00035BB8 /* WwiseWrapper.cpp */; };
+		CE5DE9D0202C331300035BB8 /* WwiseWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DE9CF202C331300035BB8 /* WwiseWrapper.cpp */; };
 		CE93D5A92029FA10003FC20D /* SceneBGM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 780D7A1C1C185D9400238AFA /* SceneBGM.cpp */; };
 		CE9CB9F3202723E600B6E261 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97681C15C0FA00D9BEC4 /* stdafx.cpp */; };
 		CE9CB9F5202729B600B6E261 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CB9F4202729B500B6E261 /* CoreText.framework */; };
@@ -322,6 +322,8 @@
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CE5DE9CA202C2F4C00035BB8 /* WwiseWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WwiseWrapper.h; path = mac/WwiseWrapper.h; sourceTree = "<group>"; };
 		CE5DE9CB202C2F4C00035BB8 /* WwiseWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseWrapper.cpp; path = mac/WwiseWrapper.cpp; sourceTree = "<group>"; };
+		CE5DE9CE202C331300035BB8 /* WwiseWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WwiseWrapper.h; path = ios/WwiseWrapper.h; sourceTree = SOURCE_ROOT; };
+		CE5DE9CF202C331300035BB8 /* WwiseWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseWrapper.cpp; path = ios/WwiseWrapper.cpp; sourceTree = SOURCE_ROOT; };
 		CE9CB9F4202729B500B6E261 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		CE9CB9F620272B8B00B6E261 /* SoundInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SoundInput.cpp; path = ios/SoundInput.cpp; sourceTree = SOURCE_ROOT; };
 		CE9CB9F82028063000B6E261 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
@@ -391,6 +393,8 @@
 		080E96DDFE201D6D7F000001 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				CE5DE9CF202C331300035BB8 /* WwiseWrapper.cpp */,
+				CE5DE9CE202C331300035BB8 /* WwiseWrapper.h */,
 				CE9CBA052029CAB300B6E261 /* PlatformCocos.h */,
 				CE9CBA032029CAA900B6E261 /* PlatformCocos.cpp */,
 				5087E77117EB970100C73F5D /* Icons */,
@@ -893,8 +897,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9CBA042029CAA900B6E261 /* PlatformCocos.cpp in Sources */,
-				CE5DE9CC202C2F4D00035BB8 /* WwiseWrapper.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				CE5DE9D0202C331300035BB8 /* WwiseWrapper.cpp in Sources */,
 				787D41D81C0863D40063B5E0 /* SceneDynamicDialogue.cpp in Sources */,
 				787D420A1C089C0E0063B5E0 /* SceneInteractiveMusic.cpp in Sources */,
 				787D41D11C0860260063B5E0 /* SceneDialogueMenu.cpp in Sources */,
