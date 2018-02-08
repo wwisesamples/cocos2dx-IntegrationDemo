@@ -18,7 +18,6 @@
 #include "WwiseWrapper.h"
 
 
-#include "android/asset_manager.h"
 #define  LOG_TAG    "WwiseWrapper"
 #define __AK_OSCHAR_SNPRINTF 	snprintf
 #define  LOGAK(...)  		__android_log_print(ANDROID_LOG_DEBUG,LOG_TAG,__VA_ARGS__)

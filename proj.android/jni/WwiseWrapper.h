@@ -35,11 +35,11 @@ class Wwise
 {
 public:
     static Wwise& Instance();
-    CAkFilePackageLowLevelIOBlocking& IOManager();
-    
-    void Term();
     
     bool Init();
+    void Term();
+    
+    CAkFilePackageLowLevelIOBlocking& IOManager();
     
     const bool GetCommunicationEnabled();
 
