@@ -18,14 +18,6 @@
 #include "WwiseWrapper.h"
 #include "WwisePlatformHelper.h"
 
-// #define  LOGAK(...)  		__android_log_print(ANDROID_LOG_DEBUG,LOG_TAG,__VA_ARGS__)
-// void LOGAKW(AkOSChar* _Buffer)  
-// {
-//     char szBuff[1024] = {0};
-//     AKPLATFORM::AkWideCharToChar((const wchar_t*)_Buffer, 1024, szBuff);
-//     __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, (const char*)&szBuff);
-// }
-
 
 Wwise& Wwise::Instance()
 {

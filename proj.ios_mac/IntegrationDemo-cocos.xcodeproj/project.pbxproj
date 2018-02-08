@@ -136,8 +136,8 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
-		CE5DE9CD202C2F7200035BB8 /* WwiseWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DE9CB202C2F4C00035BB8 /* WwiseWrapper.cpp */; };
-		CE5DE9D0202C331300035BB8 /* WwiseWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DE9CF202C331300035BB8 /* WwiseWrapper.cpp */; };
+		CE5DE9D8202CCDAC00035BB8 /* WwisePlatformHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DE9D4202CCD7300035BB8 /* WwisePlatformHelper.cpp */; };
+		CE5DE9E3202CD9C500035BB8 /* WwiseWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DE9DF202CD8AC00035BB8 /* WwiseWrapper.cpp */; };
 		CE93D5A92029FA10003FC20D /* SceneBGM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 780D7A1C1C185D9400238AFA /* SceneBGM.cpp */; };
 		CE9CB9F3202723E600B6E261 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78EA97681C15C0FA00D9BEC4 /* stdafx.cpp */; };
 		CE9CB9F5202729B600B6E261 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9CB9F4202729B500B6E261 /* CoreText.framework */; };
@@ -148,6 +148,10 @@
 		CE9CBA072029CB9900B6E261 /* PlatformCocos.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE9CBA012029B85300B6E261 /* PlatformCocos.cpp */; };
 		CEDC55582025F7D300A0080D /* Mac in Resources */ = {isa = PBXBuildFile; fileRef = CEDC55572025F7D300A0080D /* Mac */; };
 		CEDC555A2025F7E500A0080D /* iOS in Resources */ = {isa = PBXBuildFile; fileRef = CEDC55592025F7E500A0080D /* iOS */; };
+		CEF5B37A202CDB7D003F3ED6 /* WwiseWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5DE9DF202CD8AC00035BB8 /* WwiseWrapper.cpp */; };
+		CEF5B37B202CE0D8003F3ED6 /* WwiseWrapper.h in Sources */ = {isa = PBXBuildFile; fileRef = CE5DE9D1202CCD5900035BB8 /* WwiseWrapper.h */; };
+		CEF5B37E202CE0F9003F3ED6 /* WwisePlatformHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF5B37D202CE0F9003F3ED6 /* WwisePlatformHelper.cpp */; };
+		CEF5B37F202CE118003F3ED6 /* WwisePlatformHelper.h in Sources */ = {isa = PBXBuildFile; fileRef = CEF5B37C202CE0F9003F3ED6 /* WwisePlatformHelper.h */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -320,10 +324,10 @@
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		CE5DE9CA202C2F4C00035BB8 /* WwiseWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WwiseWrapper.h; path = mac/WwiseWrapper.h; sourceTree = "<group>"; };
-		CE5DE9CB202C2F4C00035BB8 /* WwiseWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseWrapper.cpp; path = mac/WwiseWrapper.cpp; sourceTree = "<group>"; };
-		CE5DE9CE202C331300035BB8 /* WwiseWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WwiseWrapper.h; path = ios/WwiseWrapper.h; sourceTree = SOURCE_ROOT; };
-		CE5DE9CF202C331300035BB8 /* WwiseWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WwiseWrapper.cpp; path = ios/WwiseWrapper.cpp; sourceTree = SOURCE_ROOT; };
+		CE5DE9D1202CCD5900035BB8 /* WwiseWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WwiseWrapper.h; sourceTree = "<group>"; };
+		CE5DE9D4202CCD7300035BB8 /* WwisePlatformHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WwisePlatformHelper.cpp; path = mac/WwisePlatformHelper.cpp; sourceTree = "<group>"; };
+		CE5DE9D5202CCD7400035BB8 /* WwisePlatformHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WwisePlatformHelper.h; path = mac/WwisePlatformHelper.h; sourceTree = "<group>"; };
+		CE5DE9DF202CD8AC00035BB8 /* WwiseWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WwiseWrapper.cpp; sourceTree = "<group>"; };
 		CE9CB9F4202729B500B6E261 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		CE9CB9F620272B8B00B6E261 /* SoundInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SoundInput.cpp; path = ios/SoundInput.cpp; sourceTree = SOURCE_ROOT; };
 		CE9CB9F82028063000B6E261 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
@@ -335,6 +339,8 @@
 		CEDC55592025F7E500A0080D /* iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOS; path = ../../WwiseProject/GeneratedSoundBanks/iOS; sourceTree = "<group>"; };
 		CEDC555B20268D1E00A0080D /* PlatformCocos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformCocos.h; path = mac/PlatformCocos.h; sourceTree = "<group>"; };
 		CEDC555C2026BB4300A0080D /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
+		CEF5B37C202CE0F9003F3ED6 /* WwisePlatformHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WwisePlatformHelper.h; path = ios/WwisePlatformHelper.h; sourceTree = SOURCE_ROOT; };
+		CEF5B37D202CE0F9003F3ED6 /* WwisePlatformHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WwisePlatformHelper.cpp; path = ios/WwisePlatformHelper.cpp; sourceTree = SOURCE_ROOT; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -393,8 +399,8 @@
 		080E96DDFE201D6D7F000001 /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				CE5DE9CF202C331300035BB8 /* WwiseWrapper.cpp */,
-				CE5DE9CE202C331300035BB8 /* WwiseWrapper.h */,
+				CEF5B37D202CE0F9003F3ED6 /* WwisePlatformHelper.cpp */,
+				CEF5B37C202CE0F9003F3ED6 /* WwisePlatformHelper.h */,
 				CE9CBA052029CAB300B6E261 /* PlatformCocos.h */,
 				CE9CBA032029CAA900B6E261 /* PlatformCocos.cpp */,
 				5087E77117EB970100C73F5D /* Icons */,
@@ -499,6 +505,8 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CE5DE9DF202CD8AC00035BB8 /* WwiseWrapper.cpp */,
+				CE5DE9D1202CCD5900035BB8 /* WwiseWrapper.h */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				784DE8B71C07094600667EFE /* SceneBase.h */,
@@ -547,8 +555,8 @@
 		503AE10617EB990700D1A890 /* mac */ = {
 			isa = PBXGroup;
 			children = (
-				CE5DE9CB202C2F4C00035BB8 /* WwiseWrapper.cpp */,
-				CE5DE9CA202C2F4C00035BB8 /* WwiseWrapper.h */,
+				CE5DE9D4202CCD7300035BB8 /* WwisePlatformHelper.cpp */,
+				CE5DE9D5202CCD7400035BB8 /* WwisePlatformHelper.h */,
 				CE9CBA012029B85300B6E261 /* PlatformCocos.cpp */,
 				CEDC555B20268D1E00A0080D /* PlatformCocos.h */,
 				503AE0F517EB97AB00D1A890 /* Icons */,
@@ -896,9 +904,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5DE9E3202CD9C500035BB8 /* WwiseWrapper.cpp in Sources */,
+				CEF5B37B202CE0D8003F3ED6 /* WwiseWrapper.h in Sources */,
 				CE9CBA042029CAA900B6E261 /* PlatformCocos.cpp in Sources */,
+				CEF5B37F202CE118003F3ED6 /* WwisePlatformHelper.h in Sources */,
+				CEF5B37E202CE0F9003F3ED6 /* WwisePlatformHelper.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
-				CE5DE9D0202C331300035BB8 /* WwiseWrapper.cpp in Sources */,
+				78EA97731C15C57500D9BEC4 /* Platform.cpp in Sources */,
 				787D41D81C0863D40063B5E0 /* SceneDynamicDialogue.cpp in Sources */,
 				787D420A1C089C0E0063B5E0 /* SceneInteractiveMusic.cpp in Sources */,
 				787D41D11C0860260063B5E0 /* SceneDialogueMenu.cpp in Sources */,
@@ -912,6 +924,7 @@
 				787D420C1C089C0E0063B5E0 /* SceneMusicCallbacks.cpp in Sources */,
 				780D7A1E1C185D9400238AFA /* SceneBGM.cpp in Sources */,
 				784DE8B61C07091B00667EFE /* SceneMain.cpp in Sources */,
+				CE9CB9F720272B8C00B6E261 /* SoundInput.cpp in Sources */,
 				784DE8B51C07091B00667EFE /* SceneBase.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
@@ -924,10 +937,8 @@
 				78EA977E1C15CD5300D9BEC4 /* AkDefaultIOHookDeferred.cpp in Sources */,
 				787D41DF1C08654C0063B5E0 /* Helpers.cpp in Sources */,
 				78EA97631C15B49400D9BEC4 /* SoundInputBase.cpp in Sources */,
-				78EA97731C15C57500D9BEC4 /* Platform.cpp in Sources */,
 				CE9CB9F3202723E600B6E261 /* stdafx.cpp in Sources */,
 				78EA977F1C15CD5300D9BEC4 /* stdafx.cpp in Sources */,
-				CE9CB9F720272B8C00B6E261 /* SoundInput.cpp in Sources */,
 				78EA975E1C15B3FF00D9BEC4 /* SoundInputMgr.cpp in Sources */,
 				78EA97641C15B49400D9BEC4 /* SoundInputMgrBase.cpp in Sources */,
 				78EA97671C15BD9B00D9BEC4 /* stdafx.cpp in Sources */,
@@ -939,7 +950,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5DE9D8202CCDAC00035BB8 /* WwisePlatformHelper.cpp in Sources */,
 				CE9CBA072029CB9900B6E261 /* PlatformCocos.cpp in Sources */,
+				CEF5B37A202CDB7D003F3ED6 /* WwiseWrapper.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				78EA979B1C15E3C100D9BEC4 /* AkDefaultLowLevelIODispatcher.cpp in Sources */,
@@ -950,7 +963,6 @@
 				78EA979A1C15E30A00D9BEC4 /* CoreAudioInputDevice.cpp in Sources */,
 				78EA97921C15E24300D9BEC4 /* IOBufferQueue.cpp in Sources */,
 				78EA978E1C15E19000D9BEC4 /* Platform.cpp in Sources */,
-				CE5DE9CD202C2F7200035BB8 /* WwiseWrapper.cpp in Sources */,
 				784DE8BA1C0709B600667EFE /* SceneMain.cpp in Sources */,
 				784DE8B91C0709B600667EFE /* SceneBase.cpp in Sources */,
 				787D420D1C089C260063B5E0 /* SceneInteractiveMusic.cpp in Sources */,
