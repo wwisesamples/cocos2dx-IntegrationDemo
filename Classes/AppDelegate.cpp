@@ -9,16 +9,7 @@
 USING_NS_CC;
 
 //static cocos2d::Size designResolutionSize = cocos2d::Size(640, 960);	//h
-#ifdef WIN32
-    static cocos2d::Size designResolutionSize = cocos2d::Size(1024, 960);	//h
-#elif  CC_TARGET_OS_MAC
-    static cocos2d::Size designResolutionSize = cocos2d::Size(1024, 960);	//h
-#elif  TARGET_IPHONE
-    static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320);
-#else
-    static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320);
-#endif
-
+static cocos2d::Size designResolutionSize = g_isLandscape ? cocos2d::Size(1024, 960) : cocos2d::Size(480, 320);	//h
 static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
 static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
 static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
