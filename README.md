@@ -1,12 +1,12 @@
-# Wwise and cocos2d-x IntegrationDemo
+# Wwise Integration Demo for cocos2d-x 
 
 Based on [the original community demo of Wwise Cocos2d-x engine integration](https://github.com/wwisesamples/cocos2dx-IntegrationDemo), this fork aims to:
 
-1. Update the demo to work with a recent Wwise and Cocos2d-x version.
-2. Add a few missing features, e.g., background music, additional SoundBank paths. 
-3. Refactor the code and file/folder structure for a more maintainable and standard demonstration.
+1. Temporarily fix compatibility with recent Wwise and Cocos2d-x versions, with no guaranteed long-term maintenance.
+2. Add missing features added in recent IntegrationDemo. 
+3. Keep the code clean for a better sample.
 
-Compared to [the Wwise SDK IntegrationDemo](https://www.audiokinetic.com/en/library/edge/?source=SDK&id=soundengine__integration__samplecode.html), [the original author](https://github.com/wwisesamples) implemented more intuitive touch screen UX for a few demos. The author should have the full credits for the content of that repo.
+Compared to [The Wwise SDK IntegrationDemo](https://www.audiokinetic.com/en/library/edge/?source=SDK&id=soundengine__integration__samplecode.html), which adopts a control scheme using virtual joysticks, [the original author](https://github.com/wwisesamples) improves the user experience by implementing a more intuitive touch screen UX, exemplified by the footsteps and positioning demos.
 
 The demo supports the following platforms:
 
@@ -16,6 +16,15 @@ The demo supports the following platforms:
 - Windows
 
 ## Update: February 9, 2018
+
+Content
+
+- Updated to support Wwise 2017.1 and Cocos2d-x 3.16.
+- Added previously disabled Background Music demo.
+- Added new plugin registration including Wwise Reflect and Wwise Recorder.
+- Fixed: Crashes when quitting Footstep demo.
+- Simplified source file and folder structure.
+- Lots of refactoring.
 
 Tested with the following software versions:
 
@@ -29,22 +38,31 @@ Tested with the following software versions:
 - Visual Studio 2017
 - JDK 1.8, Android SDK API 24, NDK r12b, Apache ANT 1.8.2
 
+## Installing the Demo
+
+First, clone the demo.
+
+```
+git clone https://github.com/cocos2dx-IntegrationDemo.git wwise-cocos-demo
+```
+This is a pre-configured cocos application project.
+
+Then, because the demo code depends on partial code of [the Wwise SDK IntegrationDemo](https://www.audiokinetic.com/en/library/edge/?source=SDK&id=soundengine__integration__samplecode.html), [the original author](https://github.com/wwisesamples), you need to install a supported Wwise version with Wwise SDK of the target platforms。
+
+Finally, copy the demo into the SDK IntegrationDemo's folder. When it's done,  your clone's root folder (e.g., `wwise-cocos-demo`) should be placed under `/path/to/Wwise/SDK/samples/IntegrationDemo/`. So it will be at:
+
+`/path/to/Wwise/SDK/samples/IntegrationDemo/wwise-cocos-demo`
+
   
-## Building and Running the Demo
+## Building the Demo
 
-### Demo Installation
+To run the demo, you need to build it from source first.
 
-The demo code depends on partial code of [the Wwise SDK IntegrationDemo](https://www.audiokinetic.com/en/library/edge/?source=SDK&id=soundengine__integration__samplecode.html), [the original author](https://github.com/wwisesamples). So you need to install a supported Wwise version, and copy the demo into the SDK IntegrationDemo's folder. When it's done,  your clone's root folder (e.g., cocos2dx-demo) should be under `/path/to/Wwise/SDK/samples/IntegrationDemo/`. So it will be at:
+For each supported platform, there is a ready-to-use IDE solution or project. A full Cocos2d-x engine distribution is also available as part of the clone, as expected with a cocos project. You can build all the demos for your chosen platforms with a single click or a single command on top of the bundled Cocos2d-x.
 
-`/path/to/Wwise/SDK/samples/IntegrationDemo/cocos2dx-demo`
+If you want to work with your own version of Cocos2d-x, you'll need to replace the `cocos2d` folder with the corresponding folder in your Cocos distribution and [set up your project by hand](https://github.com/cocos2d/cocos2d-x/blob/v3/README.md#how-to-start-a-new-game).
 
-Since the demo comes with a complete Cocos2d-x engine build, you could quickly test it by building the demo for any supported platform. 
-
-You need to install Wwise with Wwise SDK of the supported version, and build the demo from source code.
-
-If you want to work with your own version of Cocos2d-x, you'll need to replace the `cocos2d` folder with your own version and [set up your project](https://github.com/cocos2d/cocos2d-x/blob/v3/README.md#how-to-start-a-new-game).
-
-The Debug build can be remotely profiled, but is not optimized. The Release build is optimized but disables profiling.
+Two build configurations are prepared for each supported platform. The *Debug* build can be remotely profiled using Wwise Authoring Tool, but is not optimized. The *Release* build is optimized but disables profiling.
 
 ### Building on Windows
 
@@ -57,45 +75,45 @@ Prerequisites
 
 Notes on DirectX:
 
-- Install the version of DirectX SDK mentioned in [Platform Requirements](https://www.audiokinetic.com/library/edge/?source=SDK&id=reference__platform.html) of Wwise documentation.
+- Install the DirectX SDK version mentioned in Wwise's [Platform Requirements](https://www.audiokinetic.com/library/edge/?source=SDK&id=reference__platform.html).
 - Restart your Windows Explorer or reboot your machine to ensure the environment variable *DXSDK_DIR* is in effect. The Visual Studio project depends on this variable.
 
 How to build
 
 - Build the solution under `/path/to/Wwise/SDK/samples/IntegrationDemo/cocos2dx-demo/proj.win32/IntegrationDemo-cocos2d-x.sln` with your Visual Studio.
-- Open the IntegrationDemo's Wwise project with the target Wwise version.
-- Generate the SoundBanks for Windows in their default paths.
-- Launch the demo's executable just built.
+- Open the IntegrationDemo's Wwise project with the compatible Wwise version.
+- Generate the SoundBanks for Windows under their default path.
 
 
 ### Building on Mac
 
 Prerequisites
 
-- Xcode with developer credential filled in.
+- Xcode with a developer credential.
 - Wwise SDK installed with the following component: SDK (macOS)
 
 How to build
 
 - Open `/path/to/Wwise/SDK/samples/IntegrationDemo/cocos2dx-demo/proj.ios_mac/IntegrationDemo-cocos.xcodeproj` with Xcode.
 - Build the Scheme `IntegrationDemo-cocos-desktop`.
-- Generate the project's SoundBank for Mac.
-- Run the executable.
+- Open the IntegrationDemo's Wwise project with the compatible Wwise version.
+- Generate the SoundBanks for Mac under their default path.
+
 
 ### Building on iOS
 
 Prerequisites
 
-- Xcode with developer credential filled in.
+- Xcode with a developer credential.
 - Wwise SDK installed with the following component: SDK (iOS)
 
 
 How to build
 
-- Open `/path/to/Wwise/SDK/samples/IntegrationDemo/cocos2dx-demo/proj.ios_mac/IntegrationDemo-cocos.xcodeproj` with Xcode.
+- Open `/path/to/Wwise/SDK/samples/IntegrationDemo/cocos2dx-demo/proj.io`s_mac/IntegrationDemo-cocos.xcodeproj` with Xcode.
 - Build the Scheme `IntegrationDemo-cocos-mobile`.
-- Generate the project's SoundBank for iOS.
-- Run the executable.
+- Open the IntegrationDemo's Wwise project with the compatible Wwise version.
+- Generate the SoundBanks for iOS under their default path.
 
 
 ### Building on Android
@@ -103,51 +121,53 @@ How to build
 Prerequisites
 
 - Android SDK/NDK/Apache ANT
-- Go under cocos2dx-demo/proj.android to make it as current working directory.
-- Run Cocos to set up Android environment variables.
+- Open Terminal/Command Prompt: `cd cocos2dx-demo/proj.android`.
+- Run Cocos command to set up Android environment variables.
 - Compile the project
-	- Debug   -> cocos compile -p android -m debug NDK_DEBUG=1 V=1 NDK_LOG=1
-	- Release -> cocos compile -p android　
-- Generate the project's SoundBank for Android.
-- Build & run 
-	- Debug   -> cocos run -p android -m debug NDK_DEBUG=1 V=1 NDK_LOG=1
-	- Release -> cocos run -p android
+	- Debug: `cocos compile -p android -m debug NDK_DEBUG=1 V=1 NDK_LOG=1`
+	- Release: `cocos compile -p android`
+- Open the IntegrationDemo's Wwise project with the compatible Wwise version.
+- Generate the SoundBanks for Android under their default path.
+- Build the APK and run
+	- Debug: `cocos run -p android -m debug NDK_DEBUG=1 V=1 NDK_LOG=1`
+	- Release: `cocos run -p android`
 
 
-## How to interact the demo?
+## How to interact with the demo?
 
-The demo has a menu system where you can navigate to individual small demos. You can use keyboard, mouse, and touch control for playing it.
+Use the demo's menu system to navigate to individual demo topics. You can use keyboard, mouse, or touch screen to control the demo.
 
 
 ## The Demos
 
-Check out the `The Demos` section of [the original documentation](https://www.audiokinetic.com/en/library/edge/?source=SDK&id=soundengine__integration__samplecode.html).
-
+Browse the `The Demos` section of [the original documentation](https://www.audiokinetic.com/en/library/edge/?source=SDK&id=soundengine__integration__samplecode.html) to get to know how each demo works. The major difference here is in user input scheme. On mobile platforms, this demo uses touch screen gestures instead of virtual joysticks, thanks to Cocos2d-x's facility; on desktop, it supports  mouse gestures while the SDK IntegrationDemo does not.
 
 
 ## The Wwise Project
 
-The Wwise project for this program is also available in /`path/to/Wwise/SDK/samples/IntegrationDemo/WwiseProject`.
+You need to generate the SoundBanks of your target platform for the demo to work on that platform. SoundBanks are the output of a Wwise project. The Wwise project for this demo is the same one for the SDK IntegrationDemo, available at `/path/to/Wwise/SDK/samples/IntegrationDemo/WwiseProject`.
 
-The SoundBanks for this project are installed with the SDK in the "samples\IntegrationDemo\WwiseProject\GeneratedSoundBanks" folder.
+Read Wwise documentation to learn how to generate SoundBanks. Once that's done, by default they will be in `GeneratedSoundBanks` sub-folder under the Wwise project folder.
 
-To regenerate the SoundBanks, so
-å
-- Check all banks in the SoundBanks list 
-- Check off all platforms that are being tested 
-- Check all languages in the Languages list 
 
-Once these settings are in place, you can click on Generate in the SoundBank Manager to generate the banks.
+## The Demo Code and File Structure
 
-## The Demo Code and File Structure.
+Compared to [the community demo repo](https://github.com/wwisesamples/cocos2dx-IntegrationDemo),  the Wwise integration code has been refactored to make it easier to follow what needs to be done for each platform integration as a whole. This was achieved mainly by separating extract cross-platform code and separate it from the platform-specific code. Of course, ad-hoc platform branching code is still inevitable, but that is  now at a bare minimum. 
 
-The Demo Code and folder structure have been restructured to better demonstrate how to integrate Wwise in a more maintainable fashion.
+A few pointers for you to walk around the code base:
 
-- `Classes/WwiseWrapper.h` and `Classes/WwiseWrapper.cpp` handle cross-platform Wwise life/cycle. 
-- `<platform>/WwisePlatformHelper.h` and `<platform>/WwisePlatformHelper.cpp` handle platform-specific code for Wwise life/cycle.
-- `PlatformCocos.h` and `PlatformCocos.cpp` define platform-specific variables.
-- All platform-specific code are under the folders named after them.
+- `Classes/Scene*.h` and `Classes/Scene*.cpp` along with the cocos template AppDelegate code are the demo application code.
+- `Classes/WwiseWrapper.h` and `Classes/WwiseWrapper.cpp` handle cross-platform Wwise sound engine lifecycle.
+- All the platform-specific code and IDE solution or project files are under the folders named after those platforms.
 	- `cocos2dx-demo/proj.android/`
 	- `cocos2dx-demo/proj.ios_mac/ios/`
-	- `cocos2dx-demo/proj.ios_mac/mac/
-	- `cocos2dx-demo/proj.win32/
+	- `cocos2dx-demo/proj.ios_mac/mac/`
+	- `cocos2dx-demo/proj.win32/`
+- `<platform>/WwisePlatformHelper.h` and `<platform>/WwisePlatformHelper.cpp` handle platform-specific code for Wwise sound engine lifecycle.
+- `<platform>/PlatformCocos.h` and `<platform>PlatformCocos.cpp` define platform-specific global variables and functions. They complements the `Platform.h` and `Platform.cpp` of the SDK IntegrationDemo.
+
+## License and Support
+
+This forked demo shares the same license as the [original project](https://github.com/wwisesamples/cocos2dx-IntegrationDemo). 
+
+You may raise issues here at the Issues section but there is no guarantee that they will be answered soon enough.
