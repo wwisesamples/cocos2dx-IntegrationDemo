@@ -123,12 +123,13 @@ DirectX 相关备注
 必备环境
 
 - Android SDK/NDK/Apache ANT
+- Python 2.7.x
 - Wwise SDK，需安装组件: SDK (Android)
 
 构建步骤
 
 - 打开终端: `cd cocos2dx-demo/proj.android`；
-- 运行 Cocos 命令设置 Android 环境变量；
+- [运行 Cocos 命令设置 Android 环境变量](https://github.com/cocos2d/cocos2d-x/blob/v3/README.md#how-to-start-a-new-game);
 - 编译工程
 	- Debug: `cocos compile -p android -m debug NDK_DEBUG=1 V=1 NDK_LOG=1`
 	- Release: `cocos compile -p android`

@@ -121,8 +121,13 @@ How to build
 Prerequisites
 
 - Android SDK/NDK/Apache ANT
+- Python 2.7.x
+- Wwise SDK installed with the following component: SDK (Android)
+
+How to build
+
 - Open Terminal/Command Prompt: `cd cocos2dx-demo/proj.android`.
-- Run Cocos command to set up Android environment variables.
+- [Run Cocos command to set up Android environment variables](https://github.com/cocos2d/cocos2d-x/blob/v3/README.md#how-to-start-a-new-game).
 - Compile the project
 	- Debug: `cocos compile -p android -m debug NDK_DEBUG=1 V=1 NDK_LOG=1`
 	- Release: `cocos compile -p android`
