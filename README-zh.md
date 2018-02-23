@@ -50,7 +50,7 @@ git clone https://github.com/cocos2dx-IntegrationDemo.git wwise-cocos-demo
 
 接下来，因为演示代码依赖于[Wwise SDK IntegrationDemo](https://www.audiokinetic.com/en/library/edge/?source=SDK&id=soundengine__integration__samplecode.html)的部分代码，所以需要安装兼容的 Wwise 版本和目标平台的 Wwise SDK。
 
-最后，将演示拷入 SDK IntegrationDemo 文件夹。完成后，本地克隆的根目录（如`wwise-cocos-demo`）会位于`<Wwise Root>/SDK/samples/IntegrationDemo/`下面，也即其路径会为：
+最后，将演示拷入 SDK IntegrationDemo 文件夹。完成后，本地克隆的根目录（如`wwise-cocos-demo`）会位于`<Wwise Root>/SDK/samples/IntegrationDemo/`下面，比如：
 
 `<Wwise Root>/SDK/samples/IntegrationDemo/wwise-cocos-demo`
 

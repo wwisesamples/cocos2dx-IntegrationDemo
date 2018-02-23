@@ -47,11 +47,11 @@ git clone https://github.com/cocos2dx-IntegrationDemo.git wwise-cocos-demo
 ```
 This is a pre-configured cocos application project.
 
-Then, because the demo code depends on partial code of [the Wwise SDK IntegrationDemo](https://www.audiokinetic.com/en/library/edge/?source=SDK&id=soundengine__integration__samplecode.html), [the original author](https://github.com/wwisesamples), you need to install a supported Wwise version with Wwise SDK of the target platforms。
+Then, because the demo code depends on partial code of [the Wwise SDK IntegrationDemo](https://www.audiokinetic.com/en/library/edge/?source=SDK&id=soundengine__integration__samplecode.html), you need to install a supported Wwise version with Wwise SDK of the target platforms。
 
-Finally, copy the demo into the SDK IntegrationDemo's folder. When it's done,  your clone's root folder (e.g., `wwise-cocos-demo`) should be placed under `/path/to/Wwise/SDK/samples/IntegrationDemo/`. So it will be at:
+Finally, copy the demo into the SDK IntegrationDemo's folder. After that, your clone's root folder (e.g., `wwise-cocos-demo`) should be placed under `<Wwise Root>/SDK/samples/IntegrationDemo/`, e.g.:
 
-`/path/to/Wwise/SDK/samples/IntegrationDemo/wwise-cocos-demo`
+`<Wwise Root>/SDK/samples/IntegrationDemo/wwise-cocos-demo`
 
   
 ## Building the Demo
@@ -80,7 +80,7 @@ Notes on DirectX:
 
 How to build
 
-- Build the solution under `/path/to/Wwise/SDK/samples/IntegrationDemo/cocos2dx-demo/proj.win32/IntegrationDemo-cocos2d-x.sln` with your Visual Studio.
+- Build the solution under `<Wwise Root>/SDK/samples/IntegrationDemo/cocos2dx-demo/proj.win32/IntegrationDemo-cocos2d-x.sln` with your Visual Studio.
 - Open the IntegrationDemo's Wwise project with the compatible Wwise version.
 - Generate the SoundBanks for Windows under their default path.
 
@@ -94,7 +94,7 @@ Prerequisites
 
 How to build
 
-- Open `/path/to/Wwise/SDK/samples/IntegrationDemo/cocos2dx-demo/proj.ios_mac/IntegrationDemo-cocos.xcodeproj` with Xcode.
+- Open `<Wwise Root>/SDK/samples/IntegrationDemo/cocos2dx-demo/proj.ios_mac/IntegrationDemo-cocos.xcodeproj` with Xcode.
 - Build the Scheme `IntegrationDemo-cocos-desktop`.
 - Open the IntegrationDemo's Wwise project with the compatible Wwise version.
 - Generate the SoundBanks for Mac under their default path.
@@ -110,7 +110,7 @@ Prerequisites
 
 How to build
 
-- Open `/path/to/Wwise/SDK/samples/IntegrationDemo/cocos2dx-demo/proj.io`s_mac/IntegrationDemo-cocos.xcodeproj` with Xcode.
+- Open `<Wwise Root>/SDK/samples/IntegrationDemo/cocos2dx-demo/proj.io`s_mac/IntegrationDemo-cocos.xcodeproj` with Xcode.
 - Build the Scheme `IntegrationDemo-cocos-mobile`.
 - Open the IntegrationDemo's Wwise project with the compatible Wwise version.
 - Generate the SoundBanks for iOS under their default path.
@@ -150,7 +150,7 @@ Browse the `The Demos` section of [the original documentation](https://www.audio
 
 ## The Wwise Project
 
-You need to generate the SoundBanks of your target platform for the demo to work on that platform. SoundBanks are the output of a Wwise project. The Wwise project for this demo is the same one for the SDK IntegrationDemo, available at `/path/to/Wwise/SDK/samples/IntegrationDemo/WwiseProject`.
+You need to generate the SoundBanks of your target platform for the demo to work on that platform. SoundBanks are the output of a Wwise project. The Wwise project for this demo is the same one for the SDK IntegrationDemo, available at `<Wwise Root>/SDK/samples/IntegrationDemo/WwiseProject`.
 
 Read Wwise documentation to learn how to generate SoundBanks. Once that's done, by default they will be in `GeneratedSoundBanks` sub-folder under the Wwise project folder.
 
