@@ -43,7 +43,7 @@
 首先要克隆本演示。
 
 ```
-git clone https://github.com/cocos2dx-IntegrationDemo.git wwise-cocos-demo
+git clone https://github.com/cocos2dx-IntegrationDemo wwise-cocos-demo
 ```
 
 这其实是一个配置好的 Cocos2d-x 应用的工程。
@@ -168,8 +168,8 @@ DirectX 相关备注
 - 平台相关代码和 IDE 解决方案或工程文件全部在以平台命名的子目录下面
 	- `cocos2dx-demo/proj.android/`
 	- `cocos2dx-demo/proj.ios_mac/ios/`
-	- `cocos2dx-demo/proj.ios_mac/mac/
-	- `cocos2dx-demo/proj.win32/
+	- `cocos2dx-demo/proj.ios_mac/mac/`
+	- `cocos2dx-demo/proj.win32/`
 - `<platform>/WwisePlatformHelper.h`和 `<platform>/WwisePlatformHelper.cpp`处理平台相关部分的 Wwise 引擎生命周期。
 - `<platform>/PlatformCocos.h`和`<platform>PlatformCocos.cpp`定义了一些演示中平台相关的全局变量和函数。这些是 SDK IntegrationDemo 中的 `Platform.h`和`Platform.cpp`的补充。
 

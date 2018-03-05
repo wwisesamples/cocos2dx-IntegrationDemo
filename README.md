@@ -43,7 +43,7 @@ Tested with the following software versions:
 First, clone the demo.
 
 ```
-git clone https://github.com/cocos2dx-IntegrationDemo.git wwise-cocos-demo
+git clone https://github.com/cocos2dx-IntegrationDemo wwise-cocos-demo
 ```
 This is a pre-configured cocos application project.
 
